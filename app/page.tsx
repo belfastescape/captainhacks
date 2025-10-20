@@ -304,7 +304,7 @@ export default function CaptainHacks() {
               {num === 1 ? (
                 <video
                   className="w-full h-full object-cover"
-                  src="/videos/captainhacksun.mp4"
+                  src="/videos/captainhackssun.mp4"
                   controls
                   playsInline
                   preload="metadata"
