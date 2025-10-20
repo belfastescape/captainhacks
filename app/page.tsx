@@ -119,12 +119,12 @@ export default function CaptainHacks() {
       <canvas ref={canvasRef} className="matrix-bg" />
 
       {/* Hero Section */}
-      <section className="min-h-screen relative z-10 pt-8 md:pt-12 lg:pt-16 px-6 md:px-10" id="home">
+      <section className="min-h-screen relative z-10 pt-20 md:pt-28 lg:pt-32 px-6 md:px-10" id="home">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
           {/* Left: CAPTAIN HACKS */}
-          <div className="order-2 md:order-1 flex items-start md:items-start">
-            <div className="flex flex-col">
-              <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none">
+          <div className="order-1 md:order-1 flex items-start md:items-start justify-center">
+            <div className="flex flex-col items-center text-center">
+              <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none text-center">
                 <span className="block text-white">CAPTAIN</span>
                 <span
                   className="block bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent"
@@ -141,8 +141,8 @@ export default function CaptainHacks() {
           </div>
 
           {/* Right: Tagline and Nav */}
-          <div className="order-1 md:order-2 relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-[3px] before:h-[60%] before:bg-gradient-to-b before:from-transparent before:via-cyan-400 before:to-transparent before:animate-pulse">
-            <div className="pl-6">
+          <div className="order-2 md:order-2 relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-[3px] before:h-[60%] before:bg-gradient-to-b before:from-transparent before:via-cyan-400 before:to-transparent before:animate-pulse">
+            <div className="px-6 text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-10">
                 Hacking the internet
                 <br />
@@ -155,7 +155,7 @@ export default function CaptainHacks() {
                 </span>{" "}
                 at a time.
               </h1>
-              <nav className="flex gap-8 mt-6">
+              <nav className="flex gap-8 mt-6 justify-center">
                 <button
                   onClick={(e) => handleScroll(e, "#work")}
                   className="text-gray-400 no-underline font-mono text-base md:text-lg uppercase tracking-widest cursor-pointer hover:text-cyan-400 transition-all duration-300 relative before:content-['>_'] before:opacity-0 before:-translate-x-2 before:transition-all before:duration-300 hover:before:opacity-100 hover:before:translate-x-0 bg-transparent border-0"
