@@ -5,6 +5,9 @@ import { useEffect, useRef, useState } from "react"
 export default function CaptainHacks() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
+  const videoRef = useRef<HTMLVideoElement | null>(null)
+  const [hasPlayedOnScroll, setHasPlayedOnScroll] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -51,6 +54,60 @@ export default function CaptainHacks() {
       window.removeEventListener("resize", handleResize)
     }
   }, [])
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const onPlay = () => setIsPlaying(true)
+    const onEnded = () => setIsPlaying(false)
+
+    video.addEventListener("play", onPlay)
+    video.addEventListener("ended", onEnded)
+
+    return () => {
+      video.removeEventListener("play", onPlay)
+      video.removeEventListener("ended", onEnded)
+    }
+  }, [])
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasPlayedOnScroll) {
+            video.muted = true
+            try {
+              video.currentTime = 0
+            } catch {}
+            video.play().then(() => {
+              setHasPlayedOnScroll(true)
+            }).catch(() => {
+              // Autoplay might be blocked; user can press the play button
+            })
+          }
+        })
+      },
+      { threshold: 0.5 }
+    )
+
+    observer.observe(video)
+    return () => observer.disconnect()
+  }, [hasPlayedOnScroll])
+
+  const handleManualPlay = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    const video = videoRef.current
+    if (!video) return
+    video.muted = false
+    try {
+      video.currentTime = 0
+    } catch {}
+    video.play().catch(() => {})
+  }
 
   const handleScroll = (e: React.MouseEvent<HTMLButtonElement>, targetId: string) => {
     e.preventDefault()
@@ -125,7 +182,7 @@ export default function CaptainHacks() {
           <div className="order-1 md:order-1 flex items-start md:items-start justify-center">
             <div className="flex flex-col items-center text-center">
               <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none text-center">
-                <span className="block text-white">CAPTAIN</span>
+                <span className="block mt-[100px] text-white">CAPTAIN</span>
                 <span
                   className="block bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent"
                   style={{ animation: "float 3s ease-in-out infinite" }}
@@ -155,7 +212,7 @@ export default function CaptainHacks() {
                 </span>{" "}
                 at a time.
               </h1>
-              <nav className="flex gap-8 mt-6 justify-center">
+              <nav className="flex gap-8 mt-[100px] justify-center">
                 <button
                   onClick={(e) => handleScroll(e, "#work")}
                   className="text-gray-400 no-underline font-mono text-base md:text-lg uppercase tracking-widest cursor-pointer hover:text-cyan-400 transition-all duration-300 relative before:content-['>_'] before:opacity-0 before:-translate-x-2 before:transition-all before:duration-300 hover:before:opacity-100 hover:before:translate-x-0 bg-transparent border-0"
@@ -187,21 +244,25 @@ export default function CaptainHacks() {
           style={{ boxShadow: "0 0 40px rgba(0, 240, 255, 0.3)" }}
         >
           <div className="absolute top-5 left-5 font-mono text-xs text-cyan-400 z-10">SHOWCASE REEL</div>
-          <div
-            className="w-full h-full flex items-center justify-center font-mono text-2xl text-cyan-400"
-            style={{
-              background:
-                "linear-gradient(45deg, #0a0a0a 25%, transparent 25%, transparent 75%, #0a0a0a 75%, #0a0a0a), linear-gradient(45deg, #0a0a0a 25%, transparent 25%, transparent 75%, #0a0a0a 75%, #0a0a0a)",
-              backgroundSize: "20px 20px",
-              backgroundPosition: "0 0, 10px 10px",
-            }}
-          >
-            <div
-              className="w-20 h-20 rounded-full bg-cyan-400/10 border-3 border-cyan-400 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300"
-              style={{ boxShadow: "0 0 0 0 rgba(0, 240, 255, 0.7)" }}
-            >
-              <span className="text-cyan-400 text-4xl ml-1">▶</span>
-            </div>
+          <div className="relative w-full h-full">
+            <video
+              ref={videoRef}
+              className="w-full h-full object-cover"
+              src="/videos/captainhacksintro.mp4"
+              controls
+              playsInline
+              preload="metadata"
+            />
+            {!isPlaying && (
+              <button
+                onClick={handleManualPlay}
+                className="absolute inset-0 m-auto w-20 h-20 rounded-full bg-black/60 border-2 border-cyan-400 text-cyan-400 flex items-center justify-center hover:scale-105 transition-transform duration-200"
+                aria-label="Play video"
+                style={{ width: 80, height: 80 }}
+              >
+                <span className="text-3xl">▶</span>
+              </button>
+            )}
           </div>
         </div>
       </section>
