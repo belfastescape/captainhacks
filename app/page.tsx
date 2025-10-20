@@ -228,7 +228,7 @@ export default function CaptainHacks() {
           className="w-full max-w-7xl aspect-video bg-black border-2 border-cyan-400 relative overflow-hidden"
           style={{ boxShadow: "0 0 40px rgba(0, 240, 255, 0.3)" }}
         >
-          <div className="absolute top-5 left-5 font-mono text-xs text-cyan-400 z-10">SHOWCASE REEL</div>
+          <div className="absolute top-5 left-5 font-mono text-xs text-cyan-400 z-10">MY SOLEMN PROMISE</div>
           <div className="relative w-full h-full">
             <video
               ref={videoRef}
@@ -273,7 +273,7 @@ export default function CaptainHacks() {
       {/* Work Section */}
       <section className="min-h-screen px-[8%] py-32 bg-black" id="work">
         <h2 className="text-5xl md:text-7xl font-bold mb-12 text-cyan-400 font-mono before:content-['//_'] before:text-gray-400 before:mr-4">
-          WORK
+         RECENT WORK
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
           {[1, 2, 3].map((num) => (
