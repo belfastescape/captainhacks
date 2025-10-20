@@ -120,7 +120,7 @@ export default function CaptainHacks() {
 
       {/* Hero Section */}
       <section className="min-h-screen flex relative z-10" id="home">
-        <div className="flex-1 flex flex-col justify-center px-[8%] relative before:content-[''] before:absolute before:left-0 before:top-[20%] before:w-[3px] before:h-[60%] before:bg-gradient-to-b before:from-transparent before:via-cyan-400 before:to-transparent before:animate-pulse">
+        <div className="flex-1 flex flex-col justify-start pt-[10%] px-[8%] relative before:content-[''] before:absolute before:left-0 before:top-[10%] before:w-[3px] before:h-[60%] before:bg-gradient-to-b before:from-transparent before:via-cyan-400 before:to-transparent before:animate-pulse">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-12">
             Hacking the internet
             <br />
@@ -154,20 +154,22 @@ export default function CaptainHacks() {
             </button>
           </nav>
         </div>
-        <div className="flex-1 flex items-center justify-center px-[8%] relative">
-          <div className="absolute top-[10%] right-[10%] font-mono text-xs text-cyan-400 opacity-60">
-            <div className="mb-2">$ ./captainhacks.exe</div>
-            <div style={{ animation: "blink 1s step-end infinite" }}>&gt; Status: ACTIVE █</div>
+        <div className="flex-1 flex items-start justify-center pt-[10%] px-[8%] relative">
+          <div className="flex flex-col items-center">
+            <h2 className="text-7xl md:text-8xl lg:text-9xl font-bold leading-none text-center">
+              <span className="block text-white">CAPTAIN</span>
+              <span
+                className="block bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent"
+                style={{ animation: "float 3s ease-in-out infinite" }}
+              >
+                HACKS
+              </span>
+            </h2>
+            <div className="mt-8 font-mono text-xs text-cyan-400 opacity-60 text-center">
+              <div className="mb-2">$ ./captainhacks.exe</div>
+              <div style={{ animation: "blink 1s step-end infinite" }}>&gt; Status: ACTIVE █</div>
+            </div>
           </div>
-          <h2 className="text-7xl md:text-8xl lg:text-9xl font-bold leading-none">
-            <span className="block text-white">CAPTAIN</span>
-            <span
-              className="block bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent"
-              style={{ animation: "float 3s ease-in-out infinite" }}
-            >
-              HACKS
-            </span>
-          </h2>
         </div>
       </section>
 
