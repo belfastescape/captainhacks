@@ -185,7 +185,7 @@ export default function CaptainHacks() {
           {/* Right: Tagline and Nav */}
           <div className="order-2 md:order-2 relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-[3px] before:h-[60%] before:bg-gradient-to-b before:from-transparent before:via-cyan-400 before:to-transparent before:animate-pulse">
             <div className="px-6 text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-10 text-white">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-10 text-white md:mt-[130px]">
                 Hacking the internet
                 <br />
                 one{" "}
@@ -199,7 +199,7 @@ export default function CaptainHacks() {
               </h1>
               <nav className="flex gap-8 mt-[100px] justify-center">
                 <button
-                  onClick={(e) => handleScroll(e, "#work")}
+                  onClick={(e) => handleScroll(e, "#RECENT")}
                   className="text-gray-400 no-underline font-mono text-base md:text-lg uppercase tracking-widest cursor-pointer hover:text-cyan-400 transition-all duration-300 relative before:content-['>_'] before:opacity-0 before:-translate-x-2 before:transition-all before:duration-300 hover:before:opacity-100 hover:before:translate-x-0 bg-transparent border-0"
                 >
                   work
