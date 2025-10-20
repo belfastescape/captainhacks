@@ -89,7 +89,7 @@ export default function CaptainHacks() {
           width: 100%;
           height: 100%;
           z-index: 0;
-          opacity: 0.03;
+          opacity: 0.15;
           pointer-events: none;
         }
         
@@ -129,7 +129,7 @@ export default function CaptainHacks() {
               className="text-cyan-400 animate-pulse"
               style={{ textShadow: "0 0 20px #00f0ff", animation: "glitch 3s infinite" }}
             >
-              DEAL
+              DEALS
             </span>{" "}
             at a time.
           </h1>
