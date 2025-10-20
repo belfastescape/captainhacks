@@ -129,7 +129,7 @@ export default function CaptainHacks() {
               className="text-cyan-400 animate-pulse"
               style={{ textShadow: "0 0 20px #00f0ff", animation: "glitch 3s infinite" }}
             >
-              DEALS
+              DEAL
             </span>{" "}
             at a time.
           </h1>
