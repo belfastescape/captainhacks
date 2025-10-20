@@ -161,7 +161,7 @@ export default function CaptainHacks() {
       <canvas ref={canvasRef} className="matrix-bg" />
 
       {/* Hero Section */}
-      <section className="min-h-[40vh] md:min-h-screen relative z-10 pt-20 md:pt-28 lg:pt-32 px-6 md:px-10 bg-black/80" id="home">
+      <section className="min-h-[40vh] md:min-h-screen relative z-10 pt-20 md:pt-28 lg:pt-32 px-6 md:px-10 bg-black" id="home">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
           {/* Left: CAPTAIN HACKS */}
           <div className="order-1 md:order-1 flex items-start md:items-start justify-center">
@@ -185,7 +185,7 @@ export default function CaptainHacks() {
           {/* Right: Tagline and Nav */}
           <div className="order-2 md:order-2 relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-[3px] before:h-[60%] before:bg-gradient-to-b before:from-transparent before:via-cyan-400 before:to-transparent before:animate-pulse">
             <div className="px-6 text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-10">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-10 text-white">
                 Hacking the internet
                 <br />
                 one{" "}
