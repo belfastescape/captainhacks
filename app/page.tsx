@@ -119,55 +119,62 @@ export default function CaptainHacks() {
       <canvas ref={canvasRef} className="matrix-bg" />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex relative z-10" id="home">
-        <div className="flex-1 flex flex-col justify-start pt-[10%] px-[8%] relative before:content-[''] before:absolute before:left-0 before:top-[10%] before:w-[3px] before:h-[60%] before:bg-gradient-to-b before:from-transparent before:via-cyan-400 before:to-transparent before:animate-pulse">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-12">
-            Hacking the internet
-            <br />
-            one{" "}
-            <span
-              className="text-cyan-400 animate-pulse"
-              style={{ textShadow: "0 0 20px #00f0ff", animation: "glitch 3s infinite" }}
-            >
-              DEAL
-            </span>{" "}
-            at a time.
-          </h1>
-          <nav className="flex gap-8 mt-8">
-            <button
-              onClick={(e) => handleScroll(e, "#work")}
-              className="text-gray-400 no-underline font-mono text-sm uppercase tracking-widest cursor-pointer hover:text-cyan-400 transition-all duration-300 relative before:content-['>_'] before:opacity-0 before:-translate-x-2 before:transition-all before:duration-300 hover:before:opacity-100 hover:before:translate-x-0 bg-transparent border-0"
-            >
-              work
-            </button>
-            <button
-              onClick={(e) => handleScroll(e, "#bio")}
-              className="text-gray-400 no-underline font-mono text-sm uppercase tracking-widest cursor-pointer hover:text-cyan-400 transition-all duration-300 relative before:content-['>_'] before:opacity-0 before:-translate-x-2 before:transition-all before:duration-300 hover:before:opacity-100 hover:before:translate-x-0 bg-transparent border-0"
-            >
-              bio
-            </button>
-            <button
-              onClick={(e) => handleScroll(e, "#contact")}
-              className="text-gray-400 no-underline font-mono text-sm uppercase tracking-widest cursor-pointer hover:text-cyan-400 transition-all duration-300 relative before:content-['>_'] before:opacity-0 before:-translate-x-2 before:transition-all before:duration-300 hover:before:opacity-100 hover:before:translate-x-0 bg-transparent border-0"
-            >
-              contact
-            </button>
-          </nav>
-        </div>
-        <div className="flex-1 flex items-start justify-center pt-[10%] px-[8%] relative">
-          <div className="flex flex-col items-center">
-            <h2 className="text-7xl md:text-8xl lg:text-9xl font-bold leading-none text-center">
-              <span className="block text-white">CAPTAIN</span>
-              <span
-                className="block bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent"
-                style={{ animation: "float 3s ease-in-out infinite" }}
-              >
-                HACKS
-              </span>
-            </h2>
-            <div className="mt-8 font-mono text-xs text-cyan-400 opacity-60 text-center">
-              <div className="mb-2">$ ./captainhacks.exe</div>
-              <div style={{ animation: "blink 1s step-end infinite" }}>&gt; Status: ACTIVE █</div>
+      <section className="min-h-screen relative z-10 pt-8 md:pt-12 lg:pt-16 px-6 md:px-10" id="home">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+          {/* Left: CAPTAIN HACKS */}
+          <div className="order-2 md:order-1 flex items-start md:items-start">
+            <div className="flex flex-col">
+              <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none">
+                <span className="block text-white">CAPTAIN</span>
+                <span
+                  className="block bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent"
+                  style={{ animation: "float 3s ease-in-out infinite" }}
+                >
+                  HACKS
+                </span>
+              </h2>
+              <div className="mt-6 md:mt-8 font-mono text-xs md:text-sm text-cyan-400 opacity-60">
+                <div className="mb-2">$ ./captainhacks.exe</div>
+                <div style={{ animation: "blink 1s step-end infinite" }}>&gt; Status: ACTIVE █</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Tagline and Nav */}
+          <div className="order-1 md:order-2 relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-[3px] before:h-[60%] before:bg-gradient-to-b before:from-transparent before:via-cyan-400 before:to-transparent before:animate-pulse">
+            <div className="pl-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-10">
+                Hacking the internet
+                <br />
+                one{" "}
+                <span
+                  className="text-cyan-400 animate-pulse"
+                  style={{ textShadow: "0 0 20px #00f0ff", animation: "glitch 3s infinite" }}
+                >
+                  DEAL
+                </span>{" "}
+                at a time.
+              </h1>
+              <nav className="flex gap-8 mt-6">
+                <button
+                  onClick={(e) => handleScroll(e, "#work")}
+                  className="text-gray-400 no-underline font-mono text-base md:text-lg uppercase tracking-widest cursor-pointer hover:text-cyan-400 transition-all duration-300 relative before:content-['>_'] before:opacity-0 before:-translate-x-2 before:transition-all before:duration-300 hover:before:opacity-100 hover:before:translate-x-0 bg-transparent border-0"
+                >
+                  work
+                </button>
+                <button
+                  onClick={(e) => handleScroll(e, "#bio")}
+                  className="text-gray-400 no-underline font-mono text-base md:text-lg uppercase tracking-widest cursor-pointer hover:text-cyan-400 transition-all duration-300 relative before:content-['>_'] before:opacity-0 before:-translate-x-2 before:transition-all before:duration-300 hover:before:opacity-100 hover:before:translate-x-0 bg-transparent border-0"
+                >
+                  bio
+                </button>
+                <button
+                  onClick={(e) => handleScroll(e, "#contact")}
+                  className="text-gray-400 no-underline font-mono text-base md:text-lg uppercase tracking-widest cursor-pointer hover:text-cyan-400 transition-all duration-300 relative before:content-['>_'] before:opacity-0 before:-translate-x-2 before:transition-all before:duration-300 hover:before:opacity-100 hover:before:translate-x-0 bg-transparent border-0"
+                >
+                  contact
+                </button>
+              </nav>
             </div>
           </div>
         </div>
