@@ -123,22 +123,7 @@ export default function CaptainHacks() {
 
   return (
     <>
-      <style jsx global>{`
-        /* Fonts are loaded globally; avoid @import in styled-jsx */
-        
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-        
-        body {
-          font-family: 'Space Grotesk', sans-serif;
-          background: #0a0a0a;
-          color: #ffffff;
-          overflow-x: hidden;
-        }
-        
+      <style dangerouslySetInnerHTML={{__html: `
         .matrix-bg {
           position: fixed;
           top: 0;
@@ -171,7 +156,7 @@ export default function CaptainHacks() {
           0%, 50% { opacity: 1; }
           51%, 100% { opacity: 0; }
         }
-      `}</style>
+      `}} />
 
       <canvas ref={canvasRef} className="matrix-bg" />
 
@@ -275,6 +260,7 @@ export default function CaptainHacks() {
         <div className="max-w-4xl text-xl leading-relaxed text-gray-400 space-y-6">
           <p>
           Captain Hacks is a cheeky rogue hacker who scans the internet to conjuring up  deals for ordinary people. He stealthily slips into ticketing websites  and merchants menus sneakily  nudging  prices down.
+          </p>
           <p>
           He has made it his mission is to bring you deals that will help with todays cost of living crisis. 
           </p>
