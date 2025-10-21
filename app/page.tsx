@@ -115,10 +115,36 @@ export default function CaptainHacks() {
     target?.scrollIntoView({ behavior: "smooth" })
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    alert("Message sent! (Demo only)")
-    setFormData({ name: "", email: "", message: "" })
+    setIsSubmitting(true)
+    setSubmitMessage(null)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubmitMessage({ type: 'success', text: data.message || 'Message sent successfully!' })
+        setFormData({ name: "", email: "", message: "" })
+      } else {
+        setSubmitMessage({ type: 'error', text: data.error || 'Failed to send message. Please try again.' })
+      }
+    } catch (error) {
+      setSubmitMessage({ type: 'error', text: 'Network error. Please check your connection and try again.' })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -365,10 +391,20 @@ export default function CaptainHacks() {
             </div>
             <button
               type="submit"
-              className="px-12 py-5 bg-transparent border-2 border-cyan-400 text-cyan-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-cyan-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0"
+              disabled={isSubmitting}
+              className="px-12 py-5 bg-transparent border-2 border-cyan-400 text-cyan-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-cyan-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
+            {submitMessage && (
+              <div className={`mt-4 p-4 border-2 font-mono text-sm ${
+                submitMessage.type === 'success' 
+                  ? 'border-cyan-400 text-cyan-400 bg-cyan-400/10' 
+                  : 'border-red-400 text-red-400 bg-red-400/10'
+              }`}>
+                {submitMessage.text}
+              </div>
+            )}
           </form>
         </div>
       </section>
