@@ -259,13 +259,13 @@ export default function CaptainHacks() {
         </h2>
         <div className="max-w-4xl text-xl leading-relaxed text-gray-400 space-y-6">
           <p>
-          Captain Hacks is a cheeky rogue hacker who scans the internet to conjuring up  deals for ordinary people. He stealthily slips into ticketing websites  and merchants menus sneakily  nudging  prices down.
+          Captain Hacks is a formidable collective of ethical hackers who surf the internet  conjuring up  deals for ordinary people. They stealthily slip into ticketing websites  and merchants menus sneakily  nudging  down prices.
           </p>
           <p>
-          He has made it his mission is to bring you deals that will help with todays cost of living crisis. 
+          Their mission is to conjure up deals that will help ordinary people in their daily struggle against  todays cost of living crisis. 
           </p>
           <p>
-          He spends his nights scouring the internet stealthily seeking out weaknesses in security systems worldwide , sneakily hacking the internet to bring down prices one deal at a time.
+          They spend their precious time  scouring the internet stealthily seeking out weaknesses in security systems worldwide , sneakily hacking the internet to bring down prices one deal at a time.
           </p>
         </div>
       </section>
