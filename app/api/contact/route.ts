@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
 
 export async function POST(request: Request) {
   try {
@@ -22,34 +23,59 @@ export async function POST(request: Request) {
       )
     }
 
-    // Here you can integrate with your email service
-    // Options include:
-    // 1. Resend: https://resend.com/
-    // 2. SendGrid: https://sendgrid.com/
-    // 3. Nodemailer with SMTP
-    // 4. AWS SES
-    
-    // For now, we'll log it (you can replace this with actual email sending)
-    console.log('Contact form submission:', {
-      name,
-      email,
-      message,
-      timestamp: new Date().toISOString()
+    // Check if email credentials are configured
+    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+      console.error('Email credentials not configured')
+      return NextResponse.json(
+        { error: 'Email service not configured. Please contact the administrator.' },
+        { status: 500 }
+      )
+    }
+
+    // Create transporter with Gmail SMTP
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
+      },
     })
 
-    // Example with Resend (uncomment and configure):
-    /*
-    import { Resend } from 'resend'
-    const resend = new Resend(process.env.RESEND_API_KEY)
-    
-    await resend.emails.send({
-      from: 'contact@yourdomain.com',
-      to: 'your-email@example.com',
+    // Email to website owner
+    const mailOptions = {
+      from: process.env.MAIL_FROM || process.env.GMAIL_USER,
+      to: process.env.GMAIL_USER, // Send to your Gmail address
       replyTo: email,
-      subject: `New contact form submission from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+      subject: `New Contact Form Submission from ${name}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+        <hr>
+        <p><small>Submitted at: ${new Date().toLocaleString()}</small></p>
+      `,
+      text: `
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+
+---
+Submitted at: ${new Date().toLocaleString()}
+      `,
+    }
+
+    // Send email
+    await transporter.sendMail(mailOptions)
+
+    console.log('Contact form submission sent:', {
+      name,
+      email,
+      timestamp: new Date().toISOString()
     })
-    */
 
     return NextResponse.json(
       { success: true, message: 'Message sent successfully!' },
