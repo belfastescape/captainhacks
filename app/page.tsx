@@ -289,6 +289,14 @@ export default function CaptainHacks() {
                   playsInline
                   preload="metadata"
                 />
+              ) : num === 2 ? (
+                <video
+                  className="w-full h-full object-cover"
+                  src="/videos/captainhacksfeERWlow.mp4"
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
               ) : (
                 <>
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
@@ -297,9 +305,7 @@ export default function CaptainHacks() {
                   </div>
                   <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="font-mono text-xl text-cyan-400 mb-2">HACK #{String(num).padStart(3, "0")}</div>
-                    <div className="text-sm text-gray-400">
-                      {num === 2 ? "Flash Sale Video" : "Limited Offer Promo"}
-                    </div>
+                    <div className="text-sm text-gray-400">Limited Offer Promo</div>
                   </div>
                 </>
               )}
