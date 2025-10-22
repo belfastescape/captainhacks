@@ -323,6 +323,14 @@ export default function CaptainHacks() {
                   playsInline
                   preload="metadata"
                 />
+              ) : num === 3 ? (
+                <video
+                  className="w-full h-full object-cover"
+                  src="/videos/newyorkcop.mp4"
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
               ) : (
                 <>
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
