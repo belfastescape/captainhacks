@@ -302,7 +302,7 @@ export default function CaptainHacks() {
          RECENT WORK
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 mt-16">
-          {[1, 2, 3, 4].map((num) => (
+          {[1, 2, 3, 4, 5].map((num) => (
             <div
               key={num}
               className="aspect-[9/16] bg-gray-950 border-2 border-transparent relative overflow-hidden cursor-pointer hover:-translate-y-2 transition-all duration-300 group"
@@ -335,6 +335,14 @@ export default function CaptainHacks() {
                 <video
                   className="w-full h-full object-cover"
                   src="/videos/sisterjane.mp4"
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
+              ) : num === 5 ? (
+                <video
+                  className="w-full h-full object-cover"
+                  src="/videos/aussiesurfer.mp4"
                   controls
                   playsInline
                   preload="metadata"
