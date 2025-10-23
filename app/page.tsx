@@ -285,7 +285,7 @@ export default function CaptainHacks() {
         </h2>
         <div className="max-w-4xl text-xl leading-relaxed text-gray-400 space-y-6">
           <p>
-          Captain Hacks is a formidable collective of ethical hackers who surf the internet  conjuring up  deals for ordinary people. They stealthily slip into ticketing websites  and merchants menus sneakily  nudging  down prices.
+          Captain HACKS is a formidable collective of ethical hackers who surf the internet  conjuring up  deals for ordinary people. They stealthily slip into ticketing websites  and merchants menus sneakily  nudging  down prices.
           </p>
           <p>
           Their mission is to conjure up deals that will help ordinary people in their daily struggle against  todays cost of living crisis. 
