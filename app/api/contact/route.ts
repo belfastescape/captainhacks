@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     }
 
     // Create transporter with MXrouting SMTP
-    const transporter = nodemailer.createTransport({
+    const smtpConfig = {
       host: process.env.SMTP_HOST || 'heracles.mxrouting.net',
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: false, // true for 465, false for other ports like 587
@@ -41,7 +41,25 @@ export async function POST(request: Request) {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD,
       },
+    }
+    
+    console.log('SMTP Config:', {
+      host: smtpConfig.host,
+      port: smtpConfig.port,
+      user: smtpConfig.auth.user,
+      hasPassword: !!smtpConfig.auth.pass
     })
+    
+    const transporter = nodemailer.createTransport(smtpConfig)
+
+    // Verify connection
+    try {
+      await transporter.verify()
+      console.log('SMTP connection verified successfully')
+    } catch (verifyError) {
+      console.error('SMTP verification failed:', verifyError)
+      throw verifyError
+    }
 
     // Email to website owner
     const mailOptions = {
@@ -85,8 +103,18 @@ Submitted at: ${new Date().toLocaleString()}
     )
   } catch (error) {
     console.error('Contact form error:', error)
+    
+    // Log more detailed error information
+    if (error instanceof Error) {
+      console.error('Error message:', error.message)
+      console.error('Error stack:', error.stack)
+    }
+    
     return NextResponse.json(
-      { error: 'Failed to send message. Please try again.' },
+      { 
+        error: 'Failed to send message. Please try again.',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      },
       { status: 500 }
     )
   }
