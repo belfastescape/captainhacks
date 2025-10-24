@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     }
 
     // Check if email credentials are configured
-    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASSWORD) {
       console.error('Email credentials not configured')
       return NextResponse.json(
         { error: 'Email service not configured. Please contact the administrator.' },
@@ -32,19 +32,21 @@ export async function POST(request: Request) {
       )
     }
 
-    // Create transporter with Gmail SMTP
+    // Create transporter with MXrouting SMTP
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: process.env.SMTP_HOST || 'heracles.mxrouting.net',
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      secure: false, // true for 465, false for other ports like 587
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASSWORD,
       },
     })
 
     // Email to website owner
     const mailOptions = {
-      from: process.env.MAIL_FROM || process.env.GMAIL_USER,
-      to: process.env.GMAIL_USER, // Send to your Gmail address
+      from: process.env.MAIL_FROM || process.env.SMTP_USER,
+      to: 'sales@captainhacks.com', // Send to Captain Hacks sales team
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
