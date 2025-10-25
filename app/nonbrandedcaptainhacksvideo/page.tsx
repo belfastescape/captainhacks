@@ -203,7 +203,14 @@ This order was submitted from the Captain Hacks order page.
                   <strong className="text-white"> characters that we have already used </strong> 
                   in our featured videos, or give us the 
                   <span className="text-cyan-400"> age, gender, and physical appearance </span> 
-                  of a new character that we will use to create your video.
+                  of a new character that we will use to create your video. You can give us an entirely new scenario to create your promotional video idea.  
+                </p>
+              </div>
+
+              <div className="flex items-start">
+                <span className="text-yellow-400 mr-3 text-xl font-mono">N.B</span>
+                <p>
+                  <strong className="text-yellow-400">The video play time can be a maximum of 16 seconds.</strong> So try not to overcomplicate the scenario, otherwise it won't work as well. We want it to be short and catchy. We can add a card at the end of the video that displays the offer.
                 </p>
               </div>
 
