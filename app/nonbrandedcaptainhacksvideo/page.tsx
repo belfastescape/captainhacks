@@ -109,7 +109,7 @@ This order was submitted from the Captain Hacks order page.
         })
         // Redirect to Stripe payment after 1.5 seconds
         setTimeout(() => {
-          window.location.href = 'https://buy.stripe.com/eVqfZh3q8aY67g9eUIfUQ00'
+          window.location.href = 'https://buy.stripe.com/3cIcN58KsfemcAteUIfUQ01'
         }, 1500)
       } else {
         setSubmitMessage({ 
@@ -168,7 +168,7 @@ This order was submitted from the Captain Hacks order page.
           <h2 className="text-4xl md:text-6xl font-bold mb-8 text-center">
             <span className="text-cyan-400 font-mono">ORDER YOUR</span>
             <br />
-            <span className="text-yellow-400 font-mono">BRANDED VIDEO</span>
+            <span className="text-yellow-400 font-mono">NON BRANDED VIDEO</span>
           </h2>
 
           {/* Introduction Section */}
@@ -181,16 +181,16 @@ This order was submitted from the Captain Hacks order page.
               <div className="flex items-start">
                 <span className="text-cyan-400 mr-3 text-xl font-mono">▸</span>
                 <p>
-                  <strong className="text-white">Our branded videos</strong> will feature a character who will have the name 
+                  <strong className="text-white">Our NON branded videos</strong> will feature a character who will NOT have the name 
                   <span className="text-cyan-400 font-mono"> "Captain Hacks" </span> 
-                  featured somewhere on their clothing.
+                  featured anywhere on their clothing.
                 </p>
               </div>
 
               <div className="flex items-start">
                 <span className="text-cyan-400 mr-3 text-xl font-mono">▸</span>
                 <p>
-                  The video will have a small 
+                  The video will NOT have a small 
                   <span className="text-yellow-400 font-mono"> Captain Hacks logo </span> 
                   featured at the bottom of the video.
                 </p>
