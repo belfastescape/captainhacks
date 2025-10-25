@@ -391,7 +391,7 @@ This order was submitted from the Captain Hacks order page.
                 disabled={isSubmitting}
                 className="w-full px-8 py-5 bg-transparent border-2 border-yellow-400 text-yellow-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-yellow-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'PROCESSING...' : 'SUBMIT & PAY NOW → $49'}
+                {isSubmitting ? 'PROCESSING...' : 'SUBMIT & PAY NOW → $69'}
               </button>
 
               {submitMessage && (
