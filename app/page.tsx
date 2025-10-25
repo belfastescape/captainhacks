@@ -534,6 +534,21 @@ export default function CaptainHacks() {
           >
             MAP_LOCATION://LOADING...
           </div>
+          
+          {/* Contact Details Card */}
+          <div className="mt-8 bg-black border-2 border-cyan-400 p-6 font-mono">
+            <h3 className="text-xl font-bold text-cyan-400 mb-4 uppercase">Contact Details</h3>
+            <div className="space-y-2 text-gray-300">
+              <div className="flex items-center">
+                <span className="text-cyan-400 mr-2">▸</span>
+                <span className="text-sm">Email: sales@captainhacks</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-cyan-400 mr-2">▸</span>
+                <span className="text-sm">Tel: +64 21 227 9255</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="flex-1 px-[6%] py-32 flex flex-col justify-center">
           <h2 className="text-5xl md:text-7xl font-bold mb-12 text-cyan-400 font-mono before:content-['//_'] before:text-gray-400 before:mr-4">
