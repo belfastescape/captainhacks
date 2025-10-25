@@ -301,6 +301,85 @@ export default function CaptainHacks() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="min-h-screen px-[8%] py-32 bg-gray-950" id="pricing">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold text-cyan-400 font-mono mb-4">
+            Short video pricing options.
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-400 font-mono">
+            Perfect for social media. <span className="text-pink-500">Fast Delivery</span>
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Column 1 - Captain Hacks Video */}
+          <div className="bg-black border-2 border-gray-700 p-8 hover:border-cyan-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,240,255,0.3)] group">
+            <h3 className="text-2xl font-bold text-white mb-2 font-mono">
+              CAPTAIN HACKS VIDEO
+            </h3>
+            <div className="text-5xl font-bold text-cyan-400 my-6 font-mono">
+              $49
+            </div>
+            <ul className="space-y-4 mb-8 text-gray-400">
+              <li className="flex items-start font-mono text-sm">
+                <span className="text-cyan-400 mr-3 text-lg">▸</span>
+                <span>16S VIDEO</span>
+              </li>
+              <li className="flex items-start font-mono text-sm">
+                <span className="text-cyan-400 mr-3 text-lg">▸</span>
+                <span>24 HOUR DELIVERY GUARANTEE</span>
+              </li>
+              <li className="flex items-start font-mono text-sm">
+                <span className="text-cyan-400 mr-3 text-lg">▸</span>
+                <span>USE CAPTAIN HACKS CHARACTER</span>
+              </li>
+              <li className="flex items-start font-mono text-sm">
+                <span className="text-cyan-400 mr-3 text-lg">▸</span>
+                <span>SMALL CAPTAIN HACKS WATERMARK</span>
+              </li>
+            </ul>
+            <button className="w-full px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-cyan-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 group-hover:shadow-[0_0_20px_rgba(0,240,255,0.5)]">
+              BUY NOW
+            </button>
+          </div>
+
+          {/* Column 2 - Your Brand Video */}
+          <div className="bg-black border-2 border-pink-500 p-8 hover:border-pink-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,0,128,0.3)] group relative">
+            <div className="absolute top-4 right-4 bg-pink-500 text-black px-3 py-1 text-xs font-mono font-bold">
+              POPULAR
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-2 font-mono">
+              YOUR BRAND VIDEO
+            </h3>
+            <div className="text-5xl font-bold text-pink-500 my-6 font-mono">
+              $69
+            </div>
+            <ul className="space-y-4 mb-8 text-gray-400">
+              <li className="flex items-start font-mono text-sm">
+                <span className="text-pink-500 mr-3 text-lg">▸</span>
+                <span>UP TO 20SEC VIDEO</span>
+              </li>
+              <li className="flex items-start font-mono text-sm">
+                <span className="text-pink-500 mr-3 text-lg">▸</span>
+                <span>24 HOUR DELIVERY GUARANTEE</span>
+              </li>
+              <li className="flex items-start font-mono text-sm">
+                <span className="text-pink-500 mr-3 text-lg">▸</span>
+                <span>YOUR UNIQUE CHARACTER</span>
+              </li>
+              <li className="flex items-start font-mono text-sm">
+                <span className="text-pink-500 mr-3 text-lg">▸</span>
+                <span>NO WATERMARK</span>
+              </li>
+            </ul>
+            <button className="w-full px-8 py-4 bg-transparent border-2 border-pink-500 text-pink-500 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-pink-500 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 group-hover:shadow-[0_0_20px_rgba(255,0,128,0.5)]">
+              BUY NOW
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Video Section */}
       <section className="min-h-screen flex items-center justify-center px-[8%] py-16 relative bg-gradient-to-b from-black to-gray-950">
         <div
