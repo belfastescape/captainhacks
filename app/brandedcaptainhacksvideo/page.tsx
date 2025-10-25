@@ -143,9 +143,9 @@ This order was submitted from the Captain Hacks order page.
         
         @keyframes glitch {
           0%, 100% { text-shadow: 0 0 20px #00f0ff; }
-          25% { text-shadow: -2px 0 20px #00f0ff, 2px 2px 20px #ff0080; }
-          50% { text-shadow: 2px 0 20px #00f0ff, -2px -2px 20px #ff0080; }
-          75% { text-shadow: -2px 2px 20px #00f0ff, 2px 0 20px #ff0080; }
+          25% { text-shadow: -2px 0 20px #00f0ff, 2px 2px 20px #fbbf24; }
+          50% { text-shadow: 2px 0 20px #00f0ff, -2px -2px 20px #fbbf24; }
+          75% { text-shadow: -2px 2px 20px #00f0ff, 2px 0 20px #fbbf24; }
         }
       `}} />
 
@@ -168,7 +168,7 @@ This order was submitted from the Captain Hacks order page.
           <h2 className="text-4xl md:text-6xl font-bold mb-8 text-center">
             <span className="text-cyan-400 font-mono">ORDER YOUR</span>
             <br />
-            <span className="text-pink-500 font-mono">BRANDED VIDEO</span>
+            <span className="text-yellow-400 font-mono">BRANDED VIDEO</span>
           </h2>
 
           {/* Introduction Section */}
@@ -191,7 +191,7 @@ This order was submitted from the Captain Hacks order page.
                 <span className="text-cyan-400 mr-3 text-xl font-mono">▸</span>
                 <p>
                   The video will have a small 
-                  <span className="text-pink-500 font-mono"> Captain Hacks logo </span> 
+                  <span className="text-yellow-400 font-mono"> Captain Hacks logo </span> 
                   featured at the bottom of the video.
                 </p>
               </div>
@@ -220,15 +220,15 @@ This order was submitted from the Captain Hacks order page.
                 <span className="text-cyan-400 mr-3 text-xl font-mono">▸</span>
                 <p>
                   Give us the 
-                  <span className="text-pink-500"> links to your websites, socials, etc. </span>, 
+                  <span className="text-yellow-400"> links to your websites, socials, etc. </span>, 
                   so that we can get a feel for the style of your business.
                 </p>
               </div>
 
               <div className="flex items-start">
-                <span className="text-pink-500 mr-3 text-xl font-mono">!</span>
+                <span className="text-yellow-400 mr-3 text-xl font-mono">!</span>
                 <p>
-                  <strong className="text-pink-500">IMPORTANT:</strong> Choose the video orientation 
+                  <strong className="text-yellow-400">IMPORTANT:</strong> Choose the video orientation 
                   <span className="text-white"> (portrait or landscape)</span>.
                 </p>
               </div>
@@ -244,7 +244,7 @@ This order was submitted from the Captain Hacks order page.
 
           {/* Order Form */}
           <div className="bg-black border-2 border-gray-700 p-8 mb-12">
-            <h3 className="text-2xl font-bold text-pink-500 mb-8 font-mono before:content-['//_'] before:text-gray-400 before:mr-4">
+            <h3 className="text-2xl font-bold text-yellow-400 mb-8 font-mono before:content-['//_'] before:text-gray-400 before:mr-4">
               ORDER DETAILS
             </h3>
 
@@ -252,7 +252,7 @@ This order was submitted from the Captain Hacks order page.
               {/* Name */}
               <div>
                 <label htmlFor="name" className="block font-mono text-cyan-400 mb-2 text-sm">
-                  YOUR NAME: <span className="text-pink-500">*</span>
+                  YOUR NAME: <span className="text-yellow-400">*</span>
                 </label>
                 <input
                   id="name"
@@ -268,7 +268,7 @@ This order was submitted from the Captain Hacks order page.
               {/* Email */}
               <div>
                 <label htmlFor="email" className="block font-mono text-cyan-400 mb-2 text-sm">
-                  YOUR EMAIL ADDRESS: <span className="text-pink-500">*</span>
+                  YOUR EMAIL ADDRESS: <span className="text-yellow-400">*</span>
                 </label>
                 <input
                   id="email"
@@ -284,7 +284,7 @@ This order was submitted from the Captain Hacks order page.
               {/* Website/Social Links */}
               <div>
                 <label htmlFor="websites" className="block font-mono text-cyan-400 mb-2 text-sm">
-                  YOUR WEBSITE, FACEBOOK, INSTAGRAM, ETC: <span className="text-pink-500">*</span>
+                  YOUR WEBSITE, FACEBOOK, INSTAGRAM, ETC: <span className="text-yellow-400">*</span>
                 </label>
                 <textarea
                   id="websites"
@@ -299,7 +299,7 @@ This order was submitted from the Captain Hacks order page.
               {/* Character Description */}
               <div>
                 <label htmlFor="character" className="block font-mono text-cyan-400 mb-2 text-sm">
-                  DESCRIPTION OF CHARACTER: <span className="text-pink-500">*</span>
+                  DESCRIPTION OF CHARACTER: <span className="text-yellow-400">*</span>
                 </label>
                 <p className="text-gray-400 text-sm mb-2 font-mono">
                   (Choose from our featured videos OR describe: age, gender, physical appearance)
@@ -317,7 +317,7 @@ This order was submitted from the Captain Hacks order page.
               {/* Offer Description */}
               <div>
                 <label htmlFor="offer" className="block font-mono text-cyan-400 mb-2 text-sm">
-                  DESCRIPTION OF OFFER: <span className="text-pink-500">*</span>
+                  DESCRIPTION OF OFFER: <span className="text-yellow-400">*</span>
                 </label>
                 <p className="text-gray-400 text-sm mb-2 font-mono">
                   (The exact deal/offer you want Captain Hacks to hack into your site)
@@ -335,7 +335,7 @@ This order was submitted from the Captain Hacks order page.
               {/* Video Orientation */}
               <div>
                 <label className="block font-mono text-cyan-400 mb-3 text-sm">
-                  VIDEO ORIENTATION: <span className="text-pink-500">*</span>
+                  VIDEO ORIENTATION: <span className="text-yellow-400">*</span>
                 </label>
                 <div className="flex flex-col md:flex-row gap-6">
                   <label className="flex items-center cursor-pointer group">
@@ -358,9 +358,9 @@ This order was submitted from the Captain Hacks order page.
                       value="landscape"
                       checked={formData.orientation === "landscape"}
                       onChange={(e) => setFormData({ ...formData, orientation: e.target.value })}
-                      className="w-5 h-5 mr-3 accent-pink-500"
+                      className="w-5 h-5 mr-3 accent-yellow-400"
                     />
-                    <span className="text-white font-mono group-hover:text-pink-500 transition-colors">
+                    <span className="text-white font-mono group-hover:text-yellow-400 transition-colors">
                       Landscape (16:9) - For YouTube/Facebook
                     </span>
                   </label>
@@ -368,10 +368,10 @@ This order was submitted from the Captain Hacks order page.
               </div>
 
               {/* Price Display */}
-              <div className="bg-gray-900 border-2 border-pink-500 p-6 rounded-none">
+              <div className="bg-gray-900 border-2 border-yellow-400 p-6 rounded-none">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300 font-mono">TOTAL PRICE:</span>
-                  <span className="text-4xl font-bold text-pink-500 font-mono">$49</span>
+                  <span className="text-4xl font-bold text-yellow-400 font-mono">$49</span>
                 </div>
                 <p className="text-gray-400 text-xs mt-2 font-mono">
                   ✓ 24 HOUR DELIVERY GUARANTEE • ✓ SECURE STRIPE PAYMENT
@@ -382,7 +382,7 @@ This order was submitted from the Captain Hacks order page.
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-8 py-5 bg-transparent border-2 border-pink-500 text-pink-500 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-pink-500 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-8 py-5 bg-transparent border-2 border-yellow-400 text-yellow-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-yellow-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'PROCESSING...' : 'SUBMIT & PAY NOW → $49'}
               </button>
