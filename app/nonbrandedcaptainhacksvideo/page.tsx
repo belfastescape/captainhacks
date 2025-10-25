@@ -371,7 +371,7 @@ This order was submitted from the Captain Hacks order page.
               <div className="bg-gray-900 border-2 border-yellow-400 p-6 rounded-none">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300 font-mono">TOTAL PRICE:</span>
-                  <span className="text-4xl font-bold text-yellow-400 font-mono">$49</span>
+                  <span className="text-4xl font-bold text-yellow-400 font-mono">$69</span>
                 </div>
                 <p className="text-gray-400 text-xs mt-2 font-mono">
                   ✓ 24 HOUR DELIVERY GUARANTEE • ✓ SECURE STRIPE PAYMENT
