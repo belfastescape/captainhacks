@@ -324,7 +324,7 @@ export default function CaptainHacks() {
             <ul className="space-y-4 mb-8 text-gray-400">
               <li className="flex items-start font-mono text-sm">
                 <span className="text-cyan-400 mr-3 text-lg">▸</span>
-                <span>16S VIDEO</span>
+                <span>UP TO 16 SEC VIDEO</span>
               </li>
               <li className="flex items-start font-mono text-sm">
                 <span className="text-cyan-400 mr-3 text-lg">▸</span>
@@ -361,7 +361,7 @@ export default function CaptainHacks() {
             <ul className="space-y-4 mb-8 text-gray-400">
               <li className="flex items-start font-mono text-sm">
                 <span className="text-yellow-400 mr-3 text-lg">▸</span>
-                <span>UP TO 20SEC VIDEO</span>
+                <span>UP TO 16 SEC VIDEO</span>
               </li>
               <li className="flex items-start font-mono text-sm">
                 <span className="text-yellow-400 mr-3 text-lg">▸</span>
