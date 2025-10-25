@@ -251,7 +251,7 @@ export default function CaptainHacks() {
       {/* Digital Marketing Section */}
       <section className="min-h-[40vh] px-[8%] py-24 bg-black relative z-10 flex items-center justify-center">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white uppercase tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cyan-400 uppercase tracking-tight">
             DIGITAL MARKETING DONE DIFFERENTLY
           </h2>
         </div>
