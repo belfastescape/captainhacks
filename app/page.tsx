@@ -248,6 +248,15 @@ export default function CaptainHacks() {
         </div>
       </section>
 
+      {/* Digital Marketing Section */}
+      <section className="min-h-[40vh] px-[8%] py-24 bg-black relative z-10 flex items-center justify-center">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white uppercase tracking-tight">
+            DIGITAL MARKETING DONE DIFFERENTLY
+          </h2>
+        </div>
+      </section>
+
       {/* Service Offering Section */}
       <section className="min-h-[60vh] px-[8%] py-24 bg-gradient-to-b from-black to-gray-950 relative z-10">
         <div className="max-w-5xl mx-auto">
