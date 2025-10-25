@@ -376,9 +376,12 @@ export default function CaptainHacks() {
                 <span>NO WATERMARK</span>
               </li>
             </ul>
-            <button className="w-full px-8 py-4 bg-transparent border-2 border-yellow-400 text-yellow-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-yellow-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 group-hover:shadow-[0_0_20px_rgba(251,191,36,0.5)]">
+            <a 
+              href="/nonbrandedcaptainhacksvideo"
+              className="block w-full px-8 py-4 bg-transparent border-2 border-yellow-400 text-yellow-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-yellow-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 group-hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] text-center no-underline"
+            >
               ORDER NOW
-            </button>
+            </a>
           </div>
         </div>
       </section>
