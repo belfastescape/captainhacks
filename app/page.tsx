@@ -339,9 +339,12 @@ export default function CaptainHacks() {
                 <span>SMALL CAPTAIN HACKS WATERMARK</span>
               </li>
             </ul>
-            <button className="w-full px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-cyan-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 group-hover:shadow-[0_0_20px_rgba(0,240,255,0.5)]">
-              BUY NOW
-            </button>
+            <a 
+              href="/brandedcaptainhacksvideo"
+              className="block w-full px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-cyan-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 group-hover:shadow-[0_0_20px_rgba(0,240,255,0.5)] text-center no-underline"
+            >
+              ORDER NOW
+            </a>
           </div>
 
           {/* Column 2 - Your Brand Video */}
@@ -374,7 +377,7 @@ export default function CaptainHacks() {
               </li>
             </ul>
             <button className="w-full px-8 py-4 bg-transparent border-2 border-pink-500 text-pink-500 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-pink-500 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 group-hover:shadow-[0_0_20px_rgba(255,0,128,0.5)]">
-              BUY NOW
+              ORDER NOW
             </button>
           </div>
         </div>
@@ -541,7 +544,7 @@ export default function CaptainHacks() {
             <div className="space-y-2 text-gray-300">
               <div className="flex items-center">
                 <span className="text-cyan-400 mr-2">▸</span>
-                <span className="text-sm">Email: sales@captainhacks</span>
+                <span className="text-sm">Email: sales@captainhacks.com</span>
               </div>
               <div className="flex items-center">
                 <span className="text-cyan-400 mr-2">▸</span>
