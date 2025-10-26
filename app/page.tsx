@@ -504,7 +504,7 @@ export default function CaptainHacks() {
               ) : num === 8 ? (
                 <video
                   className="w-full h-full object-cover"
-                  src="/videos/dogspa.mp4"
+                  src="/videos/dogspawithlogo.mp4"
                   controls
                   playsInline
                   preload="metadata"
