@@ -403,26 +403,49 @@ export default function CaptainHacksHome() {
           RECENT MISSIONS
         </h2>
         
+        <p className="text-gray-400 text-center mb-8 font-mono text-sm">
+          // HOVER TO PREVIEW • CLICK TO PLAY WITH SOUND
+        </p>
+
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Video 1 - femBARISTA */}
           <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300"
+            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
             style={{ aspectRatio: "9/16" }}
+            onClick={(e) => {
+              const video = e.currentTarget.querySelector('video')
+              if (video) {
+                if (video.paused) {
+                  video.muted = false
+                  video.play()
+                } else {
+                  video.pause()
+                  video.currentTime = 0
+                  video.muted = true
+                }
+              }
+            }}
           >
             <video
               className="w-full h-full object-cover"
               loop
               muted
               playsInline
-              onMouseEnter={(e) => e.currentTarget.play()}
+              preload="metadata"
+              onMouseEnter={(e) => {
+                e.currentTarget.muted = true
+                e.currentTarget.play().catch(() => {})
+              }}
               onMouseLeave={(e) => {
-                e.currentTarget.pause()
-                e.currentTarget.currentTime = 0
+                if (e.currentTarget.muted) {
+                  e.currentTarget.pause()
+                  e.currentTarget.currentTime = 0
+                }
               }}
             >
               <source src="/videos/femBARISTA.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: COFFEE SHOP</p>
                 <p className="text-lg">Barista hacks your morning routine</p>
@@ -432,23 +455,42 @@ export default function CaptainHacksHome() {
 
           {/* Video 2 - newyorkcop */}
           <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300"
+            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
             style={{ aspectRatio: "9/16" }}
+            onClick={(e) => {
+              const video = e.currentTarget.querySelector('video')
+              if (video) {
+                if (video.paused) {
+                  video.muted = false
+                  video.play()
+                } else {
+                  video.pause()
+                  video.currentTime = 0
+                  video.muted = true
+                }
+              }
+            }}
           >
             <video
               className="w-full h-full object-cover"
               loop
               muted
               playsInline
-              onMouseEnter={(e) => e.currentTarget.play()}
+              preload="metadata"
+              onMouseEnter={(e) => {
+                e.currentTarget.muted = true
+                e.currentTarget.play().catch(() => {})
+              }}
               onMouseLeave={(e) => {
-                e.currentTarget.pause()
-                e.currentTarget.currentTime = 0
+                if (e.currentTarget.muted) {
+                  e.currentTarget.pause()
+                  e.currentTarget.currentTime = 0
+                }
               }}
             >
               <source src="/videos/newyorkcop.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: SECURITY SERVICES</p>
                 <p className="text-lg">Cop catches the best deal</p>
@@ -458,23 +500,42 @@ export default function CaptainHacksHome() {
 
           {/* Video 3 - wizardemporium */}
           <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300"
+            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
             style={{ aspectRatio: "9/16" }}
+            onClick={(e) => {
+              const video = e.currentTarget.querySelector('video')
+              if (video) {
+                if (video.paused) {
+                  video.muted = false
+                  video.play()
+                } else {
+                  video.pause()
+                  video.currentTime = 0
+                  video.muted = true
+                }
+              }
+            }}
           >
             <video
               className="w-full h-full object-cover"
               loop
               muted
               playsInline
-              onMouseEnter={(e) => e.currentTarget.play()}
+              preload="metadata"
+              onMouseEnter={(e) => {
+                e.currentTarget.muted = true
+                e.currentTarget.play().catch(() => {})
+              }}
               onMouseLeave={(e) => {
-                e.currentTarget.pause()
-                e.currentTarget.currentTime = 0
+                if (e.currentTarget.muted) {
+                  e.currentTarget.pause()
+                  e.currentTarget.currentTime = 0
+                }
               }}
             >
               <source src="/videos/wizardemporium.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: MYSTICAL EMPORIUM</p>
                 <p className="text-lg">Wizard conjures magical savings</p>
@@ -484,23 +545,42 @@ export default function CaptainHacksHome() {
 
           {/* Video 4 - aussiesurfer */}
           <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300"
+            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
             style={{ aspectRatio: "9/16" }}
+            onClick={(e) => {
+              const video = e.currentTarget.querySelector('video')
+              if (video) {
+                if (video.paused) {
+                  video.muted = false
+                  video.play()
+                } else {
+                  video.pause()
+                  video.currentTime = 0
+                  video.muted = true
+                }
+              }
+            }}
           >
             <video
               className="w-full h-full object-cover"
               loop
               muted
               playsInline
-              onMouseEnter={(e) => e.currentTarget.play()}
+              preload="metadata"
+              onMouseEnter={(e) => {
+                e.currentTarget.muted = true
+                e.currentTarget.play().catch(() => {})
+              }}
               onMouseLeave={(e) => {
-                e.currentTarget.pause()
-                e.currentTarget.currentTime = 0
+                if (e.currentTarget.muted) {
+                  e.currentTarget.pause()
+                  e.currentTarget.currentTime = 0
+                }
               }}
             >
               <source src="/videos/aussiesurfer.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: BEACH BRAND</p>
                 <p className="text-lg">Surfer rides the wave of savings</p>
@@ -510,23 +590,42 @@ export default function CaptainHacksHome() {
 
           {/* Video 5 - sisterjane */}
           <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300"
+            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
             style={{ aspectRatio: "9/16" }}
+            onClick={(e) => {
+              const video = e.currentTarget.querySelector('video')
+              if (video) {
+                if (video.paused) {
+                  video.muted = false
+                  video.play()
+                } else {
+                  video.pause()
+                  video.currentTime = 0
+                  video.muted = true
+                }
+              }
+            }}
           >
             <video
               className="w-full h-full object-cover"
               loop
               muted
               playsInline
-              onMouseEnter={(e) => e.currentTarget.play()}
+              preload="metadata"
+              onMouseEnter={(e) => {
+                e.currentTarget.muted = true
+                e.currentTarget.play().catch(() => {})
+              }}
               onMouseLeave={(e) => {
-                e.currentTarget.pause()
-                e.currentTarget.currentTime = 0
+                if (e.currentTarget.muted) {
+                  e.currentTarget.pause()
+                  e.currentTarget.currentTime = 0
+                }
               }}
             >
               <source src="/videos/sisterjane.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: CHARITY</p>
                 <p className="text-lg">Sister Jane blesses your discount</p>
@@ -536,23 +635,42 @@ export default function CaptainHacksHome() {
 
           {/* Video 6 - dogspa */}
           <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300"
+            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
             style={{ aspectRatio: "9/16" }}
+            onClick={(e) => {
+              const video = e.currentTarget.querySelector('video')
+              if (video) {
+                if (video.paused) {
+                  video.muted = false
+                  video.play()
+                } else {
+                  video.pause()
+                  video.currentTime = 0
+                  video.muted = true
+                }
+              }
+            }}
           >
             <video
               className="w-full h-full object-cover"
               loop
               muted
               playsInline
-              onMouseEnter={(e) => e.currentTarget.play()}
+              preload="metadata"
+              onMouseEnter={(e) => {
+                e.currentTarget.muted = true
+                e.currentTarget.play().catch(() => {})
+              }}
               onMouseLeave={(e) => {
-                e.currentTarget.pause()
-                e.currentTarget.currentTime = 0
+                if (e.currentTarget.muted) {
+                  e.currentTarget.pause()
+                  e.currentTarget.currentTime = 0
+                }
               }}
             >
               <source src="/videos/dogspa.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: PET SPA</p>
                 <p className="text-lg">Pups get pampered for less</p>
