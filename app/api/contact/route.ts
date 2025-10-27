@@ -64,7 +64,7 @@ export async function POST(request: Request) {
     // Email to website owner
     const mailOptions = {
       from: process.env.MAIL_FROM || process.env.SMTP_USER,
-      to: 'sales@captainhacks.com', // Send to Captain Hacks sales team
+      to: 'contact@captainhacks.com', // Send to Captain Hacks contact email
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
