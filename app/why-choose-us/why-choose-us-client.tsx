@@ -70,9 +70,12 @@ export function WhyChooseUsClient() {
         <section className="relative z-10 min-h-screen flex items-center justify-center px-4 py-20">
           <div className="max-w-6xl mx-auto text-center">
             <AnimatedSection animation={prefersReducedMotion ? "none" : "slideIn"}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-mono">
-                <span className="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
-                  From Brief to Broadcast: We Create Your Video.
+              <h1 className="font-bold mb-6 font-mono">
+                <span className="block text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent mb-4">
+                  From Brief to Broadcast:
+                </span>
+                <span className="block text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-pink-500 to-cyan-400 bg-clip-text text-transparent">
+                  We Create Your Video.
                 </span>
               </h1>
             </AnimatedSection>
