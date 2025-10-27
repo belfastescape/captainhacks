@@ -14,10 +14,31 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Captain Hacks - Hacking the Internet One Deal at a Time",
+  title: {
+    default: "Captain Hacks - Professional Video Marketing | 24-Hour Delivery",
+    template: "%s | Captain Hacks",
+  },
   description:
-    "Captain Hacks - Your source for viral deals, flash sales, and limited offers. Hacking the internet one deal at a time.",
-  generator: "v0.app",
+    "Professional video editing for small businesses. Scroll-stopping promo videos delivered in 24 hours from $49. Perfect for social media, restaurants, retail & services.",
+  keywords: [
+    "video marketing",
+    "video editing service",
+    "promo videos",
+    "social media videos",
+    "business marketing",
+  ],
+  authors: [{ name: "Captain Hacks" }],
+  creator: "Captain Hacks",
+  publisher: "Captain Hacks",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Captain Hacks",
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@captainhacks",
+  },
 }
 
 export default function RootLayout({
