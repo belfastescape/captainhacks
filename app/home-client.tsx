@@ -326,7 +326,7 @@ export default function CaptainHacksHome() {
               CAPTAIN HACKS VIDEO
             </h3>
             <div className="text-5xl font-bold text-cyan-400 my-6 font-mono">
-              $49usd
+              $49 USD
             </div>
             <ul className="space-y-4 mb-8 text-gray-400">
               <li className="flex items-start font-mono text-sm">
