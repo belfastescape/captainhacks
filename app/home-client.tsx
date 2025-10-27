@@ -792,7 +792,7 @@ export default function CaptainHacksHome() {
           </h2>
 
           {/* Video Section */}
-          <div className="mb-16 max-w-2xl mx-auto" ref={videoRef as React.LegacyRef<HTMLDivElement>}>
+          <div className="mb-16 max-w-2xl mx-auto">
             <div className="relative border-2 border-cyan-400 p-2 bg-black/50 group">
               <video
                 ref={videoRef}
@@ -805,10 +805,10 @@ export default function CaptainHacksHome() {
                 Your browser does not support the video tag.
               </video>
               {!isPlaying && (
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <button
                     onClick={handleManualPlay}
-                    className="bg-cyan-500 hover:bg-cyan-400 text-black rounded-full p-6 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                    className="bg-cyan-500 hover:bg-cyan-400 text-black rounded-full p-6 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-cyan-400 pointer-events-auto"
                     aria-label="Play video"
                   >
                     <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
