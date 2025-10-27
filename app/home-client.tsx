@@ -416,12 +416,15 @@ export default function CaptainHacksHome() {
               const video = e.currentTarget.querySelector('video')
               if (video) {
                 if (video.paused) {
+                  video.loop = false
                   video.muted = false
+                  video.currentTime = 0
                   video.play()
                 } else {
                   video.pause()
                   video.currentTime = 0
                   video.muted = true
+                  video.loop = true
                 }
               }
             }}
@@ -433,14 +436,20 @@ export default function CaptainHacksHome() {
               playsInline
               preload="metadata"
               onMouseEnter={(e) => {
-                e.currentTarget.muted = true
-                e.currentTarget.play().catch(() => {})
+                if (e.currentTarget.muted) {
+                  e.currentTarget.loop = true
+                  e.currentTarget.play().catch(() => {})
+                }
               }}
               onMouseLeave={(e) => {
                 if (e.currentTarget.muted) {
                   e.currentTarget.pause()
                   e.currentTarget.currentTime = 0
                 }
+              }}
+              onEnded={(e) => {
+                e.currentTarget.loop = true
+                e.currentTarget.muted = true
               }}
             >
               <source src="/videos/femBARISTA.mp4" type="video/mp4" />
@@ -461,12 +470,15 @@ export default function CaptainHacksHome() {
               const video = e.currentTarget.querySelector('video')
               if (video) {
                 if (video.paused) {
+                  video.loop = false
                   video.muted = false
+                  video.currentTime = 0
                   video.play()
                 } else {
                   video.pause()
                   video.currentTime = 0
                   video.muted = true
+                  video.loop = true
                 }
               }
             }}
@@ -478,14 +490,20 @@ export default function CaptainHacksHome() {
               playsInline
               preload="metadata"
               onMouseEnter={(e) => {
-                e.currentTarget.muted = true
-                e.currentTarget.play().catch(() => {})
+                if (e.currentTarget.muted) {
+                  e.currentTarget.loop = true
+                  e.currentTarget.play().catch(() => {})
+                }
               }}
               onMouseLeave={(e) => {
                 if (e.currentTarget.muted) {
                   e.currentTarget.pause()
                   e.currentTarget.currentTime = 0
                 }
+              }}
+              onEnded={(e) => {
+                e.currentTarget.loop = true
+                e.currentTarget.muted = true
               }}
             >
               <source src="/videos/newyorkcop.mp4" type="video/mp4" />
@@ -506,12 +524,15 @@ export default function CaptainHacksHome() {
               const video = e.currentTarget.querySelector('video')
               if (video) {
                 if (video.paused) {
+                  video.loop = false
                   video.muted = false
+                  video.currentTime = 0
                   video.play()
                 } else {
                   video.pause()
                   video.currentTime = 0
                   video.muted = true
+                  video.loop = true
                 }
               }
             }}
@@ -523,14 +544,20 @@ export default function CaptainHacksHome() {
               playsInline
               preload="metadata"
               onMouseEnter={(e) => {
-                e.currentTarget.muted = true
-                e.currentTarget.play().catch(() => {})
+                if (e.currentTarget.muted) {
+                  e.currentTarget.loop = true
+                  e.currentTarget.play().catch(() => {})
+                }
               }}
               onMouseLeave={(e) => {
                 if (e.currentTarget.muted) {
                   e.currentTarget.pause()
                   e.currentTarget.currentTime = 0
                 }
+              }}
+              onEnded={(e) => {
+                e.currentTarget.loop = true
+                e.currentTarget.muted = true
               }}
             >
               <source src="/videos/wizardemporium.mp4" type="video/mp4" />
@@ -551,12 +578,15 @@ export default function CaptainHacksHome() {
               const video = e.currentTarget.querySelector('video')
               if (video) {
                 if (video.paused) {
+                  video.loop = false
                   video.muted = false
+                  video.currentTime = 0
                   video.play()
                 } else {
                   video.pause()
                   video.currentTime = 0
                   video.muted = true
+                  video.loop = true
                 }
               }
             }}
@@ -568,14 +598,20 @@ export default function CaptainHacksHome() {
               playsInline
               preload="metadata"
               onMouseEnter={(e) => {
-                e.currentTarget.muted = true
-                e.currentTarget.play().catch(() => {})
+                if (e.currentTarget.muted) {
+                  e.currentTarget.loop = true
+                  e.currentTarget.play().catch(() => {})
+                }
               }}
               onMouseLeave={(e) => {
                 if (e.currentTarget.muted) {
                   e.currentTarget.pause()
                   e.currentTarget.currentTime = 0
                 }
+              }}
+              onEnded={(e) => {
+                e.currentTarget.loop = true
+                e.currentTarget.muted = true
               }}
             >
               <source src="/videos/aussiesurfer.mp4" type="video/mp4" />
@@ -596,12 +632,15 @@ export default function CaptainHacksHome() {
               const video = e.currentTarget.querySelector('video')
               if (video) {
                 if (video.paused) {
+                  video.loop = false
                   video.muted = false
+                  video.currentTime = 0
                   video.play()
                 } else {
                   video.pause()
                   video.currentTime = 0
                   video.muted = true
+                  video.loop = true
                 }
               }
             }}
@@ -613,14 +652,20 @@ export default function CaptainHacksHome() {
               playsInline
               preload="metadata"
               onMouseEnter={(e) => {
-                e.currentTarget.muted = true
-                e.currentTarget.play().catch(() => {})
+                if (e.currentTarget.muted) {
+                  e.currentTarget.loop = true
+                  e.currentTarget.play().catch(() => {})
+                }
               }}
               onMouseLeave={(e) => {
                 if (e.currentTarget.muted) {
                   e.currentTarget.pause()
                   e.currentTarget.currentTime = 0
                 }
+              }}
+              onEnded={(e) => {
+                e.currentTarget.loop = true
+                e.currentTarget.muted = true
               }}
             >
               <source src="/videos/sisterjane.mp4" type="video/mp4" />
@@ -641,12 +686,15 @@ export default function CaptainHacksHome() {
               const video = e.currentTarget.querySelector('video')
               if (video) {
                 if (video.paused) {
+                  video.loop = false
                   video.muted = false
+                  video.currentTime = 0
                   video.play()
                 } else {
                   video.pause()
                   video.currentTime = 0
                   video.muted = true
+                  video.loop = true
                 }
               }
             }}
@@ -658,14 +706,20 @@ export default function CaptainHacksHome() {
               playsInline
               preload="metadata"
               onMouseEnter={(e) => {
-                e.currentTarget.muted = true
-                e.currentTarget.play().catch(() => {})
+                if (e.currentTarget.muted) {
+                  e.currentTarget.loop = true
+                  e.currentTarget.play().catch(() => {})
+                }
               }}
               onMouseLeave={(e) => {
                 if (e.currentTarget.muted) {
                   e.currentTarget.pause()
                   e.currentTarget.currentTime = 0
                 }
+              }}
+              onEnded={(e) => {
+                e.currentTarget.loop = true
+                e.currentTarget.muted = true
               }}
             >
               <source src="/videos/dogspa.mp4" type="video/mp4" />
