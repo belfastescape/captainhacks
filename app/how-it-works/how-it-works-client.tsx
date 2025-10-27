@@ -51,6 +51,54 @@ const faqs = [
 
 export function HowItWorksClient() {
   const [selectedType, setSelectedType] = useState<"branded" | "nonbranded">("branded")
+  const [contactForm, setContactForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null
+    message: string
+  }>({ type: null, message: "" })
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus({ type: null, message: "" })
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(contactForm),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Message sent! We'll get back to you within 24 hours.",
+        })
+        setContactForm({ name: "", email: "", message: "" })
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: data.error || "Failed to send message. Please try again.",
+        })
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "Failed to send message. Please try again.",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <>
@@ -605,19 +653,81 @@ export function HowItWorksClient() {
               </Link>
             </div>
 
-            <div className="mt-16 border-2 border-cyan-400 bg-gray-950 p-8 font-mono rounded-lg">
-              <p className="text-cyan-400 text-xl mb-4">
+            <div className="mt-16 border-2 border-cyan-400 bg-gray-950 p-8 rounded-lg max-w-2xl mx-auto">
+              <p className="text-cyan-400 text-2xl mb-2 font-mono uppercase text-center">
                 <span className="text-4xl mr-2" aria-hidden="true">
                   ⚡
                 </span>
                 Still have questions?
               </p>
-              <Link
-                href="/contact"
-                className="text-gray-400 hover:text-cyan-400 underline transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
-              >
-                Hit us up. We reply fast.
-              </Link>
+              <p className="text-gray-400 text-center mb-8 font-mono">Hit us up. We reply fast.</p>
+
+              <form onSubmit={handleContactSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="contact-name" className="block text-cyan-400 font-mono text-sm uppercase mb-2">
+                    Name
+                  </label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    value={contactForm.name}
+                    onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                    required
+                    className="w-full px-4 py-3 bg-black border-2 border-gray-700 text-white font-mono focus:border-cyan-400 focus:outline-none transition-colors"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="contact-email" className="block text-cyan-400 font-mono text-sm uppercase mb-2">
+                    Email
+                  </label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    value={contactForm.email}
+                    onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                    required
+                    className="w-full px-4 py-3 bg-black border-2 border-gray-700 text-white font-mono focus:border-cyan-400 focus:outline-none transition-colors"
+                    placeholder="your@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="contact-message" className="block text-cyan-400 font-mono text-sm uppercase mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    value={contactForm.message}
+                    onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 bg-black border-2 border-gray-700 text-white font-mono focus:border-cyan-400 focus:outline-none transition-colors resize-none"
+                    placeholder="What do you need help with?"
+                  />
+                </div>
+
+                {submitStatus.type && (
+                  <div
+                    className={`p-4 border-2 font-mono text-sm ${
+                      submitStatus.type === "success"
+                        ? "border-green-500 bg-green-500/10 text-green-400"
+                        : "border-red-500 bg-red-500/10 text-red-400"
+                    }`}
+                  >
+                    {submitStatus.message}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-mono text-lg uppercase tracking-widest relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-cyan-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
+                </button>
+              </form>
             </div>
           </div>
         </section>
