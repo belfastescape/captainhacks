@@ -2,6 +2,44 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Navigation } from "@/components/navigation"
+import { CollapsibleFAQ } from "@/components/collapsible-faq"
+
+const faqs = [
+  {
+    question: "What if I don't like the video?",
+    answer:
+      "We refund you. No questions asked. But this basically never happens because we're good at this.",
+  },
+  {
+    question: "Can I request revisions?",
+    answer:
+      "Minor tweaks? Usually yes. Complete re-do? That's a new order. We get it right the first time 99% of the time.",
+  },
+  {
+    question: "Do I own the video?",
+    answer: "100%. Use it wherever, whenever. We don't care. It's yours.",
+  },
+  {
+    question: "What video formats do you deliver?",
+    answer:
+      "MP4, ready to upload anywhere. TikTok, Instagram, Facebook, LinkedIn, your gran's email - works everywhere.",
+  },
+  {
+    question: "Can I order multiple videos?",
+    answer:
+      "Of course. Bulk discounts available. The more you order, the less you pay per video.",
+  },
+  {
+    question: "What if I need it faster than 24 hours?",
+    answer:
+      "Get in touch. Rush jobs usually possible for an extra fee. But 24 hours is already pretty damn fast.",
+  },
+  {
+    question: "What industries do you work with?",
+    answer:
+      "All of them. Restaurants, gyms, retail, services, e-commerce, real estate, coaches - if you have a deal, we can make it memorable.",
+  },
+]
 
 export default function CaptainHacksHome() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
@@ -814,6 +852,18 @@ export default function CaptainHacksHome() {
             </p>
           </div>
         </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="min-h-screen px-4 sm:px-6 md:px-[8%] py-32 bg-gray-950 relative z-10">
+        <h2 className="text-5xl md:text-7xl font-bold mb-12 text-cyan-400 font-mono before:content-['//_'] before:text-gray-400 before:mr-4">
+          QUICK QUESTIONS
+        </h2>
+        <p className="text-xl text-gray-400 mb-16 max-w-3xl">
+          The answers you need. Click any question to expand.
+        </p>
+
+        <CollapsibleFAQ faqs={faqs} />
       </section>
 
       {/* Contact Section */}
