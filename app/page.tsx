@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { Navigation } from "@/components/navigation"
 
 export default function CaptainHacks() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
@@ -14,6 +15,8 @@ export default function CaptainHacks() {
     if (!canvas) return
 
     const ctx = canvas.getContext("2d")
+    if (!ctx) return
+    
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
@@ -23,6 +26,8 @@ export default function CaptainHacks() {
     const drops = Array(Math.floor(columns)).fill(1)
 
     const drawMatrix = () => {
+      if (!ctx || !canvas) return
+      
       ctx.fillStyle = "rgba(10, 10, 10, 0.05)"
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
@@ -149,6 +154,8 @@ export default function CaptainHacks() {
 
   return (
     <>
+      <Navigation />
+      
       <style dangerouslySetInnerHTML={{__html: `
         .matrix-bg {
           position: fixed;
