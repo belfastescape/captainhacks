@@ -326,12 +326,12 @@ export default function CaptainHacksHome() {
               CAPTAIN HACKS VIDEO
             </h3>
             <div className="text-5xl font-bold text-cyan-400 my-6 font-mono">
-              $49
+              $49 USD
             </div>
             <ul className="space-y-4 mb-8 text-gray-400">
               <li className="flex items-start font-mono text-sm">
                 <span className="text-cyan-400 mr-3 text-lg">▸</span>
-                <span>UP TO 16 SEC VIDEO</span>
+                <span>UP TO 16 SEC VIDEO + END CARD</span>
               </li>
               <li className="flex items-start font-mono text-sm">
                 <span className="text-cyan-400 mr-3 text-lg">▸</span>
@@ -360,7 +360,7 @@ export default function CaptainHacksHome() {
               YOUR BRANDING ONLY
             </h3>
             <div className="text-5xl font-bold text-pink-500 my-6 font-mono">
-              CUSTOM
+              $69 USD
             </div>
             <ul className="space-y-4 mb-8 text-gray-400">
               <li className="flex items-start font-mono text-sm">
