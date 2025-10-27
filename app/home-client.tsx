@@ -952,7 +952,7 @@ export default function CaptainHacksHome() {
                     &lt; 24 HOURS
                   </p>
                   <p className="text-gray-400 mt-2">
-                    We reply fast. Usually within a few hours.
+                    We reply fast. If we are awake. We will answer you ASAP.
                   </p>
                 </div>
 
