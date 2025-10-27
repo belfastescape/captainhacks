@@ -307,14 +307,14 @@ export function WhyChooseUsClient() {
                 className="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-bold text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 mb-6 focus:outline-none focus:ring-4 focus:ring-pink-400/50"
               >
                 <Link href="/contact">
-                  Start Your Free Trial
+                  Order Your First Video
                   <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
                 </Link>
               </Button>
 
               <p className="text-sm text-gray-400 flex items-center justify-center gap-2 flex-wrap">
                 <Shield className="w-5 h-5 text-green-400" aria-hidden="true" />
-                <span>100% Money-Back Guarantee • No Credit Card Required</span>
+                <span>If You Are Not Happy, We Will Not Be Happy. We Will Refund.</span>
               </p>
             </AnimatedSection>
           </div>

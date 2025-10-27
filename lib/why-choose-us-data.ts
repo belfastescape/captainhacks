@@ -69,7 +69,7 @@ export const comparisonData = [
     feature: "Cost per video",
     diy: "Your time + software",
     agency: "$400-$800",
-    captainHacks: "$99-$299",
+    captainHacks: "$49-$69",
   },
   {
     feature: "Turnaround time",
