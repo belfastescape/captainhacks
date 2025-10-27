@@ -62,7 +62,7 @@ export function Navigation() {
               size="sm"
               className="ml-4 bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-black"
             >
-              <Link href="/contact">Get Started</Link>
+              <Link href="/order-now">Order Now</Link>
             </Button>
           </div>
 
@@ -97,8 +97,8 @@ export function Navigation() {
               size="sm"
               className="w-full mt-4 bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
             >
-              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                Get Started
+              <Link href="/order-now" onClick={() => setIsMobileMenuOpen(false)}>
+                Order Now
               </Link>
             </Button>
           </div>
