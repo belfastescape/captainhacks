@@ -12,7 +12,7 @@ export function OrderNowClient() {
 
       <main className="relative z-10">
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-[8%] py-20">
+        <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-[8%] py-32 pt-32">
           <div className="max-w-7xl mx-auto w-full">
             {/* Header */}
             <div className="text-center mb-16">

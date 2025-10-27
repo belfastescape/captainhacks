@@ -306,7 +306,7 @@ export function WhyChooseUsClient() {
                 size="lg"
                 className="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-bold text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 mb-6 focus:outline-none focus:ring-4 focus:ring-pink-400/50"
               >
-                <Link href="/contact">
+                <Link href="/order-now">
                   Order Your First Video
                   <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
                 </Link>
