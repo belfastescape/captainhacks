@@ -7,7 +7,6 @@ import { FloatingCTA } from "@/components/floating-cta"
 import { ProgressIndicator } from "@/components/progress-indicator"
 import { CharacterGallery } from "@/components/character-gallery"
 import { VideoExamples } from "@/components/video-examples"
-import { PricingCalculator } from "@/components/pricing-calculator"
 import { CollapsibleFAQ } from "@/components/collapsible-faq"
 import { sampleScenarios } from "@/lib/character-data"
 import Link from "next/link"
@@ -196,12 +195,12 @@ export function HowItWorksClient() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="bg-black border border-cyan-400 rounded p-4">
                 <div className="text-cyan-400 font-mono text-xs uppercase mb-2">Branded</div>
-                <div className="text-white font-bold text-xl mb-2">FROM $49</div>
+                <div className="text-white font-bold text-xl mb-2"> $49 USD</div>
                 <div className="text-gray-400 text-sm">Captain Hacks logo • 24hr delivery</div>
               </div>
               <div className="bg-black border border-pink-500 rounded p-4">
                 <div className="text-pink-500 font-mono text-xs uppercase mb-2">Non-Branded</div>
-                <div className="text-white font-bold text-xl mb-2">CUSTOM</div>
+                <div className="text-white font-bold text-xl mb-2">$69 USD</div>
                 <div className="text-gray-400 text-sm">100% your brand • 24hr delivery</div>
               </div>
             </div>
@@ -287,7 +286,7 @@ export function HowItWorksClient() {
                 </div>
 
                 <div className="mt-10 pt-8 border-t-2 border-gray-700">
-                  <div className="text-4xl font-mono text-cyan-400 mb-2">FROM $49</div>
+                  <div className="text-4xl font-mono text-cyan-400 mb-2"> $49 USD</div>
                   <p className="text-gray-400 text-sm">
                     Perfect if you like the Captain Hacks vibe and don't mind the co-branding
                   </p>
@@ -394,7 +393,7 @@ export function HowItWorksClient() {
                 </div>
 
                 <div className="mt-10 pt-8 border-t-2 border-gray-700">
-                  <div className="text-4xl font-mono text-pink-500 mb-2">CUSTOM PRICING</div>
+                  <div className="text-4xl font-mono text-pink-500 mb-2">$69 USD</div>
                   <p className="text-gray-400 text-sm">Pure white-label video content. It's all about YOUR brand.</p>
                 </div>
               </div>
@@ -562,18 +561,6 @@ export function HowItWorksClient() {
               </p>
             </div>
           </div>
-        </section>
-
-        {/* Pricing Calculator Section */}
-        <section id="pricing" className="min-h-screen px-4 sm:px-6 md:px-[8%] py-32 bg-black relative z-10">
-          <h2 className="text-5xl md:text-7xl font-bold mb-12 text-cyan-400 font-mono before:content-['//_'] before:text-gray-400 before:mr-4">
-            CALCULATE YOUR INVESTMENT
-          </h2>
-          <p className="text-xl text-gray-400 mb-16 max-w-3xl">
-            See exactly what you'll pay. Bulk orders get automatic discounts.
-          </p>
-
-          <PricingCalculator />
         </section>
 
         {/* FAQ Section */}
