@@ -85,7 +85,7 @@ export function WhyChooseUsClient() {
 
             <AnimatedSection animation={prefersReducedMotion ? "none" : "float"} className="mb-12">
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Professional video editing for small businesses who need quality content without the agency price tag
+                Professional short social videos  for small businesses who need quality content without the agency price tag
                 or DIY headaches.
               </p>
             </AnimatedSection>

@@ -7,7 +7,7 @@ export const painPoints = [
   {
     icon: "DollarSign",
     title: "Expensive Agencies",
-    description: "Traditional agencies charge $2,000-$10,000 per video with long turnaround times.",
+    description: "Traditional agencies charge $400-$800 per video with long turnaround times.",
   },
   {
     icon: "TrendingDown",
@@ -35,7 +35,7 @@ export const benefits = [
   {
     icon: "Rocket",
     title: "Fast Turnaround",
-    description: "Get your edited videos back in 24-48 hours. No more waiting weeks for content.",
+    description: "Get your edited videos back in 24 hours. No more waiting weeks for content.",
   },
   {
     icon: "DollarSign",
@@ -54,8 +54,8 @@ export const benefits = [
   },
   {
     icon: "MessageSquare",
-    title: "Unlimited Revisions",
-    description: "Not happy with something? We'll make it right. No extra charges for revisions.",
+    title: "Revisions",
+    description: "Not happy with something? We'll make it right.",
   },
   {
     icon: "Shield",
@@ -68,14 +68,14 @@ export const comparisonData = [
   {
     feature: "Cost per video",
     diy: "Your time + software",
-    agency: "$2,000-$10,000",
+    agency: "$400-$800",
     captainHacks: "$99-$299",
   },
   {
     feature: "Turnaround time",
     diy: "Days to weeks",
     agency: "1-4 weeks",
-    captainHacks: "24-48 hours",
+    captainHacks: "24 hours",
   },
   {
     feature: "Quality consistency",
@@ -87,7 +87,7 @@ export const comparisonData = [
     feature: "Revisions",
     diy: "More of your time",
     agency: "Limited (extra $$$)",
-    captainHacks: "Unlimited",
+    captainHacks: "Included",
   },
   {
     feature: "Learning curve",
