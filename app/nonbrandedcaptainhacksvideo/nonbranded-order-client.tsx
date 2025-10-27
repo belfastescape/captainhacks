@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { Navigation } from "@/components/navigation"
 
 export default function NonBrandedOrderClient() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
@@ -129,6 +130,8 @@ This order was submitted from the Captain Hacks order page.
 
   return (
     <>
+      <Navigation />
+      
       <style dangerouslySetInnerHTML={{__html: `
         .matrix-bg {
           position: fixed;
@@ -150,16 +153,6 @@ This order was submitted from the Captain Hacks order page.
       `}} />
 
       <canvas ref={canvasRef} className="matrix-bg" />
-
-      {/* Header */}
-      <header className="relative z-10 px-6 md:px-10 py-8 bg-black border-b-2 border-gray-800">
-        <a href="/" className="inline-block">
-          <h1 className="text-3xl md:text-4xl font-bold font-mono">
-            <span className="text-white">CAPTAIN</span>
-            <span className="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent"> HACKS</span>
-          </h1>
-        </a>
-      </header>
 
       {/* Main Content */}
       <section className="relative z-10 min-h-screen px-6 md:px-[8%] py-16 md:py-32 bg-gray-950">
