@@ -438,7 +438,7 @@ export default function CaptainHacksHome() {
       {/* RECENT Section */}
       <section className="min-h-screen px-[8%] py-32 bg-black" id="RECENT">
         <h2 className="text-5xl md:text-7xl font-bold mb-16 text-cyan-400 font-mono before:content-['//_'] before:text-gray-400 before:mr-4">
-          RECENT MISSIONS
+          RECENT CAPTAIN HACKS MISSIONS
         </h2>
         
         <p className="text-gray-400 text-center mb-8 font-mono text-sm">
