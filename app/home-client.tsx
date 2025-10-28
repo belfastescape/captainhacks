@@ -346,39 +346,6 @@ export default function CaptainHacksHome() {
         </div>
       </section>
 
-      {/* Video Comparison Section */}
-      <section className="px-[8%] py-24 bg-black">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white font-mono mb-8 text-center">
-            Captain Hacks Video vs Your Brand Video — What's the Difference?
-          </h2>
-          
-          <div className="space-y-6 text-lg leading-relaxed text-gray-300">
-            <p className="text-xl text-center">
-              Both deliver the same quality and punch — the only real difference is the style.
-            </p>
-            
-            <div className="border-l-4 border-cyan-400 pl-6 py-4 bg-gray-950/50">
-              <p className="font-mono text-cyan-400 uppercase text-sm mb-2">Captain Hacks Videos</p>
-              <p>
-                Feature our fun "hacker" characters who break into websites to unlock deals. They're fast for us to make and help spread the Captain Hacks story.
-              </p>
-            </div>
-            
-            <div className="border-l-4 border-pink-500 pl-6 py-4 bg-gray-950/50">
-              <p className="font-mono text-pink-500 uppercase text-sm mb-2">Your Brand Videos</p>
-              <p>
-                Fully customized around your business — no hackers, just your message.
-              </p>
-            </div>
-            
-            <p className="text-center text-xl font-mono text-cyan-400 pt-4">
-              Whichever you choose, you get a short, scroll-stopping video that gets attention fast.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
       <section className="min-h-screen px-[8%] py-32 bg-gray-950" id="pricing">
         <div className="text-center mb-16">
@@ -814,6 +781,39 @@ export default function CaptainHacksHome() {
           >
             HIRE US FOR YOUR HACK
           </a>
+        </div>
+      </section>
+
+      {/* Video Comparison Section */}
+      <section className="px-[8%] py-24 bg-black">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-white font-mono mb-8 text-center">
+            Captain Hacks Video vs Your Brand Video — What's the Difference?
+          </h2>
+          
+          <div className="space-y-6 text-lg leading-relaxed text-gray-300">
+            <p className="text-xl text-center">
+              Both deliver the same quality and punch — the only real difference is the style.
+            </p>
+            
+            <div className="border-l-4 border-cyan-400 pl-6 py-4 bg-gray-950/50">
+              <p className="font-mono text-cyan-400 uppercase text-sm mb-2">Captain Hacks Videos</p>
+              <p>
+                Feature our fun "hacker" characters who break into websites to unlock deals. They're fast for us to make and help spread the Captain Hacks story.
+              </p>
+            </div>
+            
+            <div className="border-l-4 border-pink-500 pl-6 py-4 bg-gray-950/50">
+              <p className="font-mono text-pink-500 uppercase text-sm mb-2">Your Brand Videos</p>
+              <p>
+                Fully customized around your business — no hackers, just your message.
+              </p>
+            </div>
+            
+            <p className="text-center text-xl font-mono text-cyan-400 pt-4">
+              Whichever you choose, you get a short, scroll-stopping video that gets attention fast.
+            </p>
+          </div>
         </div>
       </section>
 
