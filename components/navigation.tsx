@@ -6,12 +6,12 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/why-choose-us", label: "Why Choose Us" },
-  { href: "/how-it-works", label: "How It Works" },
-  { href: "/will-it-work", label: "Will It Work?" },
-  { href: "/brandedcaptainhacksvideo", label: "Captain Hacks Style Video" },
-  { href: "/nonbrandedcaptainhacksvideo", label: "Your Brand Video" },
+  { href: "/", label: ["Home"], mobileLabel: "Home" },
+  { href: "/why-choose-us", label: ["Why Choose Us?"], mobileLabel: "Why Choose Us?" },
+  { href: "/how-it-works", label: ["How It Works"], mobileLabel: "How It Works" },
+  { href: "/will-it-work", label: ["Will It Work?"], mobileLabel: "Will It Work?" },
+  { href: "/brandedcaptainhacksvideo", label: ["Captain Hacks", "Style Video"], mobileLabel: "Captain Hacks Style Video" },
+  { href: "/nonbrandedcaptainhacksvideo", label: ["Your Brand", "Video"], mobileLabel: "Your Brand Video" },
 ]
 
 export function Navigation() {
@@ -53,9 +53,14 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3 lg:px-4 py-2 text-sm lg:text-base text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black"
+                className="px-3 lg:px-4 py-2 text-sm lg:text-base text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black text-center leading-tight"
               >
-                {item.label}
+                {item.label.map((line, idx) => (
+                  <span key={idx}>
+                    {line}
+                    {idx < item.label.length - 1 && <br />}
+                  </span>
+                ))}
               </Link>
             ))}
             <Button
@@ -90,7 +95,7 @@ export function Navigation() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block px-4 py-3 text-base text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               >
-                {item.label}
+                {item.mobileLabel}
               </Link>
             ))}
             <Button
