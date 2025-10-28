@@ -7,10 +7,11 @@ import { Button } from "@/components/ui/button"
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/order-now", label: "Order Now" },
   { href: "/why-choose-us", label: "Why Choose Us" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/will-it-work", label: "Will It Work?" },
+  { href: "/brandedcaptainhacksvideo", label: "Captain Hacks Style Video" },
+  { href: "/nonbrandedcaptainhacksvideo", label: "Your Brand Video" },
 ]
 
 export function Navigation() {
