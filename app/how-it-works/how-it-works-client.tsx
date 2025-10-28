@@ -47,6 +47,11 @@ const faqs = [
     answer:
       "All of them. Restaurants, gyms, retail, services, e-commerce, real estate, coaches - if you have a deal, we can make it memorable.",
   },
+  {
+    question: "Is this a subscription service?",
+    answer:
+      "No. You will only ever make a one off deal with us for the video that you are ordering.",
+  },
 ]
 
 export function HowItWorksClient() {
