@@ -298,8 +298,62 @@ export default function CaptainHacksHome() {
         </div>
       </section>
 
+      {/* Opening Statement Section */}
+      <section className="px-[8%] py-24 bg-gradient-to-b from-black via-gray-950 to-black relative z-10 overflow-hidden">
+        {/* Background accent elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-6xl mx-auto relative">
+          {/* Top badge */}
+          <div className="text-center mb-8">
+            <span className="inline-block px-6 py-2 border-2 border-cyan-400 bg-cyan-400/10 text-cyan-400 font-mono text-sm uppercase tracking-widest">
+              // Industry Alert
+            </span>
+          </div>
+          
+          {/* Main statement box */}
+          <div 
+            className="relative bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 p-8 md:p-12 lg:p-16 transition-all duration-500 hover:border-cyan-400 hover:shadow-[0_0_50px_rgba(0,240,255,0.2)] group"
+          >
+            {/* Corner accent */}
+            <div className="absolute top-0 left-0 w-20 h-20 border-t-4 border-l-4 border-cyan-400 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute bottom-0 right-0 w-20 h-20 border-b-4 border-r-4 border-pink-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            
+            <div className="relative z-10">
+              <p className="text-2xl md:text-3xl lg:text-5xl leading-relaxed text-white font-bold mb-8">
+                Short-form video has officially taken over{" "}
+                <a 
+                  href="/how-to-use-short-form-video" 
+                  className="relative text-cyan-400 hover:text-pink-500 transition-all duration-300 underline decoration-2 underline-offset-8 decoration-cyan-400 hover:decoration-pink-500 inline-block group/link"
+                  style={{ textShadow: "0 0 15px rgba(0, 240, 255, 0.5)" }}
+                >
+                  <span className="relative z-10">digital marketing</span>
+                  <span className="absolute -right-6 top-0 opacity-0 group-hover/link:opacity-100 group-hover/link:-right-8 transition-all duration-300">→</span>
+                </a>
+              </p>
+              
+              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-pink-500 mb-8"></div>
+              
+              <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed text-gray-300">
+                It's changing the game for small businesses everywhere. Whether you run a café, a startup, or an online store, mastering this format is{" "}
+                <span className="relative inline-block">
+                  <span className="text-pink-500 font-bold relative z-10">no longer optional</span>
+                  <span className="absolute bottom-0 left-0 w-full h-2 bg-pink-500/20"></span>
+                </span>
+                {" "}— it's{" "}
+                <span className="relative inline-block">
+                  <span className="text-cyan-400 font-bold relative z-10">essential</span>
+                  <span className="absolute bottom-0 left-0 w-full h-2 bg-cyan-400/20"></span>
+                </span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Digital Marketing Section */}
-      <section className="min-h-[40vh] px-[8%] py-24 bg-black relative z-10 flex items-center justify-center">
+      <section className="min-h-[40vh] px-[8%] py-24 bg-gray-950 relative z-10 flex items-center justify-center">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cyan-400 uppercase tracking-tight">
             DIGITAL MARKETING DONE DIFFERENTLY
