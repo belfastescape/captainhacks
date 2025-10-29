@@ -92,11 +92,11 @@ export function SevenReasonsClient() {
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-center">
-              <span className="text-white">7 Reasons Your Brand Should Be Using </span>
+              <span className="text-white">How Smart Brands Are Using </span>
               <span className="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent animate-pulse">
-                Short-Form Video Content
+                Short-Form Video
               </span>
-              <span className="text-white"> in 2025</span>
+              <span className="text-white"> in Digital Marketing in 2025</span>
             </h1>
             
             <p className="text-xl text-gray-400 text-center max-w-3xl mx-auto mb-12">
