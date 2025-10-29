@@ -440,7 +440,7 @@ export default function CaptainHacksHome() {
               </li>
               <li className="flex items-start font-mono text-sm">
                 <span className="text-cyan-400 mr-3 text-lg">▸</span>
-                <span>SMALL CAPTAIN HACKS WATERMARK</span>
+                <span>SMALL CAPTAIN HACKS LOGO</span>
               </li>
             </ul>
             <a 
@@ -474,7 +474,7 @@ export default function CaptainHacksHome() {
               </li>
               <li className="flex items-start font-mono text-sm">
                 <span className="text-pink-500 mr-3 text-lg">▸</span>
-                <span>NO CAPTAIN HACKS WATERMARK</span>
+                <span>NO CAPTAIN HACKS LOGO</span>
               </li>
             </ul>
             <a 

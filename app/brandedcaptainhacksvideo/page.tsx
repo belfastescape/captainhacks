@@ -4,7 +4,7 @@ import BrandedOrderClient from "./branded-order-client"
 export const metadata: Metadata = {
   title: "Order Branded Video - Captain Hacks | $39 Video Editing",
   description:
-    "Order a branded Captain Hacks promo video for your business. Get a professional 16-second video with our character and small watermark. 24-hour delivery guaranteed. Only $39.",
+    "Order a branded Captain Hacks promo video for your business. Get a professional 16-second video with our character and small logo. 24-hour delivery guaranteed. Only $39.",
   keywords: [
     "order promo video",
     "branded video",

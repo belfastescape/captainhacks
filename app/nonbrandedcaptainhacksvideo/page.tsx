@@ -4,7 +4,7 @@ import NonBrandedOrderClient from "./nonbranded-order-client"
 export const metadata: Metadata = {
   title: "Order Non-Branded Video - Captain Hacks | Custom Video Editing",
   description:
-    "Order a 100% white-label video for your business. Custom characters, your branding only, no watermarks. Professional video editing with 24-hour delivery. Custom pricing.",
+    "Order a 100% white-label video for your business. Custom characters, your branding only, no logos. Professional video editing with 24-hour delivery. Custom pricing.",
   keywords: [
     "white label video",
     "custom video editing",

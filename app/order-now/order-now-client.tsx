@@ -52,7 +52,7 @@ export function OrderNowClient() {
                   </li>
                   <li className="flex items-start font-mono text-sm">
                     <span className="text-cyan-400 mr-3 text-lg flex-shrink-0">▸</span>
-                    <span>SMALL CAPTAIN HACKS WATERMARK</span>
+                    <span>SMALL CAPTAIN HACKS LOGO</span>
                   </li>
                 </ul>
                 <Link
@@ -89,7 +89,7 @@ export function OrderNowClient() {
                   </li>
                   <li className="flex items-start font-mono text-sm">
                     <span className="text-pink-500 mr-3 text-lg flex-shrink-0">▸</span>
-                    <span>NO CAPTAIN HACKS WATERMARK</span>
+                    <span>NO CAPTAIN HACKS LOGO</span>
                   </li>
                 </ul>
                 <Link
