@@ -48,11 +48,11 @@ export function HowToUseClient() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-              <span className="text-white">How to Use </span>
+              <span className="text-white">Using </span>
               <span className="text-cyan-400" style={{ textShadow: "0 0 20px #00f0ff" }}>
                 Short-Form Video
               </span>
-              <span className="text-white"> in Digital Marketing</span>
+              <span className="text-white"> to Elevate Your Digital Marketing Strategy</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">

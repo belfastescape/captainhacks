@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { HowToUseClient } from "./how-to-use-client"
 
 export const metadata: Metadata = {
-  title: "How to Use Short-Form Video in Digital Marketing | Captain Hacks",
+  title: "Using Short-Form Video to Elevate Your Digital Marketing Strategy | Captain Hacks",
   description:
     "Learn how to strategically use short-form video in your digital marketing mix. From driving reach to generating sales, discover the best practices and strategies for 2025.",
   keywords: [
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     "video SEO",
   ],
   openGraph: {
-    title: "How to Use Short-Form Video in Digital Marketing",
+    title: "Using Short-Form Video to Elevate Your Digital Marketing Strategy",
     description: "Master short-form video strategy and turn it into a growth engine for your brand",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
-    title: "How to Use Short-Form Video in Digital Marketing",
+    title: "Using Short-Form Video to Elevate Your Digital Marketing Strategy",
     description: "Master short-form video strategy and turn it into a growth engine for your brand",
   },
 }
