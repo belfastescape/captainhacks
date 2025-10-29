@@ -457,7 +457,7 @@ export default function CaptainHacksHome() {
               YOUR BRANDING ONLY
             </h3>
             <div className="text-5xl font-bold text-pink-500 my-6 font-mono">
-              $69 USD
+              $49 USD
             </div>
             <ul className="space-y-4 mb-8 text-gray-400">
               <li className="flex items-start font-mono text-sm">

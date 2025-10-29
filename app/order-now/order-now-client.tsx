@@ -72,7 +72,7 @@ export function OrderNowClient() {
                   YOUR BRANDING ONLY
                 </h2>
                 <div className="text-5xl font-bold text-pink-500 my-6 font-mono text-center">
-                  $69 USD
+                  $49 USD
                 </div>
                 <ul className="space-y-4 mb-8 text-gray-400">
                   <li className="flex items-start font-mono text-sm">

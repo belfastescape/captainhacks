@@ -253,7 +253,7 @@ export function HowItWorksClient() {
               </div>
               <div className="bg-black border border-pink-500 rounded p-4">
                 <div className="text-pink-500 font-mono text-xs uppercase mb-2">Non-Branded</div>
-                <div className="text-white font-bold text-xl mb-2">$69 USD</div>
+                <div className="text-white font-bold text-xl mb-2">$49 USD</div>
                 <div className="text-gray-400 text-sm">100% your brand • 24hr delivery</div>
               </div>
             </div>
@@ -446,7 +446,7 @@ export function HowItWorksClient() {
                 </div>
 
                 <div className="mt-10 pt-8 border-t-2 border-gray-700">
-                  <div className="text-4xl font-mono text-pink-500 mb-2">$69 USD</div>
+                  <div className="text-4xl font-mono text-pink-500 mb-2">$49 USD</div>
                   <p className="text-gray-400 text-sm">Pure white-label video content. It's all about YOUR brand.</p>
                 </div>
               </div>
