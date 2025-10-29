@@ -336,7 +336,7 @@ export default function CaptainHacksHome() {
               </div>
               <p className="text-2xl md:text-3xl font-bold text-center">
                 <span className="text-white">Your video. Your deal. 24 hours. </span>
-                <span className="text-cyan-400" style={{ textShadow: "0 0 15px #00f0ff" }}>from $49.</span>
+                <span className="text-cyan-400" style={{ textShadow: "0 0 15px #00f0ff" }}>from $39.</span>
               </p>
             </div>
             
@@ -423,7 +423,7 @@ export default function CaptainHacksHome() {
               CAPTAIN HACKS VIDEO
             </h3>
             <div className="text-5xl font-bold text-cyan-400 my-6 font-mono">
-              $49 USD
+              $39 USD
             </div>
             <ul className="space-y-4 mb-8 text-gray-400">
               <li className="flex items-start font-mono text-sm">

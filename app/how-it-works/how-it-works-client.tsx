@@ -248,7 +248,7 @@ export function HowItWorksClient() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="bg-black border border-cyan-400 rounded p-4">
                 <div className="text-cyan-400 font-mono text-xs uppercase mb-2">Branded</div>
-                <div className="text-white font-bold text-xl mb-2"> $49 USD</div>
+                <div className="text-white font-bold text-xl mb-2"> $39 USD</div>
                 <div className="text-gray-400 text-sm">Captain Hacks logo • 24hr delivery</div>
               </div>
               <div className="bg-black border border-pink-500 rounded p-4">
@@ -339,7 +339,7 @@ export function HowItWorksClient() {
                 </div>
 
                 <div className="mt-10 pt-8 border-t-2 border-gray-700">
-                  <div className="text-4xl font-mono text-cyan-400 mb-2"> $49 USD</div>
+                  <div className="text-4xl font-mono text-cyan-400 mb-2"> $39 USD</div>
                   <p className="text-gray-400 text-sm">
                     Perfect if you like the Captain Hacks vibe and don't mind the co-branding
                   </p>

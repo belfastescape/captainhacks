@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Captain Hacks",
   },
   description:
-    "Professional video editing for small businesses. Scroll-stopping promo videos delivered in 24 hours from $49. Perfect for social media, restaurants, retail & services.",
+    "Professional video editing for small businesses. Scroll-stopping promo videos delivered in 24 hours from $39. Perfect for social media, restaurants, retail & services.",
   keywords: [
     "video marketing",
     "video editing service",
