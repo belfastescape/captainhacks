@@ -298,6 +298,59 @@ export default function CaptainHacksHome() {
         </div>
       </section>
 
+      {/* Digital Marketing Section */}
+      <section className="min-h-[40vh] px-[8%] py-24 bg-gray-950 relative z-10 flex items-center justify-center">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cyan-400 uppercase tracking-tight">
+            DIGITAL MARKETING DONE DIFFERENTLY
+          </h2>
+        </div>
+      </section>
+
+      {/* Service Offering Section */}
+      <section className="min-h-[60vh] px-[8%] py-24 bg-gradient-to-b from-black to-gray-950 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-12 leading-tight">
+            <span className="text-white">We'll Hack Your Brand</span>
+            <br />
+            <span className="text-cyan-400" style={{ textShadow: "0 0 20px #00f0ff" }}>
+              Into People's Brains
+            </span>
+          </h2>
+          
+          <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-300">
+            <p>
+              Need a promo video that actually stops the scroll? We create short, sharp, attention-hijacking Facebook reels that make your business impossible to ignore.
+            </p>
+            
+            <p>
+              Each 15-20 second video features our Captain Hacks crew "infiltrating" your business to unleash your latest deal, discount, or offer. Think: a wizard conjuring 20% off wands, a nun blessing book discounts, a cop commandeering free pizza nights. Weird? Yes. Memorable? Absolutely.
+            </p>
+            
+            <div 
+              className="p-8 my-8 border-2 border-cyan-400 bg-black/50 relative"
+              style={{ boxShadow: "0 0 30px rgba(0, 240, 255, 0.2)" }}
+            >
+              <div className="absolute -top-3 left-6 bg-gray-950 px-3 font-mono text-cyan-400 text-sm">
+                PACKAGE_DETAILS
+              </div>
+              <p className="text-2xl md:text-3xl font-bold text-center">
+                <span className="text-white">Your video. Your deal. 24 hours. </span>
+                <span className="text-cyan-400" style={{ textShadow: "0 0 15px #00f0ff" }}>from $49.</span>
+              </p>
+            </div>
+            
+            <p>
+              Perfect for restaurants, retail stores, service businesses, or anyone who needs fast, affordable video content that doesn't look like every other boring promo out there. No lengthy contracts. No corporate fluff. Just pay upfront, tell us your deal, and we'll hack it into existence.
+            </p>
+            
+            <p className="text-xl md:text-2xl font-bold text-cyan-400 pt-4">
+              Why settle for forgettable when you can be unforgettable?
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Opening Statement Section */}
       <section className="px-[8%] py-24 bg-gradient-to-b from-black via-gray-950 to-black relative z-10 overflow-hidden">
         {/* Background accent elements */}
@@ -348,59 +401,6 @@ export default function CaptainHacksHome() {
                 </span>.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Digital Marketing Section */}
-      <section className="min-h-[40vh] px-[8%] py-24 bg-gray-950 relative z-10 flex items-center justify-center">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cyan-400 uppercase tracking-tight">
-            DIGITAL MARKETING DONE DIFFERENTLY
-          </h2>
-        </div>
-      </section>
-
-      {/* Service Offering Section */}
-      <section className="min-h-[60vh] px-[8%] py-24 bg-gradient-to-b from-black to-gray-950 relative z-10">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-12 leading-tight">
-            <span className="text-white">We'll Hack Your Brand</span>
-            <br />
-            <span className="text-cyan-400" style={{ textShadow: "0 0 20px #00f0ff" }}>
-              Into People's Brains
-            </span>
-          </h2>
-          
-          <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-300">
-            <p>
-              Need a promo video that actually stops the scroll? We create short, sharp, attention-hijacking Facebook reels that make your business impossible to ignore.
-            </p>
-            
-            <p>
-              Each 15-20 second video features our Captain Hacks crew "infiltrating" your business to unleash your latest deal, discount, or offer. Think: a wizard conjuring 20% off wands, a nun blessing book discounts, a cop commandeering free pizza nights. Weird? Yes. Memorable? Absolutely.
-            </p>
-            
-            <div 
-              className="p-8 my-8 border-2 border-cyan-400 bg-black/50 relative"
-              style={{ boxShadow: "0 0 30px rgba(0, 240, 255, 0.2)" }}
-            >
-              <div className="absolute -top-3 left-6 bg-gray-950 px-3 font-mono text-cyan-400 text-sm">
-                PACKAGE_DETAILS
-              </div>
-              <p className="text-2xl md:text-3xl font-bold text-center">
-                <span className="text-white">Your video. Your deal. 24 hours. </span>
-                <span className="text-cyan-400" style={{ textShadow: "0 0 15px #00f0ff" }}>from $49.</span>
-              </p>
-            </div>
-            
-            <p>
-              Perfect for restaurants, retail stores, service businesses, or anyone who needs fast, affordable video content that doesn't look like every other boring promo out there. No lengthy contracts. No corporate fluff. Just pay upfront, tell us your deal, and we'll hack it into existence.
-            </p>
-            
-            <p className="text-xl md:text-2xl font-bold text-cyan-400 pt-4">
-              Why settle for forgettable when you can be unforgettable?
-            </p>
           </div>
         </div>
       </section>
