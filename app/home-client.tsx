@@ -1015,10 +1015,81 @@ export default function CaptainHacksHome() {
           </div>
 
           {/* Footer */}
-          <div className="mt-24 pt-12 border-t border-gray-800 text-center">
-            <p className="text-gray-500 font-mono text-sm">
-              © {new Date().getFullYear()} Captain Hacks. Hacking deals since day one.
-            </p>
+          <div className="mt-24 pt-12 border-t border-gray-800">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {/* Column 1 - Resources */}
+              <div>
+                <h3 className="text-cyan-400 font-mono text-sm uppercase mb-4 tracking-wider">
+                  Resources
+                </h3>
+                <ul className="space-y-3">
+                  <li>
+                    <a 
+                      href="/7-reasons-short-form-video" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      7 Reasons Your Brand Should Use Short-Form Video in 2025
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Column 2 - Quick Links */}
+              <div>
+                <h3 className="text-cyan-400 font-mono text-sm uppercase mb-4 tracking-wider">
+                  Quick Links
+                </h3>
+                <ul className="space-y-3">
+                  <li>
+                    <a 
+                      href="/#pricing" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      Pricing
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/#RECENT" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      Our Work
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/#faq" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      FAQ
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Column 3 - Contact */}
+              <div>
+                <h3 className="text-cyan-400 font-mono text-sm uppercase mb-4 tracking-wider">
+                  Contact
+                </h3>
+                <ul className="space-y-3">
+                  <li>
+                    <a 
+                      href="#contact" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      Get in Touch
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center pt-8 border-t border-gray-700">
+              <p className="text-gray-500 font-mono text-sm">
+                © {new Date().getFullYear()} Captain Hacks. Hacking deals since day one.
+              </p>
+            </div>
           </div>
         </div>
       </section>
