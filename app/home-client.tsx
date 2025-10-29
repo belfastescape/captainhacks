@@ -1031,6 +1031,14 @@ export default function CaptainHacksHome() {
                       7 Reasons Your Brand Should Use Short-Form Video in 2025
                     </a>
                   </li>
+                  <li>
+                    <a 
+                      href="/how-to-use-short-form-video" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      How To Use Short Form Video in Digital Marketing
+                    </a>
+                  </li>
                 </ul>
               </div>
 
