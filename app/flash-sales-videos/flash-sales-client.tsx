@@ -639,36 +639,61 @@ export function FlashSalesClient() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {[
-                {
-                  title: "Weekend Flash Sale",
-                  thumbnail: "🛍️",
-                  description: "50% off everything - 48 hours only"
-                },
-                {
-                  title: "New Product Launch",
-                  thumbnail: "🚀",
-                  description: "First 24 hours special pricing"
-                },
-                {
-                  title: "Clearance Event",
-                  thumbnail: "🔥",
-                  description: "Limited stock - ends midnight"
-                }
-              ].map((video, idx) => (
-                <div key={idx} className="bg-gradient-to-br from-gray-900 to-black border-2 border-pink-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-pink-400/70 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)]">
-                  <div className="relative aspect-[9/16] bg-gradient-to-br from-red-900/30 to-pink-900/30 flex items-center justify-center">
-                    <div className="text-8xl">{video.thumbnail}</div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Play className="w-16 h-16 text-white opacity-80" />
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <h4 className="font-bold text-pink-400 text-lg mb-2">{video.title}</h4>
-                    <p className="text-gray-400 text-sm">{video.description}</p>
+              {/* Weekend Flash Sale - Real Video */}
+              <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-pink-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-pink-400/70 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)] group">
+                <div className="relative aspect-[9/16] bg-black">
+                  <video
+                    className="w-full h-full object-cover"
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    onMouseEnter={(e) => e.currentTarget.play()}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.pause()
+                      e.currentTarget.currentTime = 0
+                    }}
+                  >
+                    <source src="/videos/Chilled Bliss Promo No logo.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition-all duration-300 flex items-center justify-center">
+                    <Play className="w-16 h-16 text-pink-400 group-hover:opacity-0 transition-opacity duration-300" />
                   </div>
                 </div>
-              ))}
+                <div className="p-4">
+                  <h4 className="font-bold text-pink-400 text-lg mb-2">Weekend Flash Sale</h4>
+                  <p className="text-gray-400 text-sm">50% off everything - 48 hours only</p>
+                </div>
+              </div>
+
+              {/* New Product Launch - Placeholder */}
+              <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-pink-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-pink-400/70 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)]">
+                <div className="relative aspect-[9/16] bg-gradient-to-br from-red-900/30 to-pink-900/30 flex items-center justify-center">
+                  <div className="text-8xl">🚀</div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Play className="w-16 h-16 text-white opacity-80" />
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-bold text-pink-400 text-lg mb-2">New Product Launch</h4>
+                  <p className="text-gray-400 text-sm">First 24 hours special pricing</p>
+                </div>
+              </div>
+
+              {/* Clearance Event - Placeholder */}
+              <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-pink-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-pink-400/70 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)]">
+                <div className="relative aspect-[9/16] bg-gradient-to-br from-red-900/30 to-pink-900/30 flex items-center justify-center">
+                  <div className="text-8xl">🔥</div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Play className="w-16 h-16 text-white opacity-80" />
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-bold text-pink-400 text-lg mb-2">Clearance Event</h4>
+                  <p className="text-gray-400 text-sm">Limited stock - ends midnight</p>
+                </div>
+              </div>
             </div>
 
             <div className="text-center bg-gradient-to-r from-cyan-900/30 to-pink-900/30 border-2 border-cyan-400/50 rounded-2xl p-8">
