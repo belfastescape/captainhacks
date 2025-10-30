@@ -647,23 +647,25 @@ export function FlashSalesClient() {
                     loop
                     muted
                     playsInline
-                    preload="metadata"
-                    onMouseEnter={(e) => e.currentTarget.play()}
+                    preload="auto"
+                    onMouseEnter={(e) => {
+                      e.currentTarget.play().catch(err => console.log('Play failed:', err))
+                    }}
                     onMouseLeave={(e) => {
                       e.currentTarget.pause()
                       e.currentTarget.currentTime = 0
                     }}
                   >
-                    <source src="/videos/Chilled Bliss Promo No logo.mp4" type="video/mp4" />
+                    <source src="/videos/Chilled%20Bliss%20Promo%20No%20logo.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
-                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition-all duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition-all duration-300 flex items-center justify-center pointer-events-none">
                     <Play className="w-16 h-16 text-pink-400 group-hover:opacity-0 transition-opacity duration-300" />
                   </div>
                 </div>
                 <div className="p-4">
                   <h4 className="font-bold text-pink-400 text-lg mb-2">Weekend Flash Sale</h4>
-                  <p className="text-gray-400 text-sm">50% off everything - 48 hours only</p>
+                  <p className="text-gray-400 text-sm">Buy 2 scoops, get 1 free. This Weekend Only</p>
                 </div>
               </div>
 
