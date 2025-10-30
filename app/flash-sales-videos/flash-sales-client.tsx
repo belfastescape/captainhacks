@@ -655,7 +655,7 @@ export function FlashSalesClient() {
                     playsInline
                     preload="auto"
                   >
-                    <source src="/videos/Chilled%20Bliss%20Promo%20No%20logo.mp4" type="video/mp4" />
+                    <source src="/videos/Chilled-Bliss-Weekend-Promo.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                   <div className="absolute inset-0 bg-black/50 transition-all duration-300 flex items-center justify-center pointer-events-none">
