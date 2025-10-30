@@ -1126,6 +1126,14 @@ export default function CaptainHacksHome() {
                       FAQ
                     </a>
                   </li>
+                  <li>
+                    <a 
+                      href="/promo-videos-for-small-business" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      Promo Videos for Small Business
+                    </a>
+                  </li>
                 </ul>
               </div>
 
