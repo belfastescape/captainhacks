@@ -423,7 +423,7 @@ export function FlashSalesClient() {
                     ))}
                   </div>
                   <p className="text-xl text-gray-200 mb-6 leading-relaxed">
-                    "Best $49 I ever spent. We moved 3 months of inventory in 48 hours."
+                    "Best investment I ever made. We moved 3 months of inventory in 48 hours."
                   </p>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-red-400 to-pink-400 flex items-center justify-center text-white font-bold text-xl">
@@ -501,7 +501,7 @@ export function FlashSalesClient() {
 
             <div className="text-center bg-gradient-to-r from-red-900/30 to-pink-900/30 border-2 border-red-500/50 rounded-2xl p-8">
               <p className="text-3xl md:text-4xl font-black text-white mb-2">
-                All for just <span className="text-red-400">$49 USD</span> per video.
+                All for just <span className="text-red-400">from $39 USD</span> per video.
               </p>
             </div>
 
@@ -721,7 +721,7 @@ export function FlashSalesClient() {
               
               <div className="bg-gradient-to-br from-pink-900/30 to-black border-2 border-pink-500/30 rounded-xl p-8 text-center hover:border-pink-400/50 transition-all duration-300 hover:scale-105">
                 <DollarSign className="w-16 h-16 text-pink-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-pink-400 mb-2">💸 Only $49 USD per video</h3>
+                <h3 className="text-2xl font-bold text-pink-400 mb-2">💸 Only from $39 USD per video</h3>
               </div>
               
               <div className="bg-gradient-to-br from-cyan-900/30 to-black border-2 border-cyan-500/30 rounded-xl p-8 text-center hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
@@ -759,7 +759,7 @@ export function FlashSalesClient() {
             </Link>
 
             <p className="text-sm text-gray-500 mt-12 font-mono">
-              ⚡ 24-hour delivery • 💸 $49 per video • 🎯 Results-driven
+              ⚡ 24-hour delivery • 💸 from $39 per video • 🎯 Results-driven
             </p>
           </div>
         </section>
