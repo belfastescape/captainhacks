@@ -641,26 +641,25 @@ export function FlashSalesClient() {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {/* Weekend Flash Sale - Real Video */}
               <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-pink-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-pink-400/70 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)] group">
-                <div className="relative aspect-[9/16] bg-black">
+                <div className="relative aspect-[9/16] bg-black cursor-pointer"
+                  onClick={(e) => {
+                    const video = e.currentTarget.querySelector('video')
+                    if (video) {
+                      video.currentTime = 0
+                      video.play().catch(err => console.log('Play failed:', err))
+                    }
+                  }}
+                >
                   <video
                     className="w-full h-full object-cover"
-                    loop
-                    muted
                     playsInline
                     preload="auto"
-                    onMouseEnter={(e) => {
-                      e.currentTarget.play().catch(err => console.log('Play failed:', err))
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.pause()
-                      e.currentTarget.currentTime = 0
-                    }}
                   >
                     <source src="/videos/Chilled%20Bliss%20Promo%20No%20logo.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
-                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/0 transition-all duration-300 flex items-center justify-center pointer-events-none">
-                    <Play className="w-16 h-16 text-pink-400 group-hover:opacity-0 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-black/50 transition-all duration-300 flex items-center justify-center pointer-events-none">
+                    <Play className="w-16 h-16 text-pink-400 transition-opacity duration-300" />
                   </div>
                 </div>
                 <div className="p-4">
