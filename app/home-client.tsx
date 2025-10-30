@@ -1093,6 +1093,14 @@ export default function CaptainHacksHome() {
                       How To Use Short Form Video in Digital Marketing
                     </a>
                   </li>
+                  <li>
+                    <a 
+                      href="/flash-sales-videos" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      Flash-Sale Videos That Sell Fast
+                    </a>
+                  </li>
                 </ul>
               </div>
 
