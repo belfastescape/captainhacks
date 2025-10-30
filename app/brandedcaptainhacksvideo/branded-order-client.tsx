@@ -110,7 +110,7 @@ This order was submitted from the Captain Hacks order page.
         })
         // Redirect to Stripe payment after 1.5 seconds
         setTimeout(() => {
-          window.location.href = 'https://buy.stripe.com/eVqfZh3q8aY67g9eUIfUQ00'
+          window.location.href = 'https://buy.stripe.com/28E3cv9Ow4zIgQJ27WfUQ03'
         }, 1500)
       } else {
         setSubmitMessage({ 
