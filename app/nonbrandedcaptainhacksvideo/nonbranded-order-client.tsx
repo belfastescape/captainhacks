@@ -123,7 +123,7 @@ Offer Description: ${formData.offer}
 Video Orientation: ${formData.orientation}
 
 ${appliedDiscount ? `Discount Code Used: ${appliedDiscount.code}
-Discounted Price: $${appliedDiscount.newPrice.toFixed(2)} (Original: $49)` : 'Price: $49'}
+Discounted Price: $${appliedDiscount.newPrice.toFixed(2)} USD (Original: $49 USD)` : 'Price: $49 USD'}
 
 ---
 This order was submitted from the Captain Hacks order page.
@@ -582,7 +582,7 @@ This order was submitted from the Captain Hacks order page.
                       <span className="text-2xl font-bold text-gray-500 font-mono line-through mr-3">$49USD</span>
                     )}
                     <span className="text-4xl font-bold text-yellow-400 font-mono">
-                      ${appliedDiscount ? `${appliedDiscount.newPrice.toFixed(2)} USD` : '49'}
+                      ${appliedDiscount ? `${appliedDiscount.newPrice.toFixed(2)} USD` : '49 USD'}
                     </span>
                   </div>
                 </div>
@@ -597,7 +597,7 @@ This order was submitted from the Captain Hacks order page.
                 disabled={isSubmitting}
                 className="w-full px-8 py-5 bg-transparent border-2 border-yellow-400 text-yellow-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-yellow-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'PROCESSING...' : `SUBMIT & PAY NOW → $${appliedDiscount ? `${appliedDiscount.newPrice.toFixed(2)} USD` : '49'}`}
+                {isSubmitting ? 'PROCESSING...' : `SUBMIT & PAY NOW → $${appliedDiscount ? `${appliedDiscount.newPrice.toFixed(2)} USD` : '49 USD'}`}
               </button>
 
               {submitMessage && (
