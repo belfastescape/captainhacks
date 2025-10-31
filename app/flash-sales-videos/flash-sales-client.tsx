@@ -668,12 +668,27 @@ export function FlashSalesClient() {
                 </div>
               </div>
 
-              {/* New Product Launch - Placeholder */}
-              <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-pink-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-pink-400/70 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)]">
-                <div className="relative aspect-[9/16] bg-gradient-to-br from-red-900/30 to-pink-900/30 flex items-center justify-center">
-                  <div className="text-8xl">🚀</div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Play className="w-16 h-16 text-white opacity-80" />
+              {/* New Product Launch - Real Video */}
+              <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-pink-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-pink-400/70 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)] group">
+                <div className="relative aspect-[9/16] bg-black cursor-pointer"
+                  onClick={(e) => {
+                    const video = e.currentTarget.querySelector('video')
+                    if (video) {
+                      video.currentTime = 0
+                      video.play().catch(err => console.log('Play failed:', err))
+                    }
+                  }}
+                >
+                  <video
+                    className="w-full h-full object-cover"
+                    playsInline
+                    preload="auto"
+                  >
+                    <source src="/videos/Zingers-Running-Shoes-New-Product.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="absolute inset-0 bg-black/50 transition-all duration-300 flex items-center justify-center pointer-events-none">
+                    <Play className="w-16 h-16 text-pink-400 transition-opacity duration-300" />
                   </div>
                 </div>
                 <div className="p-4">
