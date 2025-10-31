@@ -2,16 +2,16 @@ import type { Metadata } from "next"
 import NonBrandedOrderClient from "./nonbranded-order-client"
 
 export const metadata: Metadata = {
-  title: "Order Non-Branded Video - Captain Hacks | Custom Video Editing",
+  title: "Order Non-Branded Video - Captain Hacks | Custom  Promo Video for Small Business",
   description:
-    "Order a 100% white-label video for your business. Custom characters, your branding only, no logos. Professional video editing with 24-hour delivery. Custom pricing.",
+    "Order a 100% white-label video for your business. Custom characters, your branding only, no logos. Professional video's created by Captain Hacks with 24-hour delivery. Custom pricing.",
   keywords: [
     "white label video",
-    "custom video editing",
+    "custom video marketing",
     "non-branded video",
     "business video production",
     "custom promo video",
-    "professional video editing",
+    "professional video marketing",
     "custom character video",
   ],
   openGraph: {

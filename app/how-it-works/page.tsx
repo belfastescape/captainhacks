@@ -2,15 +2,15 @@ import type { Metadata } from "next"
 import { HowItWorksClient } from "./how-it-works-client"
 
 export const metadata: Metadata = {
-  title: "How It Works - Captain Hacks Video Editing Process",
+  title: "How It Works - Captain Hacks Promo Video Ordering  Process",
   description:
     "3 minutes to order. 24 hours to delivery. Zero hassle. Learn how Captain Hacks creates scroll-stopping video content for your business in just 6 simple steps.",
   keywords: [
-    "video editing process",
+    "video marketing process",
     "how to order video",
     "video creation process",
     "24 hour video delivery",
-    "quick video editing",
+    "quick video marketing",
   ],
   openGraph: {
     title: "How It Works - Captain Hacks",
