@@ -361,8 +361,11 @@ export default function CaptainHacksHome() {
           </div>
 
           <div className="text-center bg-gradient-to-r from-cyan-900/30 to-pink-900/30 border-2 border-cyan-400/50 rounded-xl p-6">
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-300 mb-4">
               <span className="text-cyan-400 font-bold">Perfect for:</span> Weekend sales, product launches, clearance events, holiday promos, and any limited-time offer that needs urgency.
+            </p>
+            <p className="text-base text-gray-400 leading-relaxed">
+              We promise to deliver you a quality promo ad very quickly. We would say it's best to plan ahead. Black Friday orders are flying in as well as Christmas promos. We will never take on any more work than we can deliver in the agreed turnaround time. We always aim for 24 hours, but don't be disappointed by leaving it too late.
             </p>
           </div>
         </div>
