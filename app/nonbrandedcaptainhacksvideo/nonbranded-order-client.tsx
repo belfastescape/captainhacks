@@ -579,7 +579,7 @@ This order was submitted from the Captain Hacks order page.
                   <span className="text-gray-300 font-mono">TOTAL PRICE:</span>
                   <div className="text-right">
                     {appliedDiscount && (
-                      <span className="text-2xl font-bold text-gray-500 font-mono line-through mr-3">$49</span>
+                      <span className="text-2xl font-bold text-gray-500 font-mono line-through mr-3">$49USD</span>
                     )}
                     <span className="text-4xl font-bold text-yellow-400 font-mono">
                       ${appliedDiscount ? appliedDiscount.newPrice.toFixed(2) : '49'}
