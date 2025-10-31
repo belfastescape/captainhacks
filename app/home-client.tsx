@@ -845,7 +845,7 @@ export default function CaptainHacksHome() {
       </section>
 
       {/* Video Examples Section */}
-      <section className="px-6 md:px-[8%] py-20 bg-black/50">
+      <section className="px-6 md:px-[8%] py-20 bg-gray-950">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block mb-4 px-4 py-2 bg-pink-500/20 border border-pink-500/30 rounded-full">
