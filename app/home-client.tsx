@@ -303,18 +303,18 @@ export default function CaptainHacksHome() {
       <section className="min-h-[40vh] px-[8%] py-24 bg-gray-950 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              Get a promo video for your next sale — in 24 hours.
+            </p>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Fast, affordable videos designed for small businesses running flash deals or limited-time offers.
+            </p>
             <div className="inline-block mb-4 px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full">
               <span className="text-red-400 font-mono text-xs uppercase tracking-wider">⚡ 24-Hour Delivery</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
               Perfect for Flash Sales, Special Offers & Product Launches
             </h2>
-            <p className="text-xl md:text-2xl text-gray-300 mb-4">
-              Get a promo video for your next sale — in 24 hours.
-            </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Fast, affordable videos designed for small businesses running flash deals or limited-time offers.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
