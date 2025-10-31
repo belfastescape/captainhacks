@@ -17,6 +17,42 @@ export default function NonBrandedOrderClient() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null)
+  const [discountCode, setDiscountCode] = useState("")
+  const [appliedDiscount, setAppliedDiscount] = useState<{
+    code: string;
+    newPrice: number;
+    stripeLink: string;
+  } | null>(null)
+  const [discountError, setDiscountError] = useState("")
+
+  // Discount code configuration
+  const DISCOUNT_CODES: Record<string, { newPrice: number; stripeLink: string }> = {
+    'BLACK35%': { 
+      newPrice: 31.85, // 35% off $49 = $31.85
+      stripeLink: 'https://buy.stripe.com/5kQ8wPf8Q4zIfMFeUIfUQ05'
+    },
+    // Add more discount codes as needed
+  }
+
+  const handleApplyDiscount = () => {
+    const code = discountCode.trim().toUpperCase()
+    setDiscountError("")
+    
+    if (DISCOUNT_CODES[code]) {
+      setAppliedDiscount({
+        code,
+        ...DISCOUNT_CODES[code]
+      })
+    } else {
+      setDiscountError("Invalid discount code")
+    }
+  }
+
+  const handleRemoveDiscount = () => {
+    setAppliedDiscount(null)
+    setDiscountCode("")
+    setDiscountError("")
+  }
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -86,6 +122,9 @@ Offer Description: ${formData.offer}
 
 Video Orientation: ${formData.orientation}
 
+${appliedDiscount ? `Discount Code Used: ${appliedDiscount.code}
+Discounted Price: $${appliedDiscount.newPrice.toFixed(2)} (Original: $49)` : 'Price: $49'}
+
 ---
 This order was submitted from the Captain Hacks order page.
       `.trim()
@@ -110,9 +149,12 @@ This order was submitted from the Captain Hacks order page.
           type: 'success', 
           text: 'Order submitted! Redirecting to payment...' 
         })
-        // Redirect to Stripe payment after 1.5 seconds
+        // Redirect to Stripe payment after 1.5 seconds - use discount link if applied
+        const paymentLink = appliedDiscount 
+          ? appliedDiscount.stripeLink 
+          : 'https://buy.stripe.com/7sY6oHe4Md6e1VP3c0fUQ02'
         setTimeout(() => {
-          window.location.href = 'https://buy.stripe.com/7sY6oHe4Md6e1VP3c0fUQ02'
+          window.location.href = paymentLink
         }, 1500)
       } else {
         setSubmitMessage({ 
@@ -484,11 +526,65 @@ This order was submitted from the Captain Hacks order page.
                 </div>
               </div>
 
+              {/* Discount Code Section */}
+              <div className="bg-gray-900 border-2 border-cyan-400/50 p-6 rounded-none">
+                <h4 className="text-cyan-400 font-mono text-sm mb-4">HAVE A DISCOUNT CODE?</h4>
+                
+                {!appliedDiscount ? (
+                  <div className="flex flex-col md:flex-row gap-3">
+                    <input
+                      type="text"
+                      value={discountCode}
+                      onChange={(e) => {
+                        setDiscountCode(e.target.value.toUpperCase())
+                        setDiscountError("")
+                      }}
+                      placeholder="Enter code"
+                      className="flex-1 p-3 bg-gray-950 border-2 border-gray-700 text-white font-mono text-sm focus:outline-none focus:border-cyan-400 transition-all duration-300 uppercase"
+                    />
+                    <button
+                      type="button"
+                      onClick={handleApplyDiscount}
+                      className="px-6 py-3 bg-transparent border-2 border-cyan-400 text-cyan-400 font-mono text-sm uppercase hover:bg-cyan-400 hover:text-black transition-all duration-300"
+                    >
+                      APPLY
+                    </button>
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-between bg-green-900/30 border border-green-400 p-3">
+                    <div>
+                      <span className="text-green-400 font-mono text-sm">✓ Code "{appliedDiscount.code}" applied!</span>
+                      <span className="text-gray-400 text-xs ml-2">
+                        (Saved ${(49 - appliedDiscount.newPrice).toFixed(2)})
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={handleRemoveDiscount}
+                      className="text-red-400 hover:text-red-300 font-mono text-xs underline"
+                    >
+                      REMOVE
+                    </button>
+                  </div>
+                )}
+                
+                {discountError && (
+                  <p className="text-red-400 font-mono text-xs mt-2">✗ {discountError}</p>
+                )}
+              </div>
+
               {/* Price Display */}
               <div className="bg-gray-900 border-2 border-yellow-400 p-6 rounded-none">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300 font-mono">TOTAL PRICE:</span>
-                  <span className="text-4xl font-bold text-yellow-400 font-mono">$49</span>
+                  <div className="text-right">
+                    {appliedDiscount && (
+                      <span className="text-2xl font-bold text-gray-500 font-mono line-through mr-3">$49</span>
+                    )}
+                    <span className="text-4xl font-bold text-yellow-400 font-mono">
+                      ${appliedDiscount ? appliedDiscount.newPrice.toFixed(2) : '49'}
+                    </span>
+                  </div>
                 </div>
                 <p className="text-gray-400 text-xs mt-2 font-mono">
                   ✓ 24 HOUR DELIVERY GUARANTEE • ✓ SECURE STRIPE PAYMENT
@@ -501,7 +597,7 @@ This order was submitted from the Captain Hacks order page.
                 disabled={isSubmitting}
                 className="w-full px-8 py-5 bg-transparent border-2 border-yellow-400 text-yellow-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-yellow-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'PROCESSING...' : 'SUBMIT & PAY NOW → $49'}
+                {isSubmitting ? 'PROCESSING...' : `SUBMIT & PAY NOW → $${appliedDiscount ? appliedDiscount.newPrice.toFixed(2) : '49'}`}
               </button>
 
               {submitMessage && (
