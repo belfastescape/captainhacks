@@ -555,7 +555,7 @@ This order was submitted from the Captain Hacks order page.
                     <div>
                       <span className="text-green-400 font-mono text-sm">✓ Code "{appliedDiscount.code}" applied!</span>
                       <span className="text-gray-400 text-xs ml-2">
-                        (Saved ${(49 - appliedDiscount.newPrice).toFixed(2)})
+                        (Saved ${(49 - appliedDiscount.newPrice).toFixed(2)} USD)
                       </span>
                     </div>
                     <button
@@ -582,7 +582,7 @@ This order was submitted from the Captain Hacks order page.
                       <span className="text-2xl font-bold text-gray-500 font-mono line-through mr-3">$49USD</span>
                     )}
                     <span className="text-4xl font-bold text-yellow-400 font-mono">
-                      ${appliedDiscount ? appliedDiscount.newPrice.toFixed(2) : '49'}
+                      ${appliedDiscount ? `${appliedDiscount.newPrice.toFixed(2)} USD` : '49'}
                     </span>
                   </div>
                 </div>
@@ -597,7 +597,7 @@ This order was submitted from the Captain Hacks order page.
                 disabled={isSubmitting}
                 className="w-full px-8 py-5 bg-transparent border-2 border-yellow-400 text-yellow-400 font-mono text-base uppercase tracking-widest cursor-pointer relative overflow-hidden hover:text-black transition-colors duration-300 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-yellow-400 before:transition-all before:duration-300 before:-z-10 hover:before:left-0 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'PROCESSING...' : `SUBMIT & PAY NOW → $${appliedDiscount ? appliedDiscount.newPrice.toFixed(2) : '49'}`}
+                {isSubmitting ? 'PROCESSING...' : `SUBMIT & PAY NOW → $${appliedDiscount ? `${appliedDiscount.newPrice.toFixed(2)} USD` : '49'}`}
               </button>
 
               {submitMessage && (
