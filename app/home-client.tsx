@@ -303,8 +303,11 @@ export default function CaptainHacksHome() {
       <section className="min-h-[40vh] px-[8%] py-24 bg-gray-950 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Get a promo video for your next sale — in 24 hours.
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+              Get a promo video for your small business.
+            </p>
+            <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-cyan-400 mb-6 leading-tight">
+              Delivery within 24 hours - Guaranteed.
             </p>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
               Fast, affordable videos designed for small businesses running flash deals or limited-time offers.
