@@ -954,7 +954,7 @@ export default function CaptainHacksHome() {
             </p>
             <a href="/order-now">
               <button className="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-2">
-                View More Examples <ArrowRight className="w-5 h-5" />
+                We will be adding more videos soon <ArrowRight className="w-5 h-5" />
               </button>
             </a>
           </div>

@@ -442,7 +442,7 @@ export function PromoVideosClient() {
                   size="lg" 
                   className="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-bold"
                 >
-                  View More Examples <ArrowRight className="ml-2 w-5 h-5" />
+                  We will be adding more videos soon <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
             </div>
