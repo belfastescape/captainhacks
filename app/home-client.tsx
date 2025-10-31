@@ -300,134 +300,67 @@ export default function CaptainHacksHome() {
       </section>
 
       {/* Promo Video for Flash Sales Section */}
-      <section className="min-h-[40vh] px-[8%] py-24 bg-gray-950 relative z-10 overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4 px-6 py-3 bg-red-500/20 border-2 border-red-500/50 rounded-full animate-pulse">
-              <span className="text-red-400 font-mono text-sm font-bold">⚡ URGENT • 24-HOUR TURNAROUND</span>
+      <section className="min-h-[40vh] px-[8%] py-24 bg-gray-950 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full">
+              <span className="text-red-400 font-mono text-xs uppercase tracking-wider">⚡ 24-Hour Delivery</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-red-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
-              Your Next Sale Starts Here
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
+              Perfect for Flash Sales, Special Offers & Product Launches
             </h2>
-            <p className="text-2xl md:text-3xl text-white mb-4 font-bold">
-              Flash Sales. Special Offers. Product Launches.
+            <p className="text-xl md:text-2xl text-gray-300 mb-4">
+              Get a promo video for your next sale — in 24 hours.
             </p>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-6">
-              Stop losing sales to boring posts. Get a <span className="text-cyan-400 font-bold">scroll-stopping promo video</span> delivered in 24 hours — from just <span className="text-red-400 font-bold">$39</span>.
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+              Fast, affordable videos designed for small businesses running flash deals or limited-time offers.
             </p>
           </div>
 
-          {/* Stats Bar */}
-          <div className="grid grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-red-900/30 to-black border-2 border-red-500/30 rounded-xl p-6 text-center hover:scale-105 transition-all duration-300">
-              <div className="text-5xl font-black text-red-400 mb-2">3.5x</div>
-              <div className="text-sm text-gray-400">Higher engagement than static posts</div>
-            </div>
-            <div className="bg-gradient-to-br from-pink-900/30 to-black border-2 border-pink-500/30 rounded-xl p-6 text-center hover:scale-105 transition-all duration-300">
-              <div className="text-5xl font-black text-pink-400 mb-2">24hr</div>
-              <div className="text-sm text-gray-400">Delivery guaranteed</div>
-            </div>
-            <div className="bg-gradient-to-br from-cyan-900/30 to-black border-2 border-cyan-500/30 rounded-xl p-6 text-center hover:scale-105 transition-all duration-300">
-              <div className="text-5xl font-black text-cyan-400 mb-2">$39</div>
-              <div className="text-sm text-gray-400">Starting price per video</div>
-            </div>
-          </div>
-
-          {/* Main Content Grid */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Left Column - Why It Works */}
-            <div className="bg-gradient-to-br from-black to-gray-900 border-2 border-cyan-500/30 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-3xl"></div>
-              <div className="relative">
-                <h3 className="text-2xl md:text-3xl font-black text-white mb-6">
-                  Why Small Businesses <span className="text-cyan-400">Love This</span>
-                </h3>
-                <ul className="space-y-5">
-                  {[
-                    { icon: "⚡", title: "Lightning-fast delivery", desc: "Order today, launch tomorrow" },
-                    { icon: "🎯", title: "Urgency built-in", desc: "Countdown timers & FOMO messaging" },
-                    { icon: "📱", title: "Mobile-first", desc: "Perfect for Stories, Reels & TikTok" },
-                    { icon: "💰", title: "Small-business budget", desc: "No agency fees, no minimums" },
-                    { icon: "🎭", title: "Custom to your brand", desc: "Your offer, your style, our expertise" }
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-4 group">
-                      <div className="text-3xl flex-shrink-0 group-hover:scale-110 transition-transform">{item.icon}</div>
-                      <div>
-                        <div className="text-lg font-bold text-cyan-400 mb-1">{item.title}</div>
-                        <div className="text-gray-400 text-sm">{item.desc}</div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Left Column - Benefits */}
+            <div className="bg-gradient-to-br from-black to-gray-900 border-2 border-cyan-500/30 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-cyan-400 mb-6 font-mono">
+                Ideal for Small Businesses Who Need Video Ads — Fast.
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  { icon: "⚡", text: "Ready in 24 hours" },
+                  { icon: "🎭", text: "Custom character & message" },
+                  { icon: "📱", text: "Optimised for Instagram, Facebook, and TikTok" },
+                  { icon: "💰", text: "Priced for small business budgets" }
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                    <span className="text-gray-300 text-lg pt-1">{item.text}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            {/* Right Column - CTA & Social Proof */}
-            <div className="space-y-6">
-              {/* CTA Box */}
-              <div className="bg-gradient-to-br from-red-900/40 to-pink-900/40 border-2 border-red-500/50 rounded-xl p-8 text-center hover:scale-105 transition-all duration-300 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-pink-500/10 blur-2xl"></div>
-                <div className="relative">
-                  <div className="text-6xl md:text-7xl mb-4">🔥</div>
-                  <h3 className="text-3xl md:text-4xl font-black text-white mb-3">
-                    Your Sale Won't Wait
-                  </h3>
-                  <p className="text-lg text-gray-300 mb-6">
-                    And neither should you. Get your video in 24 hours.
-                  </p>
-                  <a href="/flash-sales-videos">
-                    <button className="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-black px-10 py-6 rounded-lg text-xl transition-all duration-300 hover:scale-105 shadow-[0_0_40px_rgba(239,68,68,0.3)] hover:shadow-[0_0_60px_rgba(239,68,68,0.5)] inline-flex items-center justify-center gap-3 uppercase tracking-wide">
-                      Get My Promo Video <ArrowRight className="w-6 h-6" />
-                    </button>
-                  </a>
-                  <p className="text-xs text-gray-500 mt-4 font-mono">From $39 • 24hr delivery • One free revision</p>
-                </div>
-              </div>
-
-              {/* Testimonial */}
-              <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-pink-500/30 rounded-xl p-6 hover:border-pink-400/50 transition-all duration-300">
-                <div className="flex gap-2 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">★</span>
-                  ))}
-                </div>
-                <p className="text-lg text-gray-200 mb-4 leading-relaxed italic">
-                  "Posted our flash-sale video on Friday. Sold out by Sunday. Best $39 I ever spent."
+            {/* Right Column - CTA Box */}
+            <div className="bg-gradient-to-br from-red-900/30 to-pink-900/30 border-2 border-red-500/50 rounded-xl p-8 flex flex-col justify-center items-center text-center hover:scale-105 transition-all duration-300">
+              <div className="mb-6">
+                <div className="text-6xl mb-4">🚀</div>
+                <h3 className="text-3xl font-black text-white mb-4">
+                  Launch Your Sale Today
+                </h3>
+                <p className="text-lg text-gray-300">
+                  Don't wait weeks for a video. Get yours in 24 hours.
                 </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-400 to-cyan-400 flex items-center justify-center text-white font-bold">
-                    L
-                  </div>
-                  <div>
-                    <p className="text-pink-400 font-bold text-sm">Leo</p>
-                    <p className="text-gray-500 text-xs">Boutique Owner</p>
-                  </div>
-                </div>
               </div>
+              <a href="/flash-sales-videos">
+                <button className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-bold px-10 py-5 rounded-lg text-xl transition-all duration-300 hover:scale-105 shadow-[0_0_40px_rgba(239,68,68,0.3)] hover:shadow-[0_0_60px_rgba(239,68,68,0.5)] inline-flex items-center gap-2 uppercase tracking-wide">
+                  Get My Promo Video Now <ArrowRight className="w-6 h-6" />
+                </button>
+              </a>
             </div>
           </div>
 
-          {/* Use Cases Banner */}
-          <div className="bg-gradient-to-r from-cyan-900/30 via-pink-900/30 to-cyan-900/30 border-2 border-cyan-400/50 rounded-xl p-8">
-            <h4 className="text-2xl font-black text-center text-white mb-6">
-              🎯 Perfect For These Situations:
-            </h4>
-            <div className="grid md:grid-cols-3 gap-4 text-center">
-              {[
-                { emoji: "⏰", text: "Weekend Flash Sales" },
-                { emoji: "🚀", text: "New Product Drops" },
-                { emoji: "🔥", text: "Clearance Events" },
-                { emoji: "🎁", text: "Holiday Promotions" },
-                { emoji: "💥", text: "Limited-Time Offers" },
-                { emoji: "🎉", text: "Season Launch Sales" }
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-center justify-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors">
-                  <span className="text-2xl">{item.emoji}</span>
-                  <span className="font-semibold">{item.text}</span>
-                </div>
-              ))}
-            </div>
+          <div className="text-center bg-gradient-to-r from-cyan-900/30 to-pink-900/30 border-2 border-cyan-400/50 rounded-xl p-6">
+            <p className="text-lg text-gray-300">
+              <span className="text-cyan-400 font-bold">Perfect for:</span> Weekend sales, product launches, clearance events, holiday promos, and any limited-time offer that needs urgency.
+            </p>
           </div>
         </div>
       </section>
