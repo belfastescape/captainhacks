@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { CollapsibleFAQ } from "@/components/collapsible-faq"
+import { Play, ArrowRight } from "lucide-react"
 
 const faqs = [
   {
@@ -840,6 +841,123 @@ export default function CaptainHacksHome() {
           >
             HIRE US FOR YOUR HACK
           </a>
+        </div>
+      </section>
+
+      {/* Video Examples Section */}
+      <section className="px-6 md:px-[8%] py-20 bg-black/50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-pink-500/20 border border-pink-500/30 rounded-full">
+              <span className="text-pink-400 font-mono text-xs uppercase tracking-wider">See It In Action</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              🎬 Video Examples
+            </h2>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+              These are the kinds of videos that stop the scroll and make people click "Buy Now"
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {/* Weekend Flash Sale - Real Video */}
+            <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-pink-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-pink-400/70 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)] group">
+              <div className="relative aspect-[9/16] bg-black cursor-pointer"
+                onClick={(e) => {
+                  const video = e.currentTarget.querySelector('video')
+                  if (video) {
+                    video.currentTime = 0
+                    video.play().catch(err => console.log('Play failed:', err))
+                  }
+                }}
+              >
+                <video
+                  className="w-full h-full object-cover"
+                  playsInline
+                  preload="auto"
+                >
+                  <source src="/videos/Chilled-Bliss-Weekend-Promo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 bg-black/50 transition-all duration-300 flex items-center justify-center pointer-events-none">
+                  <Play className="w-16 h-16 text-pink-400 transition-opacity duration-300" />
+                </div>
+              </div>
+              <div className="p-4">
+                <h4 className="font-bold text-pink-400 text-lg mb-2">Weekend Flash Sale</h4>
+                <p className="text-gray-400 text-sm">Buy 2 scoops, get 1 free. This Weekend Only</p>
+              </div>
+            </div>
+
+            {/* New Product Launch - Real Video */}
+            <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-pink-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-pink-400/70 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)] group">
+              <div className="relative aspect-[9/16] bg-black cursor-pointer"
+                onClick={(e) => {
+                  const video = e.currentTarget.querySelector('video')
+                  if (video) {
+                    video.currentTime = 0
+                    video.play().catch(err => console.log('Play failed:', err))
+                  }
+                }}
+              >
+                <video
+                  className="w-full h-full object-cover"
+                  playsInline
+                  preload="auto"
+                >
+                  <source src="/videos/Zingers-Running-Shoes-New-Product.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 bg-black/50 transition-all duration-300 flex items-center justify-center pointer-events-none">
+                  <Play className="w-16 h-16 text-pink-400 transition-opacity duration-300" />
+                </div>
+              </div>
+              <div className="p-4">
+                <h4 className="font-bold text-pink-400 text-lg mb-2">New Product Launch</h4>
+                <p className="text-gray-400 text-sm">First 24 hours special pricing</p>
+              </div>
+            </div>
+
+            {/* Clearance Event - Real Video */}
+            <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-pink-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-pink-400/70 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)] group">
+              <div className="relative aspect-[9/16] bg-black cursor-pointer"
+                onClick={(e) => {
+                  const video = e.currentTarget.querySelector('video')
+                  if (video) {
+                    video.currentTime = 0
+                    video.play().catch(err => console.log('Play failed:', err))
+                  }
+                }}
+              >
+                <video
+                  className="w-full h-full object-cover"
+                  playsInline
+                  preload="auto"
+                >
+                  <source src="/videos/Greenland-Clothing-Clearance.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 bg-black/50 transition-all duration-300 flex items-center justify-center pointer-events-none">
+                  <Play className="w-16 h-16 text-pink-400 transition-opacity duration-300" />
+                </div>
+              </div>
+              <div className="p-4">
+                <h4 className="font-bold text-pink-400 text-lg mb-2">Clearance Event</h4>
+                <p className="text-gray-400 text-sm">Limited stock - ends midnight</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center bg-gradient-to-r from-cyan-900/30 to-pink-900/30 border-2 border-cyan-400/50 rounded-2xl p-8">
+            <p className="text-xl text-white font-semibold mb-4">
+              Want to see our full portfolio?
+            </p>
+            <a href="/order-now">
+              <button className="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-2">
+                View More Examples <ArrowRight className="w-5 h-5" />
+              </button>
+            </a>
+          </div>
         </div>
       </section>
 
