@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { CollapsibleFAQ } from "@/components/collapsible-faq"
-import { Play, ArrowRight } from "lucide-react"
+import { Play, ArrowRight, Heart } from "lucide-react"
 
 const faqs = [
   {
@@ -53,6 +53,54 @@ export default function CaptainHacksHome() {
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [hasPlayedOnScroll, setHasPlayedOnScroll] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [likes, setLikes] = useState<Record<string, boolean>>({})
+  const [likeCounts, setLikeCounts] = useState<Record<string, number>>({})
+
+  // Initial like counts (random between 50-90 for each video)
+  const initialLikeCounts: Record<string, number> = {
+    'weekend-flash-sale': 73,
+    'new-product-launch': 85,
+    'clearance-event': 62,
+    'fem-barista': 78,
+    'newyork-cop': 54,
+    'wizard-emporium': 89,
+    'aussie-surfer': 67,
+    'sister-jane': 71,
+    'dog-spa': 56,
+  }
+
+  // Load likes and like counts from localStorage on mount
+  useEffect(() => {
+    const savedLikes = localStorage.getItem('videoLikes')
+    if (savedLikes) {
+      setLikes(JSON.parse(savedLikes))
+    }
+
+    const savedLikeCounts = localStorage.getItem('videoLikeCounts')
+    if (savedLikeCounts) {
+      setLikeCounts(JSON.parse(savedLikeCounts))
+    } else {
+      // Initialize with starting counts
+      setLikeCounts(initialLikeCounts)
+      localStorage.setItem('videoLikeCounts', JSON.stringify(initialLikeCounts))
+    }
+  }, [])
+
+  // Toggle like for a video
+  const toggleLike = (videoId: string, e: React.MouseEvent) => {
+    e.stopPropagation() // Prevent video play when clicking like button
+    const wasLiked = likes[videoId]
+    const newLikes = { ...likes, [videoId]: !wasLiked }
+    setLikes(newLikes)
+    localStorage.setItem('videoLikes', JSON.stringify(newLikes))
+
+    // Update like count
+    const currentCount = likeCounts[videoId] || initialLikeCounts[videoId]
+    const newCount = wasLiked ? currentCount - 1 : currentCount + 1
+    const newLikeCounts = { ...likeCounts, [videoId]: newCount }
+    setLikeCounts(newLikeCounts)
+    localStorage.setItem('videoLikeCounts', JSON.stringify(newLikeCounts))
+  }
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -411,7 +459,25 @@ export default function CaptainHacksHome() {
                 </div>
               </div>
               <div className="p-4">
-                <h4 className="font-bold text-pink-400 text-lg mb-2">Weekend Flash Sale</h4>
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-bold text-pink-400 text-lg">Weekend Flash Sale</h4>
+                  <button
+                    onClick={(e) => toggleLike('weekend-flash-sale', e)}
+                    className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
+                    aria-label="Like this video"
+                  >
+                    <span className="text-gray-400 font-mono text-sm">
+                      {likeCounts['weekend-flash-sale'] || initialLikeCounts['weekend-flash-sale']}
+                    </span>
+                    <Heart
+                      className={`w-6 h-6 ${
+                        likes['weekend-flash-sale']
+                          ? 'fill-pink-500 text-pink-500'
+                          : 'text-gray-400 hover:text-pink-400'
+                      }`}
+                    />
+                  </button>
+                </div>
                 <p className="text-gray-400 text-sm">Buy 2 scoops, get 1 free. This Weekend Only</p>
               </div>
             </div>
@@ -440,7 +506,25 @@ export default function CaptainHacksHome() {
                 </div>
               </div>
               <div className="p-4">
-                <h4 className="font-bold text-pink-400 text-lg mb-2">New Product Launch</h4>
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-bold text-pink-400 text-lg">New Product Launch</h4>
+                  <button
+                    onClick={(e) => toggleLike('new-product-launch', e)}
+                    className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
+                    aria-label="Like this video"
+                  >
+                    <span className="text-gray-400 font-mono text-sm">
+                      {likeCounts['new-product-launch'] || initialLikeCounts['new-product-launch']}
+                    </span>
+                    <Heart
+                      className={`w-6 h-6 ${
+                        likes['new-product-launch']
+                          ? 'fill-pink-500 text-pink-500'
+                          : 'text-gray-400 hover:text-pink-400'
+                      }`}
+                    />
+                  </button>
+                </div>
                 <p className="text-gray-400 text-sm">First 24 hours special pricing</p>
               </div>
             </div>
@@ -469,7 +553,25 @@ export default function CaptainHacksHome() {
                 </div>
               </div>
               <div className="p-4">
-                <h4 className="font-bold text-pink-400 text-lg mb-2">Clearance Event</h4>
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-bold text-pink-400 text-lg">Clearance Event</h4>
+                  <button
+                    onClick={(e) => toggleLike('clearance-event', e)}
+                    className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
+                    aria-label="Like this video"
+                  >
+                    <span className="text-gray-400 font-mono text-sm">
+                      {likeCounts['clearance-event'] || initialLikeCounts['clearance-event']}
+                    </span>
+                    <Heart
+                      className={`w-6 h-6 ${
+                        likes['clearance-event']
+                          ? 'fill-pink-500 text-pink-500'
+                          : 'text-gray-400 hover:text-pink-400'
+                      }`}
+                    />
+                  </button>
+                </div>
                 <p className="text-gray-400 text-sm">Limited stock - ends midnight</p>
               </div>
             </div>
@@ -732,7 +834,25 @@ export default function CaptainHacksHome() {
             >
               <source src="/videos/femBARISTA.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
+              <div className="p-4 flex justify-end pointer-events-auto">
+                <button
+                  onClick={(e) => toggleLike('fem-barista', e)}
+                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  aria-label="Like this video"
+                >
+                  <span className="text-gray-300 font-mono text-sm">
+                    {likeCounts['fem-barista'] || initialLikeCounts['fem-barista']}
+                  </span>
+                  <Heart
+                    className={`w-6 h-6 ${
+                      likes['fem-barista']
+                        ? 'fill-pink-500 text-pink-500'
+                        : 'text-gray-400 hover:text-pink-400'
+                    }`}
+                  />
+                </button>
+              </div>
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: COFFEE SHOP</p>
                 <p className="text-lg">Barista hacks your morning routine</p>
@@ -786,7 +906,25 @@ export default function CaptainHacksHome() {
             >
               <source src="/videos/newyorkcop.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
+              <div className="p-4 flex justify-end pointer-events-auto">
+                <button
+                  onClick={(e) => toggleLike('newyork-cop', e)}
+                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  aria-label="Like this video"
+                >
+                  <span className="text-gray-300 font-mono text-sm">
+                    {likeCounts['newyork-cop'] || initialLikeCounts['newyork-cop']}
+                  </span>
+                  <Heart
+                    className={`w-6 h-6 ${
+                      likes['newyork-cop']
+                        ? 'fill-pink-500 text-pink-500'
+                        : 'text-gray-400 hover:text-pink-400'
+                    }`}
+                  />
+                </button>
+              </div>
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: SECURITY SERVICES</p>
                 <p className="text-lg">Cop catches the best deal</p>
@@ -840,7 +978,25 @@ export default function CaptainHacksHome() {
             >
               <source src="/videos/wizardemporium.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
+              <div className="p-4 flex justify-end pointer-events-auto">
+                <button
+                  onClick={(e) => toggleLike('wizard-emporium', e)}
+                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  aria-label="Like this video"
+                >
+                  <span className="text-gray-300 font-mono text-sm">
+                    {likeCounts['wizard-emporium'] || initialLikeCounts['wizard-emporium']}
+                  </span>
+                  <Heart
+                    className={`w-6 h-6 ${
+                      likes['wizard-emporium']
+                        ? 'fill-pink-500 text-pink-500'
+                        : 'text-gray-400 hover:text-pink-400'
+                    }`}
+                  />
+                </button>
+              </div>
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: MYSTICAL EMPORIUM</p>
                 <p className="text-lg">Wizard conjures magical savings</p>
@@ -894,7 +1050,25 @@ export default function CaptainHacksHome() {
             >
               <source src="/videos/aussiesurfer.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
+              <div className="p-4 flex justify-end pointer-events-auto">
+                <button
+                  onClick={(e) => toggleLike('aussie-surfer', e)}
+                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  aria-label="Like this video"
+                >
+                  <span className="text-gray-300 font-mono text-sm">
+                    {likeCounts['aussie-surfer'] || initialLikeCounts['aussie-surfer']}
+                  </span>
+                  <Heart
+                    className={`w-6 h-6 ${
+                      likes['aussie-surfer']
+                        ? 'fill-pink-500 text-pink-500'
+                        : 'text-gray-400 hover:text-pink-400'
+                    }`}
+                  />
+                </button>
+              </div>
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: BEACH BRAND</p>
                 <p className="text-lg">Surfer rides the wave of savings</p>
@@ -948,7 +1122,25 @@ export default function CaptainHacksHome() {
             >
               <source src="/videos/sisterjane.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
+              <div className="p-4 flex justify-end pointer-events-auto">
+                <button
+                  onClick={(e) => toggleLike('sister-jane', e)}
+                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  aria-label="Like this video"
+                >
+                  <span className="text-gray-300 font-mono text-sm">
+                    {likeCounts['sister-jane'] || initialLikeCounts['sister-jane']}
+                  </span>
+                  <Heart
+                    className={`w-6 h-6 ${
+                      likes['sister-jane']
+                        ? 'fill-pink-500 text-pink-500'
+                        : 'text-gray-400 hover:text-pink-400'
+                    }`}
+                  />
+                </button>
+              </div>
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: CHARITY</p>
                 <p className="text-lg">Sister Jane blesses your discount</p>
@@ -1002,7 +1194,25 @@ export default function CaptainHacksHome() {
             >
               <source src="/videos/dogspa.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
+              <div className="p-4 flex justify-end pointer-events-auto">
+                <button
+                  onClick={(e) => toggleLike('dog-spa', e)}
+                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  aria-label="Like this video"
+                >
+                  <span className="text-gray-300 font-mono text-sm">
+                    {likeCounts['dog-spa'] || initialLikeCounts['dog-spa']}
+                  </span>
+                  <Heart
+                    className={`w-6 h-6 ${
+                      likes['dog-spa']
+                        ? 'fill-pink-500 text-pink-500'
+                        : 'text-gray-400 hover:text-pink-400'
+                    }`}
+                  />
+                </button>
+              </div>
               <div className="p-6 text-white">
                 <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: PET SPA</p>
                 <p className="text-lg">Pups get pampered for less</p>
