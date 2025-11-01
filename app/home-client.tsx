@@ -435,8 +435,8 @@ export default function CaptainHacksHome() {
             <p className="text-gray-400 text-sm">Limited time offer - Don't miss out!</p>
           </div>
 
-          <div className="relative max-w-md mx-auto">
-            <div className="relative aspect-[9/16] bg-black border-4 border-yellow-400 rounded-xl overflow-hidden shadow-[0_0_50px_rgba(251,191,36,0.3)] cursor-pointer group"
+          <div className="relative max-w-4xl mx-auto">
+            <div className="relative aspect-[16/9] bg-black border-4 border-yellow-400 rounded-xl overflow-hidden shadow-[0_0_50px_rgba(251,191,36,0.3)] cursor-pointer group"
               onClick={(e) => {
                 const video = e.currentTarget.querySelector('video')
                 if (video) {
@@ -452,7 +452,7 @@ export default function CaptainHacksHome() {
                 playsInline
                 preload="auto"
               >
-                <source src="/videos/Captain-Hacks-Hacker-Black-Friday-35%-Off.mp4" type="video/mp4" />
+                <source src="/videos/Captain-Hacks-Hacker-Black-Friday-35-Off.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center pointer-events-none">
