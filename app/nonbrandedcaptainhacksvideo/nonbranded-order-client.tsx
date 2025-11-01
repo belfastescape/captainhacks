@@ -321,6 +321,13 @@ This order was submitted from the Captain Hacks order page.
 
               <div className="flex items-start">
                 <span className="text-cyan-400 mr-3 text-xl font-mono">▸</span>
+                <p className="text-cyan-400">
+                  When we receive your order, we will send you back a proposed image and a short 2 scene script. When you send back the okay, we will start working on the finished video.
+                </p>
+              </div>
+
+              <div className="flex items-start">
+                <span className="text-cyan-400 mr-3 text-xl font-mono">▸</span>
                 <p className="text-cyan-400 font-bold">
                   Leave the rest to us. We will have your video back to you within 24 hours!
                 </p>
