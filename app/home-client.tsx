@@ -833,59 +833,68 @@ export default function CaptainHacksHome() {
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Video 1 - femBARISTA */}
-          <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
-            style={{ aspectRatio: "9/16" }}
-            onClick={(e) => {
-              const video = e.currentTarget.querySelector('video')
-              if (video) {
-                if (video.paused) {
-                  video.loop = false
-                  video.muted = false
-                  video.currentTime = 0
-                  video.play()
-                } else {
-                  video.pause()
-                  video.currentTime = 0
-                  video.muted = true
-                  video.loop = true
+          <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-cyan-400/30 rounded-xl overflow-hidden hover:border-cyan-400/70 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] group">
+            <div 
+              className="relative"
+              style={{ aspectRatio: "9/16" }}
+              onClick={(e) => {
+                const video = e.currentTarget.querySelector('video')
+                if (video) {
+                  if (video.paused) {
+                    video.loop = false
+                    video.muted = false
+                    video.currentTime = 0
+                    video.play()
+                  } else {
+                    video.pause()
+                    video.currentTime = 0
+                    video.muted = true
+                    video.loop = true
+                  }
                 }
-              }
-            }}
-          >
-            <video
-              className="w-full h-full object-cover"
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              onMouseEnter={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.loop = true
-                  e.currentTarget.play().catch(() => {})
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.pause()
-                  e.currentTarget.currentTime = 0
-                }
-              }}
-              onEnded={(e) => {
-                e.currentTarget.loop = true
-                e.currentTarget.muted = true
               }}
             >
-              <source src="/videos/femBARISTA.mp4" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
-              <div className="p-4 flex justify-end pointer-events-auto">
+              <video
+                className="w-full h-full object-cover cursor-pointer"
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onMouseEnter={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.loop = true
+                    e.currentTarget.play().catch(() => {})
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.pause()
+                    e.currentTarget.currentTime = 0
+                  }
+                }}
+                onEnded={(e) => {
+                  e.currentTarget.loop = true
+                  e.currentTarget.muted = true
+                }}
+              >
+                <source src="/videos/femBARISTA.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div className="p-6 text-white">
+                  <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: COFFEE SHOP</p>
+                  <p className="text-lg">Barista hacks your morning routine</p>
+                </div>
+              </div>
+            </div>
+            <div className="p-4">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold text-cyan-400 text-lg">Coffee Shop Promo</h4>
                 <button
                   onClick={(e) => toggleLike('fem-barista', e)}
-                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
                   aria-label="Like this video"
                 >
-                  <span className="text-gray-300 font-mono text-sm">
+                  <span className="text-gray-400 font-mono text-sm">
                     {likeCounts['fem-barista'] || initialLikeCounts['fem-barista']}
                   </span>
                   <Heart
@@ -897,67 +906,72 @@ export default function CaptainHacksHome() {
                   />
                 </button>
               </div>
-              <div className="p-6 text-white">
-                <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: COFFEE SHOP</p>
-                <p className="text-lg">Barista hacks your morning routine</p>
-              </div>
             </div>
           </div>
 
           {/* Video 2 - newyorkcop */}
-          <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
-            style={{ aspectRatio: "9/16" }}
-            onClick={(e) => {
-              const video = e.currentTarget.querySelector('video')
-              if (video) {
-                if (video.paused) {
-                  video.loop = false
-                  video.muted = false
-                  video.currentTime = 0
-                  video.play()
-                } else {
-                  video.pause()
-                  video.currentTime = 0
-                  video.muted = true
-                  video.loop = true
+          <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-cyan-400/30 rounded-xl overflow-hidden hover:border-cyan-400/70 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] group">
+            <div 
+              className="relative"
+              style={{ aspectRatio: "9/16" }}
+              onClick={(e) => {
+                const video = e.currentTarget.querySelector('video')
+                if (video) {
+                  if (video.paused) {
+                    video.loop = false
+                    video.muted = false
+                    video.currentTime = 0
+                    video.play()
+                  } else {
+                    video.pause()
+                    video.currentTime = 0
+                    video.muted = true
+                    video.loop = true
+                  }
                 }
-              }
-            }}
-          >
-            <video
-              className="w-full h-full object-cover"
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              onMouseEnter={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.loop = true
-                  e.currentTarget.play().catch(() => {})
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.pause()
-                  e.currentTarget.currentTime = 0
-                }
-              }}
-              onEnded={(e) => {
-                e.currentTarget.loop = true
-                e.currentTarget.muted = true
               }}
             >
-              <source src="/videos/newyorkcop.mp4" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
-              <div className="p-4 flex justify-end pointer-events-auto">
+              <video
+                className="w-full h-full object-cover cursor-pointer"
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onMouseEnter={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.loop = true
+                    e.currentTarget.play().catch(() => {})
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.pause()
+                    e.currentTarget.currentTime = 0
+                  }
+                }}
+                onEnded={(e) => {
+                  e.currentTarget.loop = true
+                  e.currentTarget.muted = true
+                }}
+              >
+                <source src="/videos/newyorkcop.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div className="p-6 text-white">
+                  <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: SECURITY SERVICES</p>
+                  <p className="text-lg">Cop catches the best deal</p>
+                </div>
+              </div>
+            </div>
+            <div className="p-4">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold text-cyan-400 text-lg">Security Services Promo</h4>
                 <button
                   onClick={(e) => toggleLike('newyork-cop', e)}
-                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
                   aria-label="Like this video"
                 >
-                  <span className="text-gray-300 font-mono text-sm">
+                  <span className="text-gray-400 font-mono text-sm">
                     {likeCounts['newyork-cop'] || initialLikeCounts['newyork-cop']}
                   </span>
                   <Heart
@@ -969,67 +983,72 @@ export default function CaptainHacksHome() {
                   />
                 </button>
               </div>
-              <div className="p-6 text-white">
-                <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: SECURITY SERVICES</p>
-                <p className="text-lg">Cop catches the best deal</p>
-              </div>
             </div>
           </div>
 
           {/* Video 3 - wizardemporium */}
-          <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
-            style={{ aspectRatio: "9/16" }}
-            onClick={(e) => {
-              const video = e.currentTarget.querySelector('video')
-              if (video) {
-                if (video.paused) {
-                  video.loop = false
-                  video.muted = false
-                  video.currentTime = 0
-                  video.play()
-                } else {
-                  video.pause()
-                  video.currentTime = 0
-                  video.muted = true
-                  video.loop = true
+          <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-cyan-400/30 rounded-xl overflow-hidden hover:border-cyan-400/70 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] group">
+            <div 
+              className="relative"
+              style={{ aspectRatio: "9/16" }}
+              onClick={(e) => {
+                const video = e.currentTarget.querySelector('video')
+                if (video) {
+                  if (video.paused) {
+                    video.loop = false
+                    video.muted = false
+                    video.currentTime = 0
+                    video.play()
+                  } else {
+                    video.pause()
+                    video.currentTime = 0
+                    video.muted = true
+                    video.loop = true
+                  }
                 }
-              }
-            }}
-          >
-            <video
-              className="w-full h-full object-cover"
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              onMouseEnter={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.loop = true
-                  e.currentTarget.play().catch(() => {})
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.pause()
-                  e.currentTarget.currentTime = 0
-                }
-              }}
-              onEnded={(e) => {
-                e.currentTarget.loop = true
-                e.currentTarget.muted = true
               }}
             >
-              <source src="/videos/wizardemporium.mp4" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
-              <div className="p-4 flex justify-end pointer-events-auto">
+              <video
+                className="w-full h-full object-cover cursor-pointer"
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onMouseEnter={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.loop = true
+                    e.currentTarget.play().catch(() => {})
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.pause()
+                    e.currentTarget.currentTime = 0
+                  }
+                }}
+                onEnded={(e) => {
+                  e.currentTarget.loop = true
+                  e.currentTarget.muted = true
+                }}
+              >
+                <source src="/videos/wizardemporium.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div className="p-6 text-white">
+                  <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: MYSTICAL EMPORIUM</p>
+                  <p className="text-lg">Wizard conjures magical savings</p>
+                </div>
+              </div>
+            </div>
+            <div className="p-4">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold text-cyan-400 text-lg">Mystical Emporium Promo</h4>
                 <button
                   onClick={(e) => toggleLike('wizard-emporium', e)}
-                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
                   aria-label="Like this video"
                 >
-                  <span className="text-gray-300 font-mono text-sm">
+                  <span className="text-gray-400 font-mono text-sm">
                     {likeCounts['wizard-emporium'] || initialLikeCounts['wizard-emporium']}
                   </span>
                   <Heart
@@ -1041,67 +1060,72 @@ export default function CaptainHacksHome() {
                   />
                 </button>
               </div>
-              <div className="p-6 text-white">
-                <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: MYSTICAL EMPORIUM</p>
-                <p className="text-lg">Wizard conjures magical savings</p>
-              </div>
             </div>
           </div>
 
           {/* Video 4 - aussiesurfer */}
-          <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
-            style={{ aspectRatio: "9/16" }}
-            onClick={(e) => {
-              const video = e.currentTarget.querySelector('video')
-              if (video) {
-                if (video.paused) {
-                  video.loop = false
-                  video.muted = false
-                  video.currentTime = 0
-                  video.play()
-                } else {
-                  video.pause()
-                  video.currentTime = 0
-                  video.muted = true
-                  video.loop = true
+          <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-cyan-400/30 rounded-xl overflow-hidden hover:border-cyan-400/70 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] group">
+            <div 
+              className="relative"
+              style={{ aspectRatio: "9/16" }}
+              onClick={(e) => {
+                const video = e.currentTarget.querySelector('video')
+                if (video) {
+                  if (video.paused) {
+                    video.loop = false
+                    video.muted = false
+                    video.currentTime = 0
+                    video.play()
+                  } else {
+                    video.pause()
+                    video.currentTime = 0
+                    video.muted = true
+                    video.loop = true
+                  }
                 }
-              }
-            }}
-          >
-            <video
-              className="w-full h-full object-cover"
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              onMouseEnter={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.loop = true
-                  e.currentTarget.play().catch(() => {})
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.pause()
-                  e.currentTarget.currentTime = 0
-                }
-              }}
-              onEnded={(e) => {
-                e.currentTarget.loop = true
-                e.currentTarget.muted = true
               }}
             >
-              <source src="/videos/aussiesurfer.mp4" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
-              <div className="p-4 flex justify-end pointer-events-auto">
+              <video
+                className="w-full h-full object-cover cursor-pointer"
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onMouseEnter={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.loop = true
+                    e.currentTarget.play().catch(() => {})
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.pause()
+                    e.currentTarget.currentTime = 0
+                  }
+                }}
+                onEnded={(e) => {
+                  e.currentTarget.loop = true
+                  e.currentTarget.muted = true
+                }}
+              >
+                <source src="/videos/aussiesurfer.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div className="p-6 text-white">
+                  <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: BEACH BRAND</p>
+                  <p className="text-lg">Surfer rides the wave of savings</p>
+                </div>
+              </div>
+            </div>
+            <div className="p-4">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold text-cyan-400 text-lg">Beach Brand Promo</h4>
                 <button
                   onClick={(e) => toggleLike('aussie-surfer', e)}
-                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
                   aria-label="Like this video"
                 >
-                  <span className="text-gray-300 font-mono text-sm">
+                  <span className="text-gray-400 font-mono text-sm">
                     {likeCounts['aussie-surfer'] || initialLikeCounts['aussie-surfer']}
                   </span>
                   <Heart
@@ -1113,67 +1137,72 @@ export default function CaptainHacksHome() {
                   />
                 </button>
               </div>
-              <div className="p-6 text-white">
-                <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: BEACH BRAND</p>
-                <p className="text-lg">Surfer rides the wave of savings</p>
-              </div>
             </div>
           </div>
 
           {/* Video 5 - sisterjane */}
-          <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
-            style={{ aspectRatio: "9/16" }}
-            onClick={(e) => {
-              const video = e.currentTarget.querySelector('video')
-              if (video) {
-                if (video.paused) {
-                  video.loop = false
-                  video.muted = false
-                  video.currentTime = 0
-                  video.play()
-                } else {
-                  video.pause()
-                  video.currentTime = 0
-                  video.muted = true
-                  video.loop = true
+          <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-cyan-400/30 rounded-xl overflow-hidden hover:border-cyan-400/70 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] group">
+            <div 
+              className="relative"
+              style={{ aspectRatio: "9/16" }}
+              onClick={(e) => {
+                const video = e.currentTarget.querySelector('video')
+                if (video) {
+                  if (video.paused) {
+                    video.loop = false
+                    video.muted = false
+                    video.currentTime = 0
+                    video.play()
+                  } else {
+                    video.pause()
+                    video.currentTime = 0
+                    video.muted = true
+                    video.loop = true
+                  }
                 }
-              }
-            }}
-          >
-            <video
-              className="w-full h-full object-cover"
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              onMouseEnter={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.loop = true
-                  e.currentTarget.play().catch(() => {})
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.pause()
-                  e.currentTarget.currentTime = 0
-                }
-              }}
-              onEnded={(e) => {
-                e.currentTarget.loop = true
-                e.currentTarget.muted = true
               }}
             >
-              <source src="/videos/sisterjane.mp4" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
-              <div className="p-4 flex justify-end pointer-events-auto">
+              <video
+                className="w-full h-full object-cover cursor-pointer"
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onMouseEnter={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.loop = true
+                    e.currentTarget.play().catch(() => {})
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.pause()
+                    e.currentTarget.currentTime = 0
+                  }
+                }}
+                onEnded={(e) => {
+                  e.currentTarget.loop = true
+                  e.currentTarget.muted = true
+                }}
+              >
+                <source src="/videos/sisterjane.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div className="p-6 text-white">
+                  <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: CHARITY</p>
+                  <p className="text-lg">Sister Jane blesses your discount</p>
+                </div>
+              </div>
+            </div>
+            <div className="p-4">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold text-cyan-400 text-lg">Charity Promo</h4>
                 <button
                   onClick={(e) => toggleLike('sister-jane', e)}
-                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
                   aria-label="Like this video"
                 >
-                  <span className="text-gray-300 font-mono text-sm">
+                  <span className="text-gray-400 font-mono text-sm">
                     {likeCounts['sister-jane'] || initialLikeCounts['sister-jane']}
                   </span>
                   <Heart
@@ -1185,67 +1214,72 @@ export default function CaptainHacksHome() {
                   />
                 </button>
               </div>
-              <div className="p-6 text-white">
-                <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: CHARITY</p>
-                <p className="text-lg">Sister Jane blesses your discount</p>
-              </div>
             </div>
           </div>
 
           {/* Video 6 - dogspa */}
-          <div 
-            className="relative group bg-gray-950 border-2 border-gray-700 overflow-hidden hover:border-cyan-400 transition-all duration-300 cursor-pointer"
-            style={{ aspectRatio: "9/16" }}
-            onClick={(e) => {
-              const video = e.currentTarget.querySelector('video')
-              if (video) {
-                if (video.paused) {
-                  video.loop = false
-                  video.muted = false
-                  video.currentTime = 0
-                  video.play()
-                } else {
-                  video.pause()
-                  video.currentTime = 0
-                  video.muted = true
-                  video.loop = true
+          <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-cyan-400/30 rounded-xl overflow-hidden hover:border-cyan-400/70 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] group">
+            <div 
+              className="relative"
+              style={{ aspectRatio: "9/16" }}
+              onClick={(e) => {
+                const video = e.currentTarget.querySelector('video')
+                if (video) {
+                  if (video.paused) {
+                    video.loop = false
+                    video.muted = false
+                    video.currentTime = 0
+                    video.play()
+                  } else {
+                    video.pause()
+                    video.currentTime = 0
+                    video.muted = true
+                    video.loop = true
+                  }
                 }
-              }
-            }}
-          >
-            <video
-              className="w-full h-full object-cover"
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              onMouseEnter={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.loop = true
-                  e.currentTarget.play().catch(() => {})
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (e.currentTarget.muted) {
-                  e.currentTarget.pause()
-                  e.currentTarget.currentTime = 0
-                }
-              }}
-              onEnded={(e) => {
-                e.currentTarget.loop = true
-                e.currentTarget.muted = true
               }}
             >
-              <source src="/videos/dogspa.mp4" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between pointer-events-none">
-              <div className="p-4 flex justify-end pointer-events-auto">
+              <video
+                className="w-full h-full object-cover cursor-pointer"
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onMouseEnter={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.loop = true
+                    e.currentTarget.play().catch(() => {})
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (e.currentTarget.muted) {
+                    e.currentTarget.pause()
+                    e.currentTarget.currentTime = 0
+                  }
+                }}
+                onEnded={(e) => {
+                  e.currentTarget.loop = true
+                  e.currentTarget.muted = true
+                }}
+              >
+                <source src="/videos/dogspa.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div className="p-6 text-white">
+                  <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: PET SPA</p>
+                  <p className="text-lg">Pups get pampered for less</p>
+                </div>
+              </div>
+            </div>
+            <div className="p-4">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold text-cyan-400 text-lg">Pet Spa Promo</h4>
                 <button
                   onClick={(e) => toggleLike('dog-spa', e)}
-                  className="transition-all duration-300 hover:scale-110 bg-black/50 p-2 rounded-full flex items-center gap-2"
+                  className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
                   aria-label="Like this video"
                 >
-                  <span className="text-gray-300 font-mono text-sm">
+                  <span className="text-gray-400 font-mono text-sm">
                     {likeCounts['dog-spa'] || initialLikeCounts['dog-spa']}
                   </span>
                   <Heart
@@ -1256,10 +1290,6 @@ export default function CaptainHacksHome() {
                     }`}
                   />
                 </button>
-              </div>
-              <div className="p-6 text-white">
-                <p className="font-mono text-sm text-cyan-400 mb-2">CLIENT: PET SPA</p>
-                <p className="text-lg">Pups get pampered for less</p>
               </div>
             </div>
           </div>
