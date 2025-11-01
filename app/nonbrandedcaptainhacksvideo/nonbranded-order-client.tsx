@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { Play, ArrowRight } from "lucide-react"
+import { Play, ArrowRight, Heart } from "lucide-react"
 
 export default function NonBrandedOrderClient() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
@@ -24,6 +24,8 @@ export default function NonBrandedOrderClient() {
     stripeLink: string;
   } | null>(null)
   const [discountError, setDiscountError] = useState("")
+  const [likes, setLikes] = useState<Record<string, boolean>>({})
+  const [likeCounts, setLikeCounts] = useState<Record<string, number>>({})
 
   // Discount code configuration
   const DISCOUNT_CODES: Record<string, { newPrice: number; stripeLink: string }> = {
@@ -32,6 +34,13 @@ export default function NonBrandedOrderClient() {
       stripeLink: 'https://buy.stripe.com/5kQ8wPf8Q4zIfMFeUIfUQ05'
     },
     // Add more discount codes as needed
+  }
+
+  // Initial like counts (same as home page)
+  const initialLikeCounts: Record<string, number> = {
+    'weekend-flash-sale': 73,
+    'new-product-launch': 85,
+    'clearance-event': 62,
   }
 
   const handleApplyDiscount = () => {
@@ -52,6 +61,39 @@ export default function NonBrandedOrderClient() {
     setAppliedDiscount(null)
     setDiscountCode("")
     setDiscountError("")
+  }
+
+  // Load likes and like counts from localStorage on mount
+  useEffect(() => {
+    const savedLikes = localStorage.getItem('videoLikes')
+    if (savedLikes) {
+      setLikes(JSON.parse(savedLikes))
+    }
+
+    const savedLikeCounts = localStorage.getItem('videoLikeCounts')
+    if (savedLikeCounts) {
+      setLikeCounts(JSON.parse(savedLikeCounts))
+    } else {
+      // Initialize with starting counts
+      setLikeCounts(initialLikeCounts)
+      localStorage.setItem('videoLikeCounts', JSON.stringify(initialLikeCounts))
+    }
+  }, [])
+
+  // Toggle like for a video
+  const toggleLike = (videoId: string, e: React.MouseEvent) => {
+    e.stopPropagation() // Prevent video play when clicking like button
+    const wasLiked = likes[videoId]
+    const newLikes = { ...likes, [videoId]: !wasLiked }
+    setLikes(newLikes)
+    localStorage.setItem('videoLikes', JSON.stringify(newLikes))
+
+    // Update like count
+    const currentCount = likeCounts[videoId] || initialLikeCounts[videoId]
+    const newCount = wasLiked ? currentCount - 1 : currentCount + 1
+    const newLikeCounts = { ...likeCounts, [videoId]: newCount }
+    setLikeCounts(newLikeCounts)
+    localStorage.setItem('videoLikeCounts', JSON.stringify(newLikeCounts))
   }
 
   useEffect(() => {
@@ -325,7 +367,25 @@ This order was submitted from the Captain Hacks order page.
                 </div>
               </div>
               <div className="p-4">
-                <h4 className="font-bold text-pink-400 text-lg mb-2">Weekend Flash Sale</h4>
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-bold text-pink-400 text-lg">Weekend Flash Sale</h4>
+                  <button
+                    onClick={(e) => toggleLike('weekend-flash-sale', e)}
+                    className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
+                    aria-label="Like this video"
+                  >
+                    <span className="text-gray-400 font-mono text-sm">
+                      {likeCounts['weekend-flash-sale'] || initialLikeCounts['weekend-flash-sale']}
+                    </span>
+                    <Heart
+                      className={`w-6 h-6 ${
+                        likes['weekend-flash-sale']
+                          ? 'fill-pink-500 text-pink-500'
+                          : 'text-gray-400 hover:text-pink-400'
+                      }`}
+                    />
+                  </button>
+                </div>
                 <p className="text-gray-400 text-sm">Buy 2 scoops, get 1 free. This Weekend Only</p>
               </div>
             </div>
@@ -354,7 +414,25 @@ This order was submitted from the Captain Hacks order page.
                 </div>
               </div>
               <div className="p-4">
-                <h4 className="font-bold text-pink-400 text-lg mb-2">New Product Launch</h4>
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-bold text-pink-400 text-lg">New Product Launch</h4>
+                  <button
+                    onClick={(e) => toggleLike('new-product-launch', e)}
+                    className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
+                    aria-label="Like this video"
+                  >
+                    <span className="text-gray-400 font-mono text-sm">
+                      {likeCounts['new-product-launch'] || initialLikeCounts['new-product-launch']}
+                    </span>
+                    <Heart
+                      className={`w-6 h-6 ${
+                        likes['new-product-launch']
+                          ? 'fill-pink-500 text-pink-500'
+                          : 'text-gray-400 hover:text-pink-400'
+                      }`}
+                    />
+                  </button>
+                </div>
                 <p className="text-gray-400 text-sm">First 24 hours special pricing</p>
               </div>
             </div>
@@ -383,7 +461,25 @@ This order was submitted from the Captain Hacks order page.
                 </div>
               </div>
               <div className="p-4">
-                <h4 className="font-bold text-pink-400 text-lg mb-2">Clearance Event</h4>
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-bold text-pink-400 text-lg">Clearance Event</h4>
+                  <button
+                    onClick={(e) => toggleLike('clearance-event', e)}
+                    className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
+                    aria-label="Like this video"
+                  >
+                    <span className="text-gray-400 font-mono text-sm">
+                      {likeCounts['clearance-event'] || initialLikeCounts['clearance-event']}
+                    </span>
+                    <Heart
+                      className={`w-6 h-6 ${
+                        likes['clearance-event']
+                          ? 'fill-pink-500 text-pink-500'
+                          : 'text-gray-400 hover:text-pink-400'
+                      }`}
+                    />
+                  </button>
+                </div>
                 <p className="text-gray-400 text-sm">Limited stock - ends midnight</p>
               </div>
             </div>
