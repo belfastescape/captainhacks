@@ -452,7 +452,7 @@ export default function CaptainHacksHome() {
                 playsInline
                 preload="auto"
               >
-                <source src="/videos/Captain-Hacks-Hacker-Black-Friday-35-Off.mp4" type="video/mp4" />
+                <source src="/videos/Captain-Hacks-Hacker-35-Off.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center pointer-events-none">
