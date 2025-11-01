@@ -419,6 +419,50 @@ export default function CaptainHacksHome() {
         </div>
       </section>
 
+      {/* Black Friday Special Video */}
+      <section className="px-6 md:px-[8%] py-16 bg-black border-y-2 border-yellow-400">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <div className="inline-block mb-4 px-6 py-3 bg-yellow-400/20 border-2 border-yellow-400 rounded-lg">
+              <span className="text-yellow-400 font-mono text-lg uppercase tracking-wider font-bold">🔥 Black Friday Special</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black mb-4 text-yellow-400 font-mono">
+              35% OFF ALL VIDEOS
+            </h2>
+            <p className="text-xl text-gray-300 mb-2">
+              Use code: <span className="text-cyan-400 font-mono font-bold">BLACK35%</span> at checkout
+            </p>
+            <p className="text-gray-400 text-sm">Limited time offer - Don't miss out!</p>
+          </div>
+
+          <div className="relative max-w-md mx-auto">
+            <div className="relative aspect-[9/16] bg-black border-4 border-yellow-400 rounded-xl overflow-hidden shadow-[0_0_50px_rgba(251,191,36,0.3)] cursor-pointer group"
+              onClick={(e) => {
+                const video = e.currentTarget.querySelector('video')
+                if (video) {
+                  if (video.paused) {
+                    video.currentTime = 0
+                    video.play().catch(err => console.log('Play failed:', err))
+                  }
+                }
+              }}
+            >
+              <video
+                className="w-full h-full object-cover"
+                playsInline
+                preload="auto"
+              >
+                <source src="/videos/Captain-Hacks-Hacker-Black-Friday-35%-Off.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center pointer-events-none">
+                <Play className="w-20 h-20 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Video Examples Section */}
       <section className="px-6 md:px-[8%] py-20 bg-gray-950">
         <div className="max-w-6xl mx-auto">
