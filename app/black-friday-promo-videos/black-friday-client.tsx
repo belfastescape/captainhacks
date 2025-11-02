@@ -470,7 +470,7 @@ export function BlackFridayClient() {
                   </tr>
                   <tr className="border-b border-gray-800 hover:bg-gray-900/50 transition-colors">
                     <td className="p-6 text-white font-semibold">All social media formats</td>
-                    <td className="p-6 text-gray-400">Vertical, square, and landscape versions</td>
+                    <td className="p-6 text-gray-400">Vertical, square, or landscape versions. You choose.</td>
                   </tr>
                   <tr className="border-b border-gray-800 hover:bg-gray-900/50 transition-colors">
                     <td className="p-6 text-white font-semibold">Captions included</td>
