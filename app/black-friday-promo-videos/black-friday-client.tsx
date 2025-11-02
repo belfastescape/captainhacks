@@ -40,6 +40,7 @@ export function BlackFridayClient() {
     'black-friday-hacker': 27,
     'hacker-35-off': 23,
     'phone-shop-promo': 29,
+    'perfume-hacker': 25,
   }
 
   // Load likes and like counts from localStorage on mount
@@ -257,7 +258,7 @@ export function BlackFridayClient() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               {/* Black Friday Hacker Video */}
               <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-orange-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-orange-400/70 hover:shadow-[0_0_30px_rgba(249,115,22,0.2)] group">
                 <div className="relative aspect-[9/16] bg-black cursor-pointer"
@@ -396,6 +397,53 @@ export function BlackFridayClient() {
                     </button>
                   </div>
                   <p className="text-gray-400 text-sm">Product promo with female hacker character</p>
+                </div>
+              </div>
+
+              {/* Perfume Hacker Video */}
+              <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-red-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-red-400/70 hover:shadow-[0_0_30px_rgba(239,68,68,0.2)] group">
+                <div className="relative aspect-[9/16] bg-black cursor-pointer"
+                  onClick={(e) => {
+                    const video = e.currentTarget.querySelector('video')
+                    if (video) {
+                      video.currentTime = 0
+                      video.play().catch(err => console.log('Play failed:', err))
+                    }
+                  }}
+                >
+                  <video
+                    className="w-full h-full object-cover"
+                    playsInline
+                    preload="auto"
+                  >
+                    <source src="/videos/perfume-hacker-yellow-captions.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="absolute inset-0 bg-black/50 transition-all duration-300 flex items-center justify-center pointer-events-none">
+                    <Play className="w-16 h-16 text-red-400 transition-opacity duration-300" />
+                  </div>
+                </div>
+                <div className="p-4">
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="font-bold text-red-400 text-lg">Perfume Sale</h4>
+                    <button
+                      onClick={(e) => toggleLike('perfume-hacker', e)}
+                      className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
+                      aria-label="Like this video"
+                    >
+                      <span className="text-gray-400 font-mono text-sm">
+                        {likeCounts['perfume-hacker'] || initialLikeCounts['perfume-hacker']}
+                      </span>
+                      <Heart
+                        className={`w-6 h-6 ${
+                          likes['perfume-hacker']
+                            ? 'fill-red-500 text-red-500'
+                            : 'text-gray-400 hover:text-red-400'
+                        }`}
+                      />
+                    </button>
+                  </div>
+                  <p className="text-gray-400 text-sm">Luxury perfume promo with captions</p>
                 </div>
               </div>
             </div>
