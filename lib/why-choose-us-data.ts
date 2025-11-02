@@ -40,7 +40,7 @@ export const benefits = [
   {
     icon: "DollarSign",
     title: "Affordable Pricing",
-    description: "Professional quality at a fraction of agency costs. Plans starting at $99/month.",
+    description: "Professional quality at a fraction of agency costs.",
   },
   {
     icon: "Sparkles",
