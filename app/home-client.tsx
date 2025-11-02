@@ -419,6 +419,18 @@ export default function CaptainHacksHome() {
         </div>
       </section>
 
+      {/* Fast Affordable No Strings */}
+      <section className="px-6 md:px-[8%] py-20 bg-gradient-to-b from-black via-gray-950 to-black relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-black mb-8 text-white">
+            Fast. <span className="text-cyan-400">Affordable.</span> <span className="text-pink-500">No strings attached.</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
+            Got a deal or update to post today? Captain Hacks helps small business owners get quick promo videos ready for social media — no long waits, no agency upsells. With our Black Friday offer, you can give us a go for the price of a couple of drinks and have your video in hand within hours.
+          </p>
+        </div>
+      </section>
+
       {/* Black Friday Special Video */}
       <section className="px-6 md:px-[8%] py-16 bg-black border-y-2 border-yellow-400">
         <div className="max-w-4xl mx-auto">
