@@ -14,27 +14,27 @@ const brandedVideos = [
     description: "Mystical wizard promoting magical deals",
   },
   {
-    title: "Captain Hacks Intro",
-    video: "/videos/captainhacksintro.mp4",
-    description: "High-energy branded intro video",
+    title: "Sister Jane - Branded",
+    video: "/videos/sisterjane.mp4",
+    description: "Character-driven with Captain Hacks branding",
   },
 ]
 
 const nonBrandedVideos = [
   {
-    title: "Dog Spa - Non-Branded",
-    video: "/videos/dogspa.mp4",
-    description: "Clean, professional without branding",
+    title: "Zingers Running Shoes",
+    video: "/videos/Zingers-Running-Shoes-New-Product.mp4",
+    description: "Clean, professional product launch",
   },
   {
-    title: "Aussie Surfer",
-    video: "/videos/aussiesurfer.mp4",
-    description: "Beach vibes, pure brand focus",
+    title: "Greenland Clothing Clearance",
+    video: "/videos/Greenland-Clothing-Clearance.mp4",
+    description: "Sale announcement, pure brand focus",
   },
   {
-    title: "Sister Jane",
-    video: "/videos/sisterjane.mp4",
-    description: "Character-driven, client branded",
+    title: "Perfume Hacker",
+    video: "/videos/perfume-hacker-yellow-captions.mp4",
+    description: "Dynamic promo with captions",
   },
 ]
 
