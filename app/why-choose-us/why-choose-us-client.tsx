@@ -139,7 +139,7 @@ export function WhyChooseUsClient() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
-                Captain Hacks delivers professional video editing that fits your business
+                Captain Hacks delivers professional affordable promo video's that fit your business needs. FAST.
               </p>
             </AnimatedSection>
 
