@@ -18,7 +18,7 @@ const blackFridayFAQs = [
   },
   {
     question: "What formats do you deliver?",
-    answer: "You'll get vertical (Stories/Reels), square (Feed), and landscape (YouTube/Website) formats. All optimized for maximum impact."
+    answer: "You can choose vertical (Stories/Reels), square (Feed), and landscape (YouTube/Website) formats. All optimized for maximum impact."
   },
   {
     question: "Can I use the video for paid ads?",
