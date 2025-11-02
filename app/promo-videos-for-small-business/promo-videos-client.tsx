@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
+import { RelatedArticles } from "@/components/related-articles"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { ArrowRight, Clock, Sparkles, TrendingUp, Zap, CheckCircle2, Play, Rocket, Target, Timer, DollarSign, Video, Instagram, Facebook, Youtube, Shield, Star } from "lucide-react"
 
 export function PromoVideosClient() {
@@ -66,6 +68,12 @@ export function PromoVideosClient() {
       
       <div className="relative min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
         <Navigation />
+        <Breadcrumbs
+          items={[
+            { label: "Video Services", href: "/#" },
+            { label: "Promo Videos for Small Business" }
+          ]}
+        />
 
         {/* Hero Section */}
         <section className="px-6 md:px-[8%] pt-32 pb-20">
@@ -83,8 +91,8 @@ export function PromoVideosClient() {
             </p>
             
             <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Running a weekend deal, new-product launch, or flash sale? Captain Hacks creates short, 
-              scroll-stopping promo videos made for small businesses — and we deliver them within 24 hours.
+              Running a weekend deal, new-product launch, or <Link href="/flash-sales-videos" className="text-red-400 hover:text-red-300 underline decoration-red-400/30 hover:decoration-red-400 transition-all duration-300">flash sale</Link>? Captain Hacks creates short, 
+              scroll-stopping <Link href="/how-to-use-short-form-video" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">short-form promo videos</Link> made for small businesses — and we deliver them within 24 hours.
             </p>
 
             <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto mb-12">
@@ -285,7 +293,7 @@ export function PromoVideosClient() {
               ⏱️ Flash-Sale & Limited-Time Offer Videos
             </h2>
             <p className="text-2xl text-center text-cyan-400 font-bold mb-12">
-              Urgency sells.
+              Urgency sells. <Link href="/7-reasons-short-form-video" className="text-pink-400 hover:text-pink-300 underline decoration-pink-400/30 hover:decoration-pink-400 transition-all duration-300">Learn why short-form video dominates digital marketing in 2025</Link>.
             </p>
 
             <div className="max-w-3xl mx-auto mb-12">
@@ -717,6 +725,27 @@ export function PromoVideosClient() {
             </p>
           </div>
         </section>
+
+        {/* Related Articles */}
+        <RelatedArticles
+          articles={[
+            {
+              title: "Flash-Sale Videos That Sell Fast",
+              href: "/flash-sales-videos",
+              description: "Create urgency and boost sales with videos designed for limited-time offers."
+            },
+            {
+              title: "Black Friday Promo Videos",
+              href: "/black-friday-promo-videos",
+              description: "Make your biggest sale impossible to miss with high-impact Black Friday videos."
+            },
+            {
+              title: "How To Use Short-Form Video in Digital Marketing",
+              href: "/how-to-use-short-form-video",
+              description: "Master the format and turn it into a growth engine for your brand."
+            }
+          ]}
+        />
 
         {/* Footer */}
         <footer className="px-6 md:px-[8%] py-12 bg-black border-t border-gray-800">

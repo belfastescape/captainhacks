@@ -5,6 +5,8 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { CollapsibleFAQ } from "@/components/collapsible-faq"
+import { RelatedArticles } from "@/components/related-articles"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { ArrowRight, Clock, Sparkles, TrendingUp, Zap, CheckCircle2, Play, Heart, DollarSign, Target, Timer, Tag, ShoppingBag, Gift } from "lucide-react"
 
 const blackFridayFAQs = [
@@ -131,6 +133,12 @@ export function BlackFridayClient() {
       
       <div className="relative min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
         <Navigation />
+        <Breadcrumbs
+          items={[
+            { label: "Video Services", href: "/#" },
+            { label: "Black Friday Promo Videos" }
+          ]}
+        />
 
         {/* Hero Section */}
         <section className="px-6 md:px-[8%] pt-32 pb-20">
@@ -149,7 +157,7 @@ export function BlackFridayClient() {
             
             <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
               Black Friday is the biggest shopping event of the year. Stand out from the noise with 
-              scroll-stopping promo videos that drive clicks, traffic, and sales — delivered in 24 hours.
+              scroll-stopping <Link href="/flash-sales-videos" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">promo videos</Link> that drive clicks, traffic, and sales — delivered in 24 hours. <Link href="/how-to-use-short-form-video" className="text-pink-400 hover:text-pink-300 underline decoration-pink-400/30 hover:decoration-pink-400 transition-all duration-300">Learn how to use short-form video in your digital marketing strategy</Link>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -235,7 +243,7 @@ export function BlackFridayClient() {
 
             <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 border-2 border-orange-400/50 rounded-2xl p-8 text-center">
               <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
-                When everyone's competing for attention, <span className="text-orange-400 font-bold">video wins</span>.
+                When everyone's competing for attention, <span className="text-orange-400 font-bold">video wins</span>. <Link href="/7-reasons-short-form-video" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">Discover why smart brands are using short-form video in 2025</Link>.
               </p>
             </div>
           </div>
@@ -630,6 +638,27 @@ export function BlackFridayClient() {
             </p>
           </div>
         </section>
+
+        {/* Related Articles */}
+        <RelatedArticles
+          articles={[
+            {
+              title: "Flash-Sale Videos That Sell Fast",
+              href: "/flash-sales-videos",
+              description: "Create urgency and boost sales with videos designed for limited-time offers."
+            },
+            {
+              title: "Promo Videos for Small Businesses",
+              href: "/promo-videos-for-small-business",
+              description: "Launch your next sale fast with scroll-stopping promo videos delivered in 24 hours."
+            },
+            {
+              title: "7 Reasons Your Brand Should Use Short-Form Video",
+              href: "/7-reasons-short-form-video",
+              description: "Discover why smart brands are dominating digital marketing with video."
+            }
+          ]}
+        />
 
         {/* Footer */}
         <footer className="px-6 md:px-[8%] py-12 bg-black border-t border-gray-800">

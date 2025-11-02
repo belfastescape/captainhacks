@@ -3,6 +3,8 @@
 import { MatrixBackground } from "@/components/matrix-background"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
+import { RelatedArticles } from "@/components/related-articles"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import Link from "next/link"
 import { ArrowRight, Clock, Eye, TrendingUp, Video, Users, Zap, DollarSign, ChevronRight, Play } from "lucide-react"
 import { useEffect, useState } from "react"
@@ -78,6 +80,13 @@ export function SevenReasonsClient() {
           style={{ width: `${(activeSection / 7) * 100}%` }}
         />
       </div>
+      
+      <Breadcrumbs
+        items={[
+          { label: "Resources", href: "/#" },
+          { label: "7 Reasons to Use Short-Form Video" }
+        ]}
+      />
       
       <div className="min-h-screen bg-black text-white relative z-10">
         {/* Hero Section */}
@@ -333,7 +342,7 @@ export function SevenReasonsClient() {
               
               <div className="space-y-6 text-lg leading-relaxed text-gray-300">
                 <p>
-                  If your product or service takes more than a few sentences to explain, video marketing can do what text can't.
+                  If your product or service takes more than a few sentences to explain, <Link href="/how-to-use-short-form-video" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">video marketing</Link> can do what text can't.
                 </p>
                 
                 <p>
@@ -475,7 +484,7 @@ export function SevenReasonsClient() {
                 </p>
                 
                 <p>
-                  But success requires more than just posting clips. You need expertise in <span className="text-white font-semibold">hooks, editing rhythm, and platform trends</span> — exactly what professional short-form teams specialize in.
+                  But success requires more than just posting clips. You need expertise in <span className="text-white font-semibold">hooks, editing rhythm, and platform trends</span> — exactly what <Link href="/how-to-use-short-form-video" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">professional short-form video teams</Link> specialize in.
                 </p>
                 
                 <div className="bg-gradient-to-r from-cyan-500/10 to-transparent border-l-4 border-cyan-400 p-6 rounded-r-lg backdrop-blur-sm">
@@ -624,7 +633,7 @@ export function SevenReasonsClient() {
             </h2>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-              At <span className="text-cyan-400 font-bold">Captain Hacks</span>, we create short-form videos that don't just get views — they <span className="text-white font-semibold">drive results</span>. From viral-ready product launches to full content calendars, we handle everything: <span className="text-pink-400">scripting, production, and optimization</span>.
+              At <span className="text-cyan-400 font-bold">Captain Hacks</span>, we create <Link href="/promo-videos-for-small-business" className="text-pink-400 hover:text-pink-300 underline decoration-pink-400/30 hover:decoration-pink-400 transition-all duration-300">short-form promo videos for small businesses</Link> that don't just get views — they <span className="text-white font-semibold">drive results</span>. From <Link href="/flash-sales-videos" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">viral-ready flash-sale videos</Link> to full content calendars, we handle everything: <span className="text-pink-400">scripting, production, and optimization</span>.
             </p>
             
             <div className="bg-gradient-to-r from-cyan-500/10 via-pink-500/10 to-cyan-500/10 border-2 border-cyan-400/50 rounded-2xl p-8 mb-12 max-w-3xl mx-auto backdrop-blur-sm">
@@ -662,6 +671,27 @@ export function SevenReasonsClient() {
             </p>
           </div>
         </section>
+
+        {/* Related Articles */}
+        <RelatedArticles
+          articles={[
+            {
+              title: "How To Use Short-Form Video in Digital Marketing",
+              href: "/how-to-use-short-form-video",
+              description: "Master the format and turn it into a growth engine for your brand with strategic deployment."
+            },
+            {
+              title: "Flash-Sale Videos That Sell Fast",
+              href: "/flash-sales-videos",
+              description: "Create urgency and boost sales with videos designed for limited-time offers and flash sales."
+            },
+            {
+              title: "Promo Videos for Small Businesses",
+              href: "/promo-videos-for-small-business",
+              description: "Launch your next sale fast with scroll-stopping promo videos delivered in 24 hours."
+            }
+          ]}
+        />
 
         {/* Footer */}
         <footer className="px-6 md:px-[8%] py-12 bg-black border-t border-gray-800">

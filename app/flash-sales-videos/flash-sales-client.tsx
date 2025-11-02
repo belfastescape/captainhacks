@@ -5,6 +5,8 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { CollapsibleFAQ } from "@/components/collapsible-faq"
+import { RelatedArticles } from "@/components/related-articles"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { ArrowRight, Clock, Timer, TrendingUp, Zap, CheckCircle2, DollarSign, Target, AlertCircle, Star, Shield, Calendar, Sparkles, Users, ShoppingCart, Eye, Play } from "lucide-react"
 
 const flashSaleFAQs = [
@@ -102,6 +104,12 @@ export function FlashSalesClient() {
       
       <div className="relative min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
         <Navigation />
+        <Breadcrumbs
+          items={[
+            { label: "Video Services", href: "/#" },
+            { label: "Flash-Sale Videos" }
+          ]}
+        />
 
         {/* Hero Section */}
         <section className="px-6 md:px-[8%] pt-32 pb-20">
@@ -120,7 +128,7 @@ export function FlashSalesClient() {
             
             <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
               Got a limited-time offer, weekend deal, or product launch?<br/>
-              Captain Hacks makes Flash-Sale Videos that stop the scroll and spark instant action — delivered in 24 hours.
+              Captain Hacks makes <Link href="/promo-videos-for-small-business" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">promo videos for small businesses</Link> that stop the scroll and spark instant action — delivered in 24 hours.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -336,7 +344,7 @@ export function FlashSalesClient() {
             <div className="bg-gradient-to-r from-red-900/20 to-pink-900/20 border-l-4 border-red-400 rounded-lg p-6 text-center">
               <p className="text-xl text-white font-semibold">
                 Bottom line: <span className="text-red-400">Urgency = Action</span>. 
-                Flash-sale videos turn "I'll think about it" into "I need this now."
+                Flash-sale videos turn "I'll think about it" into "I need this now." <Link href="/7-reasons-short-form-video" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">Learn more about why short-form video dominates digital marketing</Link>.
               </p>
             </div>
           </div>
@@ -349,7 +357,7 @@ export function FlashSalesClient() {
               💼 Ideal for Small Businesses
             </h2>
             <p className="text-xl text-center text-gray-300 mb-12">
-              Flash-Sale Videos are perfect for:
+              Flash-Sale Videos are perfect for <Link href="/how-to-use-short-form-video" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">businesses leveraging short-form video marketing</Link>:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -819,6 +827,27 @@ export function FlashSalesClient() {
             </p>
           </div>
         </section>
+
+        {/* Related Articles */}
+        <RelatedArticles
+          articles={[
+            {
+              title: "Promo Videos for Small Businesses",
+              href: "/promo-videos-for-small-business",
+              description: "Launch your next sale fast with scroll-stopping promo videos delivered in 24 hours."
+            },
+            {
+              title: "How To Use Short-Form Video in Digital Marketing",
+              href: "/how-to-use-short-form-video",
+              description: "Master the format and turn it into a growth engine for your brand."
+            },
+            {
+              title: "7 Reasons Your Brand Should Use Short-Form Video",
+              href: "/7-reasons-short-form-video",
+              description: "Discover why smart brands are dominating digital marketing with video."
+            }
+          ]}
+        />
 
         {/* Footer */}
         <footer className="px-6 md:px-[8%] py-12 bg-black border-t border-gray-800">

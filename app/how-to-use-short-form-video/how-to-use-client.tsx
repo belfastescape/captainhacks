@@ -3,6 +3,8 @@
 import { MatrixBackground } from "@/components/matrix-background"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
+import { RelatedArticles } from "@/components/related-articles"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import Link from "next/link"
 import { ArrowRight, Target, Eye, TrendingUp, Video, DollarSign, CheckCircle2, XCircle, Clock, Smartphone, Hash, PlayCircle, Zap, BarChart3, Users, MessageCircle } from "lucide-react"
 import { useEffect, useState } from "react"
@@ -38,6 +40,12 @@ export function HowToUseClient() {
     <>
       <MatrixBackground />
       <Navigation />
+      <Breadcrumbs
+        items={[
+          { label: "Resources", href: "/#" },
+          { label: "How To Use Short-Form Video" }
+        ]}
+      />
       
       <main className="relative z-10 min-h-screen bg-black text-white">
         {/* Hero Section */}
@@ -270,7 +278,7 @@ export function HowToUseClient() {
                       </h3>
                     </div>
                     <p className="text-gray-300 text-lg">
-                      Short-form videos make effective ads because they feel native, snackable and aligned with what users expect on social platforms—not long, "traditional" commercials.
+                      Short-form videos make effective ads because they feel native, snackable and aligned with what users expect on social platforms—not long, "traditional" commercials. <Link href="/7-reasons-short-form-video" className="text-pink-500 hover:text-pink-400 underline decoration-pink-500/30 hover:decoration-pink-500 transition-all duration-300">Discover why smart brands are using short-form video in 2025</Link>.
                     </p>
                   </div>
                 </div>
@@ -289,7 +297,7 @@ export function HowToUseClient() {
                       </h3>
                     </div>
                     <p className="text-gray-300 text-lg">
-                      Beyond views and likes, short-form video can push real business outcomes: demos, product reveals, social commerce integrations, CTAs built in.
+                      Beyond views and likes, short-form video can push real business outcomes: demos, product reveals, social commerce integrations, CTAs built in. <Link href="/flash-sales-videos" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">Flash-sale videos</Link> are particularly effective at driving immediate conversions.
                     </p>
                   </div>
                 </div>
@@ -500,7 +508,7 @@ export function HowToUseClient() {
                   👉 We can build high-impact short-form content for your brand.
                 </p>
                 <p className="text-gray-300">
-                  From strategy to execution, we help brands like yours create videos that don't just get views—they drive results.
+                  From strategy to execution, we help brands like yours create videos that don't just get views—they drive results. Whether you need <Link href="/promo-videos-for-small-business" className="text-pink-400 hover:text-pink-300 underline decoration-pink-400/30 hover:decoration-pink-400 transition-all duration-300">promo videos for your small business</Link> or <Link href="/black-friday-promo-videos" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">seasonal promotional content</Link>, we've got you covered.
                 </p>
               </div>
             </div>
@@ -559,6 +567,27 @@ export function HowToUseClient() {
             </div>
           </div>
         </section>
+
+        {/* Related Articles */}
+        <RelatedArticles
+          articles={[
+            {
+              title: "7 Reasons Your Brand Should Use Short-Form Video in 2025",
+              href: "/7-reasons-short-form-video",
+              description: "Understand why smart brands are dominating digital marketing with short-form video."
+            },
+            {
+              title: "Flash-Sale Videos That Sell Fast",
+              href: "/flash-sales-videos",
+              description: "Create urgency and boost sales with videos designed for limited-time offers."
+            },
+            {
+              title: "Black Friday Promo Videos",
+              href: "/black-friday-promo-videos",
+              description: "Make your biggest sale impossible to miss with high-impact Black Friday videos."
+            }
+          ]}
+        />
       </main>
     </>
   )

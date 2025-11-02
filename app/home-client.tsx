@@ -372,7 +372,7 @@ export default function CaptainHacksHome() {
             {/* Left Column - Benefits */}
             <div className="bg-gradient-to-br from-black to-gray-900 border-2 border-cyan-500/30 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300">
               <h3 className="text-2xl font-bold text-cyan-400 mb-6 font-mono">
-                Ideal for Small Businesses Who Need Video Ads — Fast.
+                Ideal for <a href="/promo-videos-for-small-business" className="hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">Small Businesses Who Need Video Ads</a> — Fast.
               </h3>
               <ul className="space-y-4">
                 {[
@@ -424,7 +424,7 @@ export default function CaptainHacksHome() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <div className="inline-block mb-4 px-6 py-3 bg-yellow-400/20 border-2 border-yellow-400 rounded-lg">
-              <span className="text-yellow-400 font-mono text-lg uppercase tracking-wider font-bold">🔥 Black Friday Special</span>
+              <a href="/black-friday-promo-videos" className="text-yellow-400 font-mono text-lg uppercase tracking-wider font-bold hover:text-yellow-300 transition-colors">🔥 Black Friday Special</a>
             </div>
             <h2 className="text-3xl md:text-5xl font-black mb-4 text-yellow-400 font-mono">
               35% OFF ALL VIDEOS
@@ -432,7 +432,7 @@ export default function CaptainHacksHome() {
             <p className="text-xl text-gray-300 mb-2">
               Use code: <span className="text-cyan-400 font-mono font-bold">BLACK35%</span> at checkout
             </p>
-            <p className="text-gray-400 text-sm">Limited time offer - Don't miss out!</p>
+            <p className="text-gray-400 text-sm">Limited time offer - <a href="/black-friday-promo-videos" className="hover:text-cyan-400 underline">Learn more about our Black Friday promo videos</a>!</p>
           </div>
 
           <div className="relative max-w-4xl mx-auto">
@@ -647,7 +647,7 @@ export default function CaptainHacksHome() {
           
           <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-300">
             <p>
-              Need a promo video that actually stops the scroll? We create short, sharp, attention-hijacking Facebook reels that make your business impossible to ignore.
+              Need a <a href="/promo-videos-for-small-business" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">promo video</a> that actually stops the scroll? We create short, sharp, attention-hijacking <a href="/how-to-use-short-form-video" className="text-pink-400 hover:text-pink-300 underline decoration-pink-400/30 hover:decoration-pink-400 transition-all duration-300">Facebook reels</a> that make your business impossible to ignore.
             </p>
             
             <p>
@@ -668,7 +668,7 @@ export default function CaptainHacksHome() {
             </div>
             
             <p>
-              Perfect for restaurants, retail stores, service businesses, or anyone who needs fast, affordable video content that doesn't look like every other boring promo out there. No lengthy contracts. No corporate fluff. Just pay upfront, tell us your deal, and we'll hack it into existence.
+              Perfect for restaurants, retail stores, service businesses, or anyone who needs <a href="/flash-sales-videos" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all duration-300">fast, affordable video content</a> that doesn't look like every other boring promo out there. No lengthy contracts. No corporate fluff. Just pay upfront, tell us your deal, and we'll hack it into existence.
             </p>
             
             <p className="text-xl md:text-2xl font-bold text-cyan-400 pt-4">
@@ -702,7 +702,12 @@ export default function CaptainHacksHome() {
             
             <div className="relative z-10">
               <p className="text-2xl md:text-3xl lg:text-5xl leading-relaxed text-white font-bold mb-8">
-                Short-form video has officially taken over{" "}
+                <a 
+                  href="/7-reasons-short-form-video"
+                  className="relative hover:text-cyan-400 transition-all duration-300 underline decoration-2 underline-offset-8 decoration-white/30 hover:decoration-cyan-400"
+                >
+                  Short-form video
+                </a> has officially taken over{" "}
                 <a 
                   href="/how-to-use-short-form-video" 
                   className="relative text-cyan-400 hover:text-pink-500 transition-all duration-300 underline decoration-2 underline-offset-8 decoration-cyan-400 hover:decoration-pink-500 inline-block group/link"
@@ -1535,60 +1540,116 @@ export default function CaptainHacksHome() {
 
           {/* Footer */}
           <div className="mt-24 pt-12 border-t border-gray-800">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {/* Column 1 - Resources */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+              {/* Column 1 - Video Services */}
               <div>
                 <h3 className="text-cyan-400 font-mono text-sm uppercase mb-4 tracking-wider">
-                  Resources
+                  Video Services
+                </h3>
+                <ul className="space-y-3">
+                  <li>
+                    <a 
+                      href="/promo-videos-for-small-business" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm block leading-relaxed"
+                    >
+                      Promo Videos for Small Business
+                    </a>
+                    <p className="text-gray-600 text-xs mt-1">24-hour video delivery from $39</p>
+                  </li>
+                  <li>
+                    <a 
+                      href="/flash-sales-videos" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm block leading-relaxed"
+                    >
+                      Flash-Sale Videos
+                    </a>
+                    <p className="text-gray-600 text-xs mt-1">Urgency-driven videos that sell fast</p>
+                  </li>
+                  <li>
+                    <a 
+                      href="/black-friday-promo-videos" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm block leading-relaxed"
+                    >
+                      Black Friday Promo Videos
+                    </a>
+                    <p className="text-gray-600 text-xs mt-1">Seasonal promotional content</p>
+                  </li>
+                  <li>
+                    <a 
+                      href="/brandedcaptainhacksvideo" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm block leading-relaxed"
+                    >
+                      Captain Hacks Style Video
+                    </a>
+                    <p className="text-gray-600 text-xs mt-1">Signature character videos from $39</p>
+                  </li>
+                  <li>
+                    <a 
+                      href="/nonbrandedcaptainhacksvideo" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm block leading-relaxed"
+                    >
+                      Your Brand Video
+                    </a>
+                    <p className="text-gray-600 text-xs mt-1">Custom branded videos from $49</p>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Column 2 - Resources */}
+              <div>
+                <h3 className="text-cyan-400 font-mono text-sm uppercase mb-4 tracking-wider">
+                  Learning Resources
                 </h3>
                 <ul className="space-y-3">
                   <li>
                     <a 
                       href="/7-reasons-short-form-video" 
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm block leading-relaxed"
                     >
-                      7 Reasons Your Brand Should Use Short-Form Video in 2025
+                      7 Reasons to Use Short-Form Video
                     </a>
+                    <p className="text-gray-600 text-xs mt-1">Why smart brands use video in 2025</p>
                   </li>
                   <li>
                     <a 
                       href="/how-to-use-short-form-video" 
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm block leading-relaxed"
                     >
-                      How To Use Short Form Video in Digital Marketing
+                      How To Use Short-Form Video
                     </a>
-                  </li>
-                  <li>
-                    <a 
-                      href="/flash-sales-videos" 
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                    >
-                      Flash-Sale Videos That Sell Fast
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                      href="/black-friday-promo-videos" 
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                    >
-                      Black Friday Promo Videos
-                    </a>
+                    <p className="text-gray-600 text-xs mt-1">Complete digital marketing strategy</p>
                   </li>
                 </ul>
               </div>
 
-              {/* Column 2 - Quick Links */}
+              {/* Column 3 - Company */}
               <div>
                 <h3 className="text-cyan-400 font-mono text-sm uppercase mb-4 tracking-wider">
-                  Quick Links
+                  Company
                 </h3>
                 <ul className="space-y-3">
                   <li>
                     <a 
-                      href="/#pricing" 
+                      href="/why-choose-us" 
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                     >
-                      Pricing
+                      Why Choose Us?
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/how-it-works" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      How It Works
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/will-it-work" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      Will It Work?
                     </a>
                   </li>
                   <li>
@@ -1607,32 +1668,44 @@ export default function CaptainHacksHome() {
                       FAQ
                     </a>
                   </li>
-                  <li>
-                    <a 
-                      href="/promo-videos-for-small-business" 
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                    >
-                      Promo Videos for Small Business
-                    </a>
-                  </li>
                 </ul>
               </div>
 
-              {/* Column 3 - Contact */}
+              {/* Column 4 - Get Started */}
               <div>
                 <h3 className="text-cyan-400 font-mono text-sm uppercase mb-4 tracking-wider">
-                  Contact
+                  Get Started
                 </h3>
                 <ul className="space-y-3">
+                  <li>
+                    <a 
+                      href="/order-now" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm font-semibold"
+                    >
+                      Order Now
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/#pricing" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      View Pricing
+                    </a>
+                  </li>
                   <li>
                     <a 
                       href="#contact" 
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                     >
-                      Get in Touch
+                      Contact Us
                     </a>
                   </li>
                 </ul>
+                <div className="mt-6 p-4 bg-cyan-500/10 border border-cyan-500/30 rounded-lg">
+                  <p className="text-cyan-400 font-mono text-xs uppercase mb-2">⚡ Fast Delivery</p>
+                  <p className="text-gray-400 text-xs leading-relaxed">Get your promo video in 24 hours or less, starting at just $39.</p>
+                </div>
               </div>
             </div>
 
