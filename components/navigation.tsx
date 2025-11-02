@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 
 const navItems = [
   { href: "/", label: ["Home"], mobileLabel: "Home" },
+  { href: "/black-friday-promo-videos", label: ["Black Friday", "Promo Videos"], mobileLabel: "Black Friday Promo Videos" },
   { href: "/why-choose-us", label: ["Why Choose Us?"], mobileLabel: "Why Choose Us?" },
   { href: "/how-it-works", label: ["How It Works"], mobileLabel: "How It Works" },
   { href: "/will-it-work", label: ["Will It Work?"], mobileLabel: "Will It Work?" },
