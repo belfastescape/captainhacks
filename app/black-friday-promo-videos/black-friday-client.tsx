@@ -37,8 +37,7 @@ export function BlackFridayClient() {
 
   // Initial like counts (random between 20-30 for each video)
   const initialLikeCounts: Record<string, number> = {
-    'black-friday-hacker': 27,
-    'hacker-35-off': 23,
+    'laptop-black-friday': 26,
     'phone-shop-promo': 29,
     'perfume-hacker': 25,
   }
@@ -258,8 +257,8 @@ export function BlackFridayClient() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {/* Black Friday Hacker Video */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {/* Laptop Black Friday Video */}
               <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-orange-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-orange-400/70 hover:shadow-[0_0_30px_rgba(249,115,22,0.2)] group">
                 <div className="relative aspect-[9/16] bg-black cursor-pointer"
                   onClick={(e) => {
@@ -275,7 +274,7 @@ export function BlackFridayClient() {
                     playsInline
                     preload="auto"
                   >
-                    <source src="/videos/Captain-Hacks-Hacker-Black-Friday-35-Off.mp4" type="video/mp4" />
+                    <source src="/videos/Laptop-And-C0-Black-Friday.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                   <div className="absolute inset-0 bg-black/50 transition-all duration-300 flex items-center justify-center pointer-events-none">
@@ -284,72 +283,25 @@ export function BlackFridayClient() {
                 </div>
                 <div className="p-4">
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold text-orange-400 text-lg">Black Friday 35% Off</h4>
+                    <h4 className="font-bold text-orange-400 text-lg">Laptop Black Friday Sale</h4>
                     <button
-                      onClick={(e) => toggleLike('black-friday-hacker', e)}
+                      onClick={(e) => toggleLike('laptop-black-friday', e)}
                       className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
                       aria-label="Like this video"
                     >
                       <span className="text-gray-400 font-mono text-sm">
-                        {likeCounts['black-friday-hacker'] || initialLikeCounts['black-friday-hacker']}
+                        {likeCounts['laptop-black-friday'] || initialLikeCounts['laptop-black-friday']}
                       </span>
                       <Heart
                         className={`w-6 h-6 ${
-                          likes['black-friday-hacker']
+                          likes['laptop-black-friday']
                             ? 'fill-orange-500 text-orange-500'
                             : 'text-gray-400 hover:text-orange-400'
                         }`}
                       />
                     </button>
                   </div>
-                  <p className="text-gray-400 text-sm">Hacker character announcing Black Friday deal</p>
-                </div>
-              </div>
-
-              {/* Hacker 35% Off Video */}
-              <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-red-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-red-400/70 hover:shadow-[0_0_30px_rgba(239,68,68,0.2)] group">
-                <div className="relative aspect-[9/16] bg-black cursor-pointer"
-                  onClick={(e) => {
-                    const video = e.currentTarget.querySelector('video')
-                    if (video) {
-                      video.currentTime = 0
-                      video.play().catch(err => console.log('Play failed:', err))
-                    }
-                  }}
-                >
-                  <video
-                    className="w-full h-full object-cover"
-                    playsInline
-                    preload="auto"
-                  >
-                    <source src="/videos/Captain-Hacks-Hacker-35-Off.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="absolute inset-0 bg-black/50 transition-all duration-300 flex items-center justify-center pointer-events-none">
-                    <Play className="w-16 h-16 text-red-400 transition-opacity duration-300" />
-                  </div>
-                </div>
-                <div className="p-4">
-                  <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold text-red-400 text-lg">Cyber Sale Promo</h4>
-                    <button
-                      onClick={(e) => toggleLike('hacker-35-off', e)}
-                      className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
-                      aria-label="Like this video"
-                    >
-                      <span className="text-gray-400 font-mono text-sm">
-                        {likeCounts['hacker-35-off'] || initialLikeCounts['hacker-35-off']}
-                      </span>
-                      <Heart
-                        className={`w-6 h-6 ${
-                          likes['hacker-35-off']
-                            ? 'fill-red-500 text-red-500'
-                            : 'text-gray-400 hover:text-red-400'
-                        }`}
-                      />
-                    </button>
-                  </div>
-                  <p className="text-gray-400 text-sm">35% off discount announcement</p>
+                  <p className="text-gray-400 text-sm">Tech deals for Black Friday</p>
                 </div>
               </div>
 
@@ -401,7 +353,7 @@ export function BlackFridayClient() {
               </div>
 
               {/* Perfume Hacker Video */}
-              <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-red-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-red-400/70 hover:shadow-[0_0_30px_rgba(239,68,68,0.2)] group">
+              <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-orange-500/30 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 hover:border-orange-400/70 hover:shadow-[0_0_30px_rgba(249,115,22,0.2)] group">
                 <div className="relative aspect-[9/16] bg-black cursor-pointer"
                   onClick={(e) => {
                     const video = e.currentTarget.querySelector('video')
@@ -420,12 +372,12 @@ export function BlackFridayClient() {
                     Your browser does not support the video tag.
                   </video>
                   <div className="absolute inset-0 bg-black/50 transition-all duration-300 flex items-center justify-center pointer-events-none">
-                    <Play className="w-16 h-16 text-red-400 transition-opacity duration-300" />
+                    <Play className="w-16 h-16 text-orange-400 transition-opacity duration-300" />
                   </div>
                 </div>
                 <div className="p-4">
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold text-red-400 text-lg">Perfume Sale</h4>
+                    <h4 className="font-bold text-orange-400 text-lg">Perfume Sale</h4>
                     <button
                       onClick={(e) => toggleLike('perfume-hacker', e)}
                       className="transition-all duration-300 hover:scale-110 flex items-center gap-2"
@@ -437,8 +389,8 @@ export function BlackFridayClient() {
                       <Heart
                         className={`w-6 h-6 ${
                           likes['perfume-hacker']
-                            ? 'fill-red-500 text-red-500'
-                            : 'text-gray-400 hover:text-red-400'
+                            ? 'fill-orange-500 text-orange-500'
+                            : 'text-gray-400 hover:text-orange-400'
                         }`}
                       />
                     </button>
