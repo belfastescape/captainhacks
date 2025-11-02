@@ -1566,6 +1566,14 @@ export default function CaptainHacksHome() {
                       Flash-Sale Videos That Sell Fast
                     </a>
                   </li>
+                  <li>
+                    <a 
+                      href="/black-friday-promo-videos" 
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      Black Friday Promo Videos
+                    </a>
+                  </li>
                 </ul>
               </div>
 
