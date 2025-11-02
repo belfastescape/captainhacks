@@ -1,14 +1,15 @@
 "use client"
 
-import { useEffect, useRef, useState, ReactNode } from "react"
+import { useEffect, useRef, useState, ReactNode, CSSProperties } from "react"
 
 interface AnimatedSectionProps {
   children: ReactNode
   animation?: "slideIn" | "float" | "pulse" | "none"
   className?: string
+  style?: CSSProperties
 }
 
-export function AnimatedSection({ children, animation = "slideIn", className = "" }: AnimatedSectionProps) {
+export function AnimatedSection({ children, animation = "slideIn", className = "", style }: AnimatedSectionProps) {
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -55,7 +56,7 @@ export function AnimatedSection({ children, animation = "slideIn", className = "
   }
 
   return (
-    <div ref={ref} className={`${getAnimationClass()} ${className}`}>
+    <div ref={ref} className={`${getAnimationClass()} ${className}`} style={style}>
       {children}
     </div>
   )
