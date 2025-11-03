@@ -16,10 +16,14 @@ export const metadata: Metadata = {
     "tiktok videos",
     "affordable video production",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Captain Hacks - Promo Video Creators for Small Business",
     description: "Scroll-stopping promo videos delivered in 24 hours. From $39.",
     type: "website",
+    url: "/",
   },
   twitter: {
     card: "summary_large_image",

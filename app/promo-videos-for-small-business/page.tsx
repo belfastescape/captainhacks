@@ -16,10 +16,14 @@ export const metadata: Metadata = {
     "product launch video",
     "sale announcement video",
   ],
+  alternates: {
+    canonical: "/promo-videos-for-small-business",
+  },
   openGraph: {
     title: "Promo Videos for Small Businesses — Ready in 24 Hours",
     description: "Fast, affordable, effective promo videos for your next sale or product launch",
     type: "article",
+    url: "/promo-videos-for-small-business",
   },
   twitter: {
     card: "summary_large_image",

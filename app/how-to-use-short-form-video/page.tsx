@@ -16,10 +16,14 @@ export const metadata: Metadata = {
     "social media video",
     "video SEO",
   ],
+  alternates: {
+    canonical: "/how-to-use-short-form-video",
+  },
   openGraph: {
     title: "Using Short-Form Video to Elevate Your Digital Marketing Strategy",
     description: "Master short-form video strategy and turn it into a growth engine for your brand",
     type: "article",
+    url: "/how-to-use-short-form-video",
   },
   twitter: {
     card: "summary_large_image",

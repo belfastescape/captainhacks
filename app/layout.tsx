@@ -15,6 +15,7 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://captainhacks.com"),
   title: {
     default: "Captain Hacks - Professional Video Marketing | 24-Hour Delivery",
     template: "%s | Captain Hacks",

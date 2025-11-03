@@ -15,10 +15,14 @@ export const metadata: Metadata = {
     "social media sale ads",
     "black friday marketing",
   ],
+  alternates: {
+    canonical: "/black-friday-promo-videos",
+  },
   openGraph: {
     title: "Black Friday Promo Videos | Captain Hacks",
     description: "See examples of our Black Friday promo videos that drive sales",
     type: "article",
+    url: "/black-friday-promo-videos",
   },
   twitter: {
     card: "summary_large_image",

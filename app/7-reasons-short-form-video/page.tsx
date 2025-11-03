@@ -15,10 +15,14 @@ export const metadata: Metadata = {
     "video content strategy",
     "digital marketing 2025",
   ],
+  alternates: {
+    canonical: "/7-reasons-short-form-video",
+  },
   openGraph: {
     title: "How Smart Brands Are Using Short-Form Video in Digital Marketing in 2025",
     description: "Master short-form video marketing and stay ahead of your competitors in 2025",
     type: "article",
+    url: "/7-reasons-short-form-video",
   },
   twitter: {
     card: "summary_large_image",

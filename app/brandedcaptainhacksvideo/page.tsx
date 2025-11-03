@@ -14,10 +14,14 @@ export const metadata: Metadata = {
     "$39 video",
     "fast video production",
   ],
+  alternates: {
+    canonical: "/brandedcaptainhacksvideo",
+  },
   openGraph: {
     title: "Order Branded Video - Captain Hacks",
     description: "Professional promo video in 24 hours. Only $39.",
     type: "website",
+    url: "/brandedcaptainhacksvideo",
   },
   twitter: {
     card: "summary_large_image",

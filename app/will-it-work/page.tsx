@@ -15,10 +15,14 @@ export const metadata: Metadata = {
     "small business video marketing",
     "video engagement",
   ],
+  alternates: {
+    canonical: "/will-it-work",
+  },
   openGraph: {
     title: "Do Short Videos Work? - Video Marketing Guide",
     description: "73% of people prefer short videos to learn about products. Learn why video works and how to use it.",
     type: "article",
+    url: "/will-it-work",
   },
   twitter: {
     card: "summary_large_image",

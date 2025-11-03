@@ -12,10 +12,14 @@ export const metadata: Metadata = {
     "affordable video marketing",
     "video marketing service",
   ],
+  alternates: {
+    canonical: "/why-choose-us",
+  },
   openGraph: {
     title: "Why Choose Captain Hacks - Professional Video's Creator for Small Business",
     description: "Professional video's created by Captain Hacks without the agency price tag or DIY headaches",
     type: "website",
+    url: "/why-choose-us",
   },
   twitter: {
     card: "summary_large_image",
