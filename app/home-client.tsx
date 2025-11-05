@@ -379,7 +379,7 @@ export default function CaptainHacksHome() {
                   { icon: "⚡", text: "Ready in 24 hours" },
                   { icon: "🎭", text: "Custom character & message" },
                   { icon: "📱", text: "Optimised for Instagram, Facebook, and TikTok" },
-                  { icon: "💰", text: "Fron $39. Priced for small business budgets" }
+                  { icon: "💰", text: "From $39. Priced for small business budgets" }
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <span className="text-2xl flex-shrink-0">{item.icon}</span>
