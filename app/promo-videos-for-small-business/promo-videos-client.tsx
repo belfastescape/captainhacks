@@ -556,7 +556,7 @@ export function PromoVideosClient() {
                     <span className="text-4xl text-gray-500 line-through">$99</span>
                     <div className="text-6xl md:text-8xl font-black bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">from $60 NZD</div>
                   </div>
-                  <div className="text-xl text-gray-400">USD per video</div>
+                  <div className="text-xl text-gray-400">NZD per video</div>
                   <div className="inline-block mt-4 px-6 py-2 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
                     <span className="text-cyan-400 font-bold text-sm">Save 51% Today</span>
                   </div>

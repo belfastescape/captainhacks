@@ -30,8 +30,8 @@ export default function NonBrandedOrderClient() {
   // Discount code configuration
   const DISCOUNT_CODES: Record<string, { newPrice: number; stripeLink: string }> = {
     'BLACK35%': { 
-      newPrice: 31.85, // 35% off $49 = $31.85
-      stripeLink: 'https://buy.stripe.com/5kQ8wPf8Q4zIfMFeUIfUQ05'
+      newPrice: 52, // 35% off $80 NZD = $52 NZD
+      stripeLink: 'https://buy.stripe.com/dRm28re4MeaidEx5k8fUQ07'
     },
     // Add more discount codes as needed
   }
@@ -165,7 +165,7 @@ Offer Description: ${formData.offer}
 Video Orientation: ${formData.orientation}
 
 ${appliedDiscount ? `Discount Code Used: ${appliedDiscount.code}
-Discounted Price: $${appliedDiscount.newPrice.toFixed(2)} USD (Original: $80 NZD)` : 'Price: $80 NZD'}
+Discounted Price: $${appliedDiscount.newPrice.toFixed(2)} NZD (Original: $80 NZD)` : 'Price: $80 NZD'}
 
 ---
 This order was submitted from the Captain Hacks order page.
@@ -194,7 +194,7 @@ This order was submitted from the Captain Hacks order page.
         // Redirect to Stripe payment after 1.5 seconds - use discount link if applied
         const paymentLink = appliedDiscount 
           ? appliedDiscount.stripeLink 
-          : 'https://buy.stripe.com/7sY6oHe4Md6e1VP3c0fUQ02'
+          : 'https://buy.stripe.com/6oU5kDgcU3vEdExbIwfUQ06'
         setTimeout(() => {
           window.location.href = paymentLink
         }, 1500)

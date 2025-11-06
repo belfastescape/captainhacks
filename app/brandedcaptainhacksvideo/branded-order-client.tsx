@@ -26,8 +26,8 @@ export default function BrandedOrderClient() {
   // Discount code configuration
   const DISCOUNT_CODES: Record<string, { newPrice: number; stripeLink: string }> = {
     'BLACK35%': { 
-      newPrice: 25.35, // 35% off $60 NZD = $25.35
-      stripeLink: 'https://buy.stripe.com/8x2eVd4ucd6egQJeUIfUQ04'
+      newPrice: 39, // 35% off $60 NZD = $39 NZD
+      stripeLink: 'https://buy.stripe.com/28E28r1i0fem8kd4g4fUQ09'
     },
     // Add more discount codes as needed
   }
@@ -121,7 +121,7 @@ Offer Description: ${formData.offer}
 Video Orientation: ${formData.orientation}
 
 ${appliedDiscount ? `Discount Code Used: ${appliedDiscount.code}
-Discounted Price: $${appliedDiscount.newPrice.toFixed(2)} USD (Original: $60 NZD USD)` : 'Price: $60 NZD USD'}
+Discounted Price: $${appliedDiscount.newPrice.toFixed(2)} NZD (Original: $60 NZD)` : 'Price: $60 NZD'}
 
 ---
 This order was submitted from the Captain Hacks order page.
@@ -150,7 +150,7 @@ This order was submitted from the Captain Hacks order page.
         // Redirect to Stripe payment after 1.5 seconds - use discount link if applied
         const paymentLink = appliedDiscount 
           ? appliedDiscount.stripeLink 
-          : 'https://buy.stripe.com/28E3cv9Ow4zIgQJ27WfUQ03'
+          : 'https://buy.stripe.com/cNi6oH4ucaY643XaEsfUQ08'
         setTimeout(() => {
           window.location.href = paymentLink
         }, 1500)
@@ -462,10 +462,10 @@ This order was submitted from the Captain Hacks order page.
                   <span className="text-gray-300 font-mono">TOTAL PRICE:</span>
                   <div className="text-right">
                     {appliedDiscount && (
-                      <span className="text-2xl font-bold text-gray-500 font-mono line-through mr-3">$60 NZD USD</span>
+                      <span className="text-2xl font-bold text-gray-500 font-mono line-through mr-3">$60 NZD</span>
                     )}
                     <span className="text-4xl font-bold text-yellow-400 font-mono">
-                      ${appliedDiscount ? `${appliedDiscount.newPrice.toFixed(2)} USD` : '39 USD'}
+                      ${appliedDiscount ? `${appliedDiscount.newPrice.toFixed(2)} NZD` : '60 NZD'}
                     </span>
                   </div>
                 </div>
