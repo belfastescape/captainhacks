@@ -200,11 +200,15 @@ This order was submitted from the Captain Hacks order page.
       <section className="relative z-10 min-h-screen px-6 md:px-[8%] py-16 md:py-32 bg-gray-950">
         <div className="max-w-4xl mx-auto">
           {/* Title */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-center">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-center">
             <span className="text-cyan-400 font-mono">ORDER YOUR</span>
             <br />
             <span className="text-yellow-400 font-mono">BRANDED VIDEO</span>
           </h2>
+          
+          <p className="text-center text-gray-400 mb-8 text-lg">
+            Perfect for businesses across Auckland, Wellington, Christchurch, and all of New Zealand
+          </p>
 
           {/* Introduction Section */}
           <div className="bg-black border-2 border-cyan-400 p-8 mb-12 shadow-[0_0_30px_rgba(0,240,255,0.2)]">

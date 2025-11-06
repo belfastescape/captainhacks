@@ -45,6 +45,11 @@ const faqs = [
     answer:
       "No. You will only ever make a one off deal with us for the video that you are ordering.",
   },
+  {
+    question: "Do you serve businesses throughout New Zealand?",
+    answer:
+      "Absolutely! We work with businesses across Auckland, Wellington, Christchurch, Dunedin, and all of New Zealand. Our 24-hour delivery works perfectly for Kiwi time zones, so whether you're in the North Island or South Island, you'll have your video ready when you need it.",
+  },
 ]
 
 export default function CaptainHacksHome() {
@@ -357,8 +362,11 @@ export default function CaptainHacksHome() {
             <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-cyan-400 mb-6 leading-tight">
               Delivery within 24 hours - Guaranteed.
             </p>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-4">
               Fast, affordable videos designed for small businesses running flash deals or limited-time offers.
+            </p>
+            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+              Trusted by businesses across Auckland, Wellington, Christchurch & throughout New Zealand
             </p>
             <div className="inline-block mb-4 px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full">
               <span className="text-red-400 font-mono text-xs uppercase tracking-wider">⚡ 24-Hour Delivery</span>
@@ -410,7 +418,7 @@ export default function CaptainHacksHome() {
 
           <div className="text-center bg-gradient-to-r from-cyan-900/30 to-pink-900/30 border-2 border-cyan-400/50 rounded-xl p-6">
             <p className="text-lg text-gray-300 mb-4">
-              <span className="text-cyan-400 font-bold">Perfect for:</span> Weekend sales, product launches, clearance events, holiday promos, and any limited-time offer that needs urgency.
+              <span className="text-cyan-400 font-bold">Perfect for:</span> Auckland cafes, Wellington startups, Christchurch retailers, and Kiwi businesses of all types. Weekend sales, product launches, clearance events, holiday promos, and any limited-time offer that needs urgency.
             </p>
             <p className="text-base text-gray-400 leading-relaxed">
               We promise to deliver you a quality promo ad very quickly. We would say it's best to plan ahead. Black Friday orders are flying in as well as Christmas promos. We will never take on any more work than we can deliver in the agreed turnaround time. We always aim for 24 hours, but don't be disappointed by leaving it too late.
@@ -1552,7 +1560,7 @@ export default function CaptainHacksHome() {
 
           {/* Footer */}
           <div className="mt-24 pt-12 border-t border-gray-800">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
               {/* Column 1 - Video Services */}
               <div>
                 <h3 className="text-cyan-400 font-mono text-sm uppercase mb-4 tracking-wider">
@@ -1719,11 +1727,29 @@ export default function CaptainHacksHome() {
                   <p className="text-gray-400 text-xs leading-relaxed">Get your promo video in 24 hours or less, starting at just $60 NZD.</p>
                 </div>
               </div>
+
+              {/* Column 5 - Serving New Zealand */}
+              <div>
+                <h3 className="text-pink-400 font-mono text-sm uppercase mb-4 tracking-wider">
+                  Serving New Zealand
+                </h3>
+                <ul className="space-y-3">
+                  <li className="text-gray-400 text-sm">Auckland</li>
+                  <li className="text-gray-400 text-sm">Wellington</li>
+                  <li className="text-gray-400 text-sm">Christchurch</li>
+                  <li className="text-gray-400 text-sm">Dunedin</li>
+                  <li className="text-gray-400 text-sm font-semibold text-pink-400">Nationwide Service</li>
+                </ul>
+                <div className="mt-6 p-4 bg-pink-500/10 border border-pink-500/30 rounded-lg">
+                  <p className="text-pink-400 font-mono text-xs uppercase mb-2">🇳🇿 Kiwi Owned</p>
+                  <p className="text-gray-400 text-xs leading-relaxed">Supporting small businesses from the Far North to Invercargill.</p>
+                </div>
+              </div>
             </div>
 
             <div className="text-center pt-8 border-t border-gray-700">
               <p className="text-gray-500 font-mono text-sm">
-                © {new Date().getFullYear()} Captain Hacks. Hacking deals since day one.
+                © {new Date().getFullYear()} Captain Hacks. Hacking deals for Kiwi businesses since day one.
               </p>
             </div>
           </div>
