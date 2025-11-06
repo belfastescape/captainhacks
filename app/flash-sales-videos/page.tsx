@@ -4,7 +4,7 @@ import { FlashSalesClient } from "./flash-sales-client"
 export const metadata: Metadata = {
   title: "Flash-Sale Videos | 24-Hour Promo Ads for Small Businesses | Captain Hacks",
   description:
-    "Boost your next flash sale with a custom promo video made in 24 hours. Urgent, high-impact videos built to drive instant sales — only $49 USD.",
+    "Boost your next flash sale with a custom promo video made in 24 hours. Urgent, high-impact videos built to drive instant sales — only $80 NZD.",
   keywords: [
     "flash sale videos",
     "urgent promo videos",

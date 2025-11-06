@@ -35,7 +35,7 @@ export function OrderNowClient() {
                   CAPTAIN HACKS VIDEO
                 </h2>
                 <div className="text-5xl font-bold text-cyan-400 my-6 font-mono text-center">
-                  $39 USD
+                  $60 NZD
                 </div>
                 <ul className="space-y-4 mb-8 text-gray-400">
                   <li className="flex items-start font-mono text-sm">
@@ -72,7 +72,7 @@ export function OrderNowClient() {
                   YOUR BRANDING ONLY
                 </h2>
                 <div className="text-5xl font-bold text-pink-500 my-6 font-mono text-center">
-                  $49 USD
+                  $80 NZD
                 </div>
                 <ul className="space-y-4 mb-8 text-gray-400">
                   <li className="flex items-start font-mono text-sm">

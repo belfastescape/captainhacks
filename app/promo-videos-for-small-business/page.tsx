@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { PromoVideosClient } from "./promo-videos-client"
 
 export const metadata: Metadata = {
-  title: "Promo Videos for Small Businesses — Ready in 24 Hours | From $39",
+  title: "Promo Videos for Small Businesses — Ready in 24 Hours | From $60 NZD",
   description:
     "Launch your next sale fast with scroll-stopping promo videos for small businesses. 24-hour delivery, affordable pricing, perfect for flash sales, product launches, and limited-time offers.",
   keywords: [

@@ -379,7 +379,7 @@ export default function CaptainHacksHome() {
                   { icon: "⚡", text: "Ready in 24 hours" },
                   { icon: "🎭", text: "Custom character & message" },
                   { icon: "📱", text: "Optimised for Instagram, Facebook, and TikTok" },
-                  { icon: "💰", text: "From $39. Priced for small business budgets" }
+                  { icon: "💰", text: "From $60 NZD. Priced for small business budgets" }
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <span className="text-2xl flex-shrink-0">{item.icon}</span>
@@ -675,7 +675,7 @@ export default function CaptainHacksHome() {
               </div>
               <p className="text-2xl md:text-3xl font-bold text-center">
                 <span className="text-white">Your video. Your deal. 24 hours. </span>
-                <span className="text-cyan-400" style={{ textShadow: "0 0 15px #00f0ff" }}>from $39.</span>
+                <span className="text-cyan-400" style={{ textShadow: "0 0 15px #00f0ff" }}>from $60 NZD.</span>
               </p>
             </div>
             
@@ -767,7 +767,7 @@ export default function CaptainHacksHome() {
               CAPTAIN HACKS VIDEO
             </h3>
             <div className="text-5xl font-bold text-cyan-400 my-6 font-mono">
-              $39 USD
+              $60 NZD USD
             </div>
             <ul className="space-y-4 mb-8 text-gray-400">
               <li className="flex items-start font-mono text-sm">
@@ -801,7 +801,7 @@ export default function CaptainHacksHome() {
               YOUR BRANDING ONLY
             </h3>
             <div className="text-5xl font-bold text-pink-500 my-6 font-mono">
-              $49 USD
+              $80 NZD
             </div>
             <ul className="space-y-4 mb-8 text-gray-400">
               <li className="flex items-start font-mono text-sm">
@@ -1566,7 +1566,7 @@ export default function CaptainHacksHome() {
                     >
                       Promo Videos for Small Business
                     </a>
-                    <p className="text-gray-600 text-xs mt-1">24-hour video delivery from $39</p>
+                    <p className="text-gray-600 text-xs mt-1">24-hour video delivery from $60 NZD</p>
                   </li>
                   <li>
                     <a 
@@ -1593,7 +1593,7 @@ export default function CaptainHacksHome() {
                     >
                       Captain Hacks Style Video
                     </a>
-                    <p className="text-gray-600 text-xs mt-1">Signature character videos from $39</p>
+                    <p className="text-gray-600 text-xs mt-1">Signature character videos from $60 NZD</p>
                   </li>
                   <li>
                     <a 
@@ -1716,7 +1716,7 @@ export default function CaptainHacksHome() {
                 </ul>
                 <div className="mt-6 p-4 bg-cyan-500/10 border border-cyan-500/30 rounded-lg">
                   <p className="text-cyan-400 font-mono text-xs uppercase mb-2">⚡ Fast Delivery</p>
-                  <p className="text-gray-400 text-xs leading-relaxed">Get your promo video in 24 hours or less, starting at just $39.</p>
+                  <p className="text-gray-400 text-xs leading-relaxed">Get your promo video in 24 hours or less, starting at just $60 NZD.</p>
                 </div>
               </div>
             </div>

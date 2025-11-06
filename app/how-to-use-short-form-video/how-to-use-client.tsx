@@ -529,7 +529,7 @@ export function HowToUseClient() {
             </h2>
             
             <p className="text-xl md:text-2xl text-gray-400 mb-12">
-              Get started with scroll-stopping short-form video from <span className="text-cyan-400 font-bold">$39</span>.
+              Get started with scroll-stopping short-form video from <span className="text-cyan-400 font-bold">$60 NZD</span>.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -557,7 +557,7 @@ export function HowToUseClient() {
                 <div className="text-sm text-gray-500 uppercase">Delivery</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-pink-500 mb-2 font-mono">$39</div>
+                <div className="text-3xl font-bold text-pink-500 mb-2 font-mono">$60 NZD</div>
                 <div className="text-sm text-gray-500 uppercase">Starting Price</div>
               </div>
               <div>

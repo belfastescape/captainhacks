@@ -484,7 +484,7 @@ export function WillItWorkClient() {
                   href="/brandedcaptainhacksvideo"
                   className="inline-block bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-mono font-bold px-8 md:px-12 py-4 md:py-5 rounded-lg transition-all duration-300 hover:scale-105 uppercase tracking-wider text-base md:text-lg focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 >
-                  Order Now- From $39
+                  Order Now- From $60 NZD
                 </Link>
               </div>
             </AnimatedSection>

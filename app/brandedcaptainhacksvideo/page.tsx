@@ -2,16 +2,16 @@ import type { Metadata } from "next"
 import BrandedOrderClient from "./branded-order-client"
 
 export const metadata: Metadata = {
-  title: "Order Branded Video - Captain Hacks | $39 Promo Video for Small Business",
+  title: "Order Branded Video - Captain Hacks | $60 NZD Promo Video for Small Business",
   description:
-    "Order a branded Captain Hacks promo video for your business. Get a professional 16-second video with our character and small logo. 24-hour delivery guaranteed. Only $39.",
+    "Order a branded Captain Hacks promo video for your business. Get a professional 16-second video with our character and small logo. 24-hour delivery guaranteed. Only $60 NZD.",
   keywords: [
     "order promo video",
     "branded video",
     "cheap video marketing",
     "social media video",
     "business promo video",
-    "$39 video",
+    "$60 NZD video",
     "fast video production",
   ],
   alternates: {
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Order Branded Video - Captain Hacks",
-    description: "Professional promo video in 24 hours. Only $39.",
+    description: "Professional promo video in 24 hours. Only $60 NZD.",
     type: "website",
     url: "/brandedcaptainhacksvideo",
   },
   twitter: {
     card: "summary_large_image",
     title: "Order Branded Video - Captain Hacks",
-    description: "Get your business promo video in 24 hours for just $39.",
+    description: "Get your business promo video in 24 hours for just $60 NZD.",
   },
 }
 

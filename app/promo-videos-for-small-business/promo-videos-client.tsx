@@ -104,7 +104,7 @@ export function PromoVideosClient() {
               <div className="bg-gradient-to-br from-pink-500/10 to-pink-500/5 border border-pink-500/30 rounded-xl p-4 hover:border-pink-400 transition-all duration-300 hover:scale-105">
                 <DollarSign className="w-8 h-8 md:w-10 md:h-10 text-pink-400 mx-auto mb-2" />
                 <div className="font-mono text-sm md:text-base text-pink-400 font-bold">Affordable</div>
-                <div className="text-xs text-gray-500 mt-1">from $39</div>
+                <div className="text-xs text-gray-500 mt-1">from $60 NZD</div>
               </div>
               <div className="bg-gradient-to-br from-cyan-500/10 to-pink-500/5 border border-cyan-500/30 rounded-xl p-4 hover:border-cyan-400 transition-all duration-300 hover:scale-105">
                 <Target className="w-8 h-8 md:w-10 md:h-10 text-cyan-400 mx-auto mb-2" />
@@ -554,7 +554,7 @@ export function PromoVideosClient() {
                   </div>
                   <div className="flex items-baseline justify-center gap-2 mb-2">
                     <span className="text-4xl text-gray-500 line-through">$99</span>
-                    <div className="text-6xl md:text-8xl font-black bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">from $39</div>
+                    <div className="text-6xl md:text-8xl font-black bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">from $60 NZD</div>
                   </div>
                   <div className="text-xl text-gray-400">USD per video</div>
                   <div className="inline-block mt-4 px-6 py-2 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
@@ -606,7 +606,7 @@ export function PromoVideosClient() {
                   size="lg" 
                   className="text-lg px-12 py-8 bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-bold uppercase tracking-widest shadow-[0_0_40px_rgba(0,240,255,0.3)] hover:shadow-[0_0_60px_rgba(0,240,255,0.5)] transition-all duration-300 hover:scale-105"
                 >
-                  Get Started from $39 <ArrowRight className="ml-2 w-6 h-6" />
+                  Get Started from $60 NZD <ArrowRight className="ml-2 w-6 h-6" />
                 </Button>
               </Link>
             </div>
@@ -721,7 +721,7 @@ export function PromoVideosClient() {
             </Link>
 
             <p className="text-sm text-gray-500 mt-12 font-mono">
-              ⚡ 24-hour delivery • 💸 from $39 per video • 🚀 Results-driven
+              ⚡ 24-hour delivery • 💸 from $60 NZD per video • 🚀 Results-driven
             </p>
           </div>
         </section>

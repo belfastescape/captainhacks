@@ -165,7 +165,7 @@ Offer Description: ${formData.offer}
 Video Orientation: ${formData.orientation}
 
 ${appliedDiscount ? `Discount Code Used: ${appliedDiscount.code}
-Discounted Price: $${appliedDiscount.newPrice.toFixed(2)} USD (Original: $49 USD)` : 'Price: $49 USD'}
+Discounted Price: $${appliedDiscount.newPrice.toFixed(2)} USD (Original: $80 NZD)` : 'Price: $80 NZD'}
 
 ---
 This order was submitted from the Captain Hacks order page.

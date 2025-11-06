@@ -26,7 +26,7 @@ export default function BrandedOrderClient() {
   // Discount code configuration
   const DISCOUNT_CODES: Record<string, { newPrice: number; stripeLink: string }> = {
     'BLACK35%': { 
-      newPrice: 25.35, // 35% off $39 = $25.35
+      newPrice: 25.35, // 35% off $60 NZD = $25.35
       stripeLink: 'https://buy.stripe.com/8x2eVd4ucd6egQJeUIfUQ04'
     },
     // Add more discount codes as needed
@@ -121,7 +121,7 @@ Offer Description: ${formData.offer}
 Video Orientation: ${formData.orientation}
 
 ${appliedDiscount ? `Discount Code Used: ${appliedDiscount.code}
-Discounted Price: $${appliedDiscount.newPrice.toFixed(2)} USD (Original: $39 USD)` : 'Price: $39 USD'}
+Discounted Price: $${appliedDiscount.newPrice.toFixed(2)} USD (Original: $60 NZD USD)` : 'Price: $60 NZD USD'}
 
 ---
 This order was submitted from the Captain Hacks order page.
@@ -462,7 +462,7 @@ This order was submitted from the Captain Hacks order page.
                   <span className="text-gray-300 font-mono">TOTAL PRICE:</span>
                   <div className="text-right">
                     {appliedDiscount && (
-                      <span className="text-2xl font-bold text-gray-500 font-mono line-through mr-3">$39 USD</span>
+                      <span className="text-2xl font-bold text-gray-500 font-mono line-through mr-3">$60 NZD USD</span>
                     )}
                     <span className="text-4xl font-bold text-yellow-400 font-mono">
                       ${appliedDiscount ? `${appliedDiscount.newPrice.toFixed(2)} USD` : '39 USD'}

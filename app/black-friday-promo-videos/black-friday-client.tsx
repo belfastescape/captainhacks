@@ -494,7 +494,7 @@ export function BlackFridayClient() {
 
             <div className="text-center bg-gradient-to-r from-orange-900/30 to-red-900/30 border-2 border-orange-500/50 rounded-2xl p-8">
               <p className="text-3xl md:text-4xl font-black text-white mb-2">
-                All for just <span className="text-orange-400">from $39 USD</span> per video.
+                All for just <span className="text-orange-400">from $60 NZD</span> per video.
               </p>
             </div>
 
@@ -634,7 +634,7 @@ export function BlackFridayClient() {
             </Link>
 
             <p className="text-sm text-gray-500 mt-12 font-mono">
-              ⚡ 24-hour delivery • 💸 from $39 per video • 🎯 Results-driven
+              ⚡ 24-hour delivery • 💸 from $60 NZD per video • 🎯 Results-driven
             </p>
           </div>
         </section>
